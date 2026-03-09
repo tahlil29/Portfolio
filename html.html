@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahlil Ullah Shaikh | Portfolio</title>
+    <meta name="description" content="Portfolio of Tahlil Ullah Shaikh - Python Developer and Graphic Designer.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Tahlil's Space</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+        <div class="container hero-content">
+            <div class="hero-text reveal">
+                <p class="greeting">Hi there, I am</p>
+                <h1 class="name">Tahlil Ullah <span>Shaikh</span></h1>
+                <h2 class="subtitle">Python Developer <span class="pipe">|</span> Graphic Designer</h2>
+                <p class="tagline">Turning ideas into code and creative designs.</p>
+                <div class="cta-group">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image reveal-right">
+                <div class="image-wrapper">
+                    <div class="pulse-ring"></div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="image/profile.jpeg" alt="Tahlil Ullah Shaikh">
+                            </div>
+                            <div class="flip-card-back">
+                                <!-- Place your second photo or illustration here. You can change this src to another image in your image folder if you have one. -->
+                                <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Nerd%20Face.png"
+                                    alt="Developer Illustration">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating badges instead of big background blob -->
+                    <div class="floating-badge"
+                        style="position: absolute; bottom: 10px; right: -10px; z-index: 3; font-size: 2.5rem; color: var(--primary); background: var(--white); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg);">
+                        <i class="fas fa-brands fa-python" style="margin: 0;"></i>
+                    </div>
+                    <div class="floating-badge"
+                        style="position: absolute; top: 30px; left: -10px; z-index: 3; font-size: 2rem; color: var(--secondary); background: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg);">
+                        <i class="fas fa-pen-nib" style="margin: 0;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section bg-light">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>About <span>Me</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-img reveal-left">
+                    <div class="img-wrapper">
+                        <img src="image/profile.jpeg" alt="Tahlil Ullah Shaikh Profile"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    </div>
+                </div>
+                <div class="about-text reveal-right">
+                    <h3>B.Tech Computer Science Student</h3>
+                    <p>I am a passionate and dedicated Computer Science student currently pursuing my B.Tech degree at
+                        Geetanjali Institute of Technical Studies. I bridge the gap between technical functionality and
+                        visual aesthetics.</p>
+                    <p>My interests lie in <strong>Python programming</strong>, <strong>graphic design</strong>,
+                        exploring new <strong>technology</strong>, and <strong>problem solving</strong>. Whether it's
+                        writing efficient code or designing compelling visuals, I strive for excellence and creativity
+                        in every project I undertake.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>tahlil.shaikh@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-location-dot"></i>
+                            <span>Udaipur, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Skills -->
+    <section id="education" class="edu-skills section">
+        <div class="container">
+            <div class="dual-layout">
+                <!-- Education -->
+                <div class="education-section reveal-left">
+                    <div class="section-header">
+                        <h2>My <span>Education</span></h2>
+                        <div class="line"></div>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="date">Currently Pursuing</span>
+                                <h3>B.Tech in Computer Science Engineering</h3>
+                                <p class="institution">Geetanjali Institute of Technical Studies</p>
+                                <p class="desc">Focusing on core computer science subjects, programming, and software
+                                    engineering principles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div id="skills" class="skills-section reveal-right">
+                    <div class="section-header">
+                        <h2>My <span>Skills</span></h2>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Technical Skills</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill-tag"><i class="fab fa-html5"></i> HTML</span>
+                            <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                            <span class="skill-tag"><i class="fab fa-js"></i> JS</span>
+                            <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                            <span class="skill-tag"><i class="fas fa-fire"></i> Firebase</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group mt-4">
+                        <h3>Creative Skills</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><i class="fas fa-paint-brush"></i> Graphic Design</span>
+                            <span class="skill-tag"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
+                                    alt="Canva" style="width: 16px; margin-right: 5px; vertical-align: middle;">
+                                Canva</span>
+                            <span class="skill-tag"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                    alt="Figma" style="width: 16px; margin-right: 5px; vertical-align: middle;">
+                                Figma</span>
+                            <span class="skill-tag"><i class="fas fa-stamp"></i> Branding</span>
+                            <span class="skill-tag"><i class="fas fa-share-alt"></i> Social Media Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="experience section bg-light">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2>Work <span>Experience</span></h2>
+                <div class="line mx-auto"></div>
+            </div>
+            <div class="experience-cards">
+                <div class="exp-card reveal">
+                    <div class="exp-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="exp-details">
+                        <span class="exp-date">Recent</span>
+                        <h3>Graphic Designer intern </h3>
+                        <p class="exp-company">Websenor</p>
+                        <p class="exp-desc">As a Graphic Design Intern, I assisted in creating logos, banners, posters,
+                            and social media graphics while ensuring brand consistency across projects. I supported the
+                            design team in developing visual concepts, editing images, and preparing layouts for digital
+                            and print materials.</p>
+                    </div>
+                </div>
+                <!-- <div class="exp-card reveal" style="transition-delay: 0.1s;">
+                    <div class="exp-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="exp-details">
+                        <span class="exp-date">Ongoing</span>
+                        <h3>Graphic Design Projects</h3>
+                        <p class="exp-company">Freelance / Independent Work</p>
+                        <p class="exp-desc">Created branding assets, social media creatives, and visual designs for
+                            various college events and independent clients.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2>Featured <span>Projects</span></h2>
+                <div class="line mx-auto"></div>
+            </div>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card reveal">
+                    <div class="project-img placeholder-bg-1">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>ByteMind News</h3>
+                        <p>A modern news platform that fetches and displays the latest news in a clean and responsive
+                            interface.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>HTML/CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://bytemind-news.onrender.com" target="_blank" class="btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                            <a href="https://github.com/tahlil29/bytemind-news.git" target="_blank" class="btn-sm">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal" style="transition-delay: 0.1s;">
+                    <div class="project-img placeholder-bg-2">
+                        <i class="fas fa-vote-yea"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Online Voting System</h3>
+                        <p>A secure web-based voting system where users can vote for candidates and view real-time
+                            results.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>SQLite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://voting-site-1.onrender.com" target="_blank" class="btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                            <a href="https://github.com/tahlil29/Voting-Site.git" target="_blank" class="btn-sm">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal" style="transition-delay: 0.2s;">
+                    <div class="project-img placeholder-bg-3">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Flowera – Online Flower Shop</h3>
+                        <p>A responsive flower shop website where users can browse flower collections, view product
+                            details, and explore a modern shopping-style interface.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://flowera.onrender.com/" target="_blank" class="btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                            <a href="https://github.com/tahlil29/Flowera.git" target="_blank" class="btn-sm">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section bg-light">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2>Get In <span>Touch</span></h2>
+                <div class="line mx-auto"></div>
+                <p class="contact-subtitle mt-4 text-muted">I'm currently open for new opportunities and collaborations.
+                </p>
+            </div>
+
+            <div class="contact-wrapper mt-4">
+                <div class="contact-info reveal-left">
+                    <div class="info-box">
+                        <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Me</h4>
+                            <p>tahlil.shaikh2004@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="icon-circle"><i class="fab fa-linkedin-in"></i></div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>www.linkedin.com/in/tahlil-shaikh-223993268</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="icon-circle"><i class="fab fa-github"></i></div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>https://github.com/tahlil29</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contactForm" action="https://formsubmit.co/tahlil.shaikh2004@gmail.com" method="POST"
+                    class="contact-form reveal-right">
+                    <!-- Disable Captcha optionally (uncomment if you want to bypass the captcha screen) -->
+                    <!-- <input type="hidden" name="_captcha" value="false"> -->
+                    <!-- Configure the success page (Replace with your actual website URL when deployed) -->
+                    <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html"> -->
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" required
+                            aria-label="Your Message"></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn btn-primary w-100" aria-label="Send Message">Send
+                        Message <i class="fas fa-paper-plane"></i></button>
+                    <div id="formMessage" class="mt-3 text-center" style="display: none; font-weight: 500;"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Tahlil Ullah Shaikh</div>
+                <div class="social-links">
+                    <a href="https://github.com/tahlil29" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="www.linkedin.com/in/tahlil-shaikh-223993268" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <!-- <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tahlil Ullah Shaikh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+
+</html>
