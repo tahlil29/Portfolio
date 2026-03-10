@@ -38,7 +38,7 @@ Home
 
 Introduction with name, role, and quick navigation to important sections.
 
-![Home Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133509.png?raw=true))
+![Home Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133509.png?raw=true)
 
 About Me
 
@@ -66,7 +66,7 @@ Branding
 
 UI Design
 
-![Skills Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133536.png?raw=true))
+![Skills Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133536.png?raw=true)
 
 Experience
 
@@ -82,11 +82,13 @@ Online Voting System – Digital voting platform with database integration
 
 Flowera – Frontend flower shop website
 
-Client-Server Quiz System – Networking project using C++ sockets
+![Project Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133600.png?raw=true)
 
 Contact
 
 Visitors can reach out through the contact form or connect via GitHub and LinkedIn.
+
+![contact Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133548.png?raw=true)
 
 🛠️ Technologies Used
 
