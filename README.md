@@ -23,7 +23,7 @@ Contact form for collaboration and opportunities
 The portfolio contains the following sections:
 Home
 Introduction with name, role, and quick navigation to important sections.
-![Home Page](Screenshot 2026-03-10 133509.png)
+![Home Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133509.png?raw=true))
 About Me
 Information about my background, interests, and goals as a developer.
 Education
