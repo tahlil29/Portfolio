@@ -34,21 +34,21 @@ Contact form for collaboration and opportunities
 
 The portfolio contains the following sections:
 
-Home
+⭐Home
 
 Introduction with name, role, and quick navigation to important sections.
 
 ![Home Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133509.png?raw=true)
 
-About Me
+⭐About Me
 
 Information about my background, interests, and goals as a developer.
 
-Education
+⭐Education
 
 Details about my B.Tech in Computer Science Engineering at Geetanjali Institute of Technical Studies.
 
-Skills
+⭐Skills
 
 Technical and creative skills including:
 
@@ -68,11 +68,7 @@ UI Design
 
 ![Skills Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133536.png?raw=true)
 
-Experience
-
-Workshops and volunteer experiences related to technology and development.
-
-Projects
+⭐Projects
 
 Some of my major projects include:
 
@@ -82,13 +78,13 @@ Online Voting System – Digital voting platform with database integration
 
 Flowera – Frontend flower shop website
 
-![Project Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133600.png?raw=true)
+![Project Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133548.png?raw=true)
 
-Contact
+⭐Contact
 
 Visitors can reach out through the contact form or connect via GitHub and LinkedIn.
 
-![contact Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133548.png?raw=true)
+![contact Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133600.png?raw=true)
 
 🛠️ Technologies Used
 
