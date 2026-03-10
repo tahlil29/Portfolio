@@ -23,6 +23,7 @@ Contact form for collaboration and opportunities
 The portfolio contains the following sections:
 Home
 Introduction with name, role, and quick navigation to important sections.
+![Home Page](Screenshot 2026-03-10 133509.png)
 About Me
 Information about my background, interests, and goals as a developer.
 Education
@@ -36,6 +37,7 @@ Database Basics
 Graphic Design
 Branding
 UI Design
+!Skill Page](Screenshot 2026-03-10 133536.png)
 
 Experience
 Workshops and volunteer experiences related to technology and development.
@@ -45,9 +47,11 @@ Some of my major projects include:
 ByteMind News – Online news platform built with Python and Flask
 Online Voting System – Digital voting platform with database integration
 Flowera – Frontend flower shop website
+![Projects Section](Screenshot 2026-03-10 133548.png)
 
 Contact
 Visitors can reach out through the contact form or connect via GitHub and LinkedIn.
+![Contact Section](Screenshot 2026-03-10 133600.png)
 
 🛠️ Technologies Used
 Frontend:
