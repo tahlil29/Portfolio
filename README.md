@@ -38,7 +38,7 @@ Home
 
 Introduction with name, role, and quick navigation to important sections.
 
-https://portfolio-x8op.onrender.com![Home Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133509.png?raw=true))
+[Home Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133509.png?raw=true))
 
 About Me
 
@@ -65,6 +65,8 @@ Graphic Design
 Branding
 
 UI Design
+
+[Skills Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133536.png?raw=true))
 
 Experience
 
