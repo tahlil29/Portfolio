@@ -5,16 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tahlil Ullah Shaikh | Portfolio</title>
-    <meta name="description" content="Portfolio of Tahlil Ullah Shaikh - Python Developer and Graphic Designer.">
+    <meta name="description"
+        content="Portfolio of Tahlil Ullah Shaikh — Product Manager Intern, Python Developer, and Graphic Designer based in Udaipur, India.">
+    <meta name="author" content="Tahlil Ullah Shaikh">
+    <meta name="theme-color" content="#1c1917">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-x8op.onrender.com/">
+    <meta property="og:title" content="Tahlil Ullah Shaikh | Portfolio">
+    <meta property="og:description"
+        content="Product Manager Intern · Python Developer · Graphic Designer. Building AI automation products and creative digital experiences.">
+    <meta property="og:image" content="https://portfolio-x8op.onrender.com/image/profile.jpeg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tahlil Ullah Shaikh | Portfolio">
+    <meta name="twitter:description"
+        content="Product Manager Intern · Python Developer · Graphic Designer based in Udaipur, India.">
+    <meta name="twitter:image" content="https://portfolio-x8op.onrender.com/image/profile.jpeg">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&display=swap"
         rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css.css?v=20260727footer">
+
+    <!--
+      Google Analytics (optional):
+      1. Create a GA4 property at https://analytics.google.com
+      2. Replace G-XXXXXXXXXX below with your Measurement ID
+      3. Uncomment the script block
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
 </head>
 
 <body>
@@ -22,9 +56,6 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">Tahlil's Space</a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -32,80 +63,178 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
                 <li><a href="#contact" class="btn-nav">Contact</a></li>
             </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero section">
-        <div class="container hero-content">
-            <div class="hero-text reveal">
-                <p class="greeting">Hi there, I am</p>
-                <h1 class="name">Tahlil Ullah <span>Shaikh</span></h1>
-                <h2 class="subtitle">Python Developer <span class="pipe">|</span> Graphic Designer</h2>
-                <p class="tagline">Turning ideas into code and creative designs.</p>
-                <div class="cta-group">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                </div>
-            </div>
-            <div class="hero-image reveal-right">
-                <div class="image-wrapper">
-                    <div class="pulse-ring"></div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="image/profile.jpeg" alt="Tahlil Ullah Shaikh">
+    <!-- Hero — billboard -->
+    <section id="home" class="hero section hero-board">
+        <div class="bb-page">
+            <div class="bb-eyebrow">About me on the board</div>
+            <h1 class="bb-title">Pinned Notes About <span>Tahlil</span></h1>
+            <p class="bb-subtitle">Product mind. Developer at heart. Designer by creativity.</p>
+
+            <div class="board-shell" data-pin-board>
+                <div class="board">
+                    <div class="bb-top-row">
+                        <article class="bb-sticky sticky-yellow pin-item" style="--r:-4deg; --d:0.05s; --sway:4.8s">
+                            I organize<br>product ideas<br>into action.
+                            <span class="bb-doodle" aria-hidden="true"><i class="fas fa-list-check"></i></span>
+                        </article>
+
+                        <article class="bb-identity pin-item" style="--r:-1deg; --d:0.1s; --sway:6s">
+                            <h2>Tahlil Ullah Shaikh</h2>
+                            <p>Product Manager &nbsp;•&nbsp; Python Developer &nbsp;•&nbsp; Visual Designer</p>
+                            <div class="bb-marker"></div>
+                        </article>
+
+                        <article class="bb-sticky sticky-green pin-item" style="--r:4deg; --d:0.15s; --sway:5.2s">
+                            I build with<br>Python.
+                            <span class="bb-doodle" aria-hidden="true"><i class="fab fa-python"></i></span>
+                        </article>
+                    </div>
+
+                    <div class="bb-content-row">
+                        <aside class="bb-side">
+                            <article class="bb-sticky sticky-lavender side-note pin-item" style="--r:2deg; --d:0.22s; --sway:4.6s">
+                                I design<br>visuals that<br>communicate<br>clearly.
+                                <span class="bb-doodle" aria-hidden="true"><i class="fas fa-pen-nib"></i></span>
+                            </article>
+
+                            <article class="bb-profile-card pin-item" style="--r:-1.5deg; --d:0.45s; --sway:5.5s">
+                                <img class="bb-avatar" src="image/profile.jpeg" alt="Tahlil Ullah Shaikh">
+                                <div>
+                                    <strong>Tahlil Ullah Shaikh</strong>
+                                    <small>Turning ideas into products people love.</small>
+                                </div>
+                            </article>
+                        </aside>
+
+                        <div class="bb-center">
+                            <div class="bb-columns">
+                                <div class="bb-column pm">
+                                    <h3 class="column-title">Product Manager</h3>
+                                    <div class="note-card pin-item" style="--r:-0.5deg; --d:0.25s; --sway:5.1s">
+                                        <div class="bb-icon"><i class="fas fa-map"></i></div>
+                                        <div>Turns ideas into clear roadmaps</div>
+                                    </div>
+                                    <div class="note-card pin-item" style="--r:0.6deg; --d:0.3s; --sway:4.9s">
+                                        <div class="bb-icon"><i class="fas fa-list-check"></i></div>
+                                        <div>Prioritizes features &amp; sprint goals</div>
+                                    </div>
+                                    <div class="note-card pin-item" style="--r:-0.4deg; --d:0.35s; --sway:5.3s">
+                                        <div class="bb-icon"><i class="fas fa-file-lines"></i></div>
+                                        <div>Writes requirements that teams can build from</div>
+                                    </div>
+                                </div>
+
+                                <div class="bb-column dev">
+                                    <h3 class="column-title">Python Developer</h3>
+                                    <div class="note-card pin-item" style="--r:0.5deg; --d:0.28s; --sway:5.4s">
+                                        <div class="bb-icon"><i class="fas fa-code"></i></div>
+                                        <div>Builds Python apps, tools &amp; automations</div>
+                                    </div>
+                                    <div class="note-card pin-item" style="--r:-0.7deg; --d:0.33s; --sway:4.7s">
+                                        <div class="bb-icon"><i class="fas fa-server"></i></div>
+                                        <div>Works with Flask, APIs and clean workflows</div>
+                                    </div>
+                                    <div class="note-card pin-item" style="--r:0.4deg; --d:0.38s; --sway:5.6s">
+                                        <div class="bb-icon"><i class="fas fa-lightbulb"></i></div>
+                                        <div>Loves solving problems with practical code</div>
+                                    </div>
+                                </div>
+
+                                <div class="bb-column design">
+                                    <h3 class="column-title">Visual Designer</h3>
+                                    <div class="note-card pin-item" style="--r:-0.6deg; --d:0.3s; --sway:5s">
+                                        <div class="bb-icon"><i class="fas fa-pen-nib"></i></div>
+                                        <div>Designs social posts, brand visuals &amp; layouts</div>
+                                    </div>
+                                    <div class="note-card pin-item" style="--r:0.8deg; --d:0.35s; --sway:4.8s">
+                                        <div class="bb-icon"><i class="fas fa-border-all"></i></div>
+                                        <div>Keeps design clean, modern and consistent</div>
+                                    </div>
+                                    <div class="note-card pin-item" style="--r:-0.3deg; --d:0.4s; --sway:5.2s">
+                                        <div class="bb-icon"><i class="fas fa-circle-nodes"></i></div>
+                                        <div>Blends product thinking, code and creativity</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flip-card-back">
-                                <!-- Place your second photo or illustration here. You can change this src to another image in your image folder if you have one. -->
-                                <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Nerd%20Face.png"
-                                    alt="Developer Illustration">
+
+                            <div class="bb-metric pin-item" style="--r:1deg; --d:0.5s; --sway:5.4s">
+                                <div class="bb-icon"><i class="fas fa-chart-line"></i></div>
+                                <div>Measures progress with graphs and insights</div>
                             </div>
                         </div>
+
+                        <aside class="bb-side">
+                            <article class="bb-sticky sticky-peach side-note pin-item" style="--r:3deg; --d:0.25s; --sway:5.5s">
+                                I connect<br>strategy,<br>development<br>and design.
+                                <span class="bb-doodle" aria-hidden="true"><i class="fas fa-diagram-project"></i></span>
+                            </article>
+
+                            <article class="bb-quote-card pin-item" style="--r:-1.2deg; --d:0.55s; --sway:4.7s">
+                                Always learning.<br>
+                                Always building.<br>
+                                Always shipping.
+                                <div class="bb-marker"></div>
+                            </article>
+                        </aside>
                     </div>
-                    <!-- Floating badges instead of big background blob -->
-                    <div class="floating-badge"
-                        style="position: absolute; bottom: 10px; right: -10px; z-index: 3; font-size: 2.5rem; color: var(--primary); background: var(--white); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg);">
-                        <i class="fas fa-brands fa-python" style="margin: 0;"></i>
-                    </div>
-                    <div class="floating-badge"
-                        style="position: absolute; top: 30px; left: -10px; z-index: 3; font-size: 2rem; color: var(--secondary); background: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg);">
-                        <i class="fas fa-pen-nib" style="margin: 0;"></i>
-                    </div>
+
+                    <span class="tiny-tape tape-left" aria-hidden="true"></span>
+                    <span class="tiny-tape tape-right" aria-hidden="true"></span>
                 </div>
+
+                <div class="bb-plant" aria-hidden="true">
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                    <div class="pot"></div>
+                </div>
+                <div class="bb-pencils" aria-hidden="true"></div>
             </div>
+
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about section bg-light">
+    <section id="about" class="about section">
         <div class="container">
             <div class="section-header reveal">
-                <h2>About <span>Me</span></h2>
-                <div class="line"></div>
+                <h2>About Me</h2>
             </div>
             <div class="about-grid">
                 <div class="about-img reveal-left">
                     <div class="img-wrapper">
-                        <img src="image/profile.jpeg" alt="Tahlil Ullah Shaikh Profile"
-                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                        <img src="image/profile.jpeg" alt="Tahlil Ullah Shaikh Profile">
                     </div>
                 </div>
                 <div class="about-text reveal-right">
-                    <h3>B.Tech Computer Science Student</h3>
-                    <p>I am a passionate and dedicated Computer Science student currently pursuing my B.Tech degree at
-                        Geetanjali Institute of Technical Studies. I bridge the gap between technical functionality and
-                        visual aesthetics.</p>
-                    <p>My interests lie in <strong>Python programming</strong>, <strong>graphic design</strong>,
-                        exploring new <strong>technology</strong>, and <strong>problem solving</strong>. Whether it's
-                        writing efficient code or designing compelling visuals, I strive for excellence and creativity
-                        in every project I undertake.</p>
+                    <h3>B.Tech CSE Student · Product Manager Intern</h3>
+                    <p>I am a Computer Science student at Geetanjali Institute of Technical Studies and a Product
+                        Manager Intern at ToBa Tech Solutions. I bridge product thinking, engineering, and design —
+                        from sprint planning and requirement docs to Python builds and brand visuals.</p>
+                    <p>My focus areas are <strong>product planning</strong>, <strong>AI-powered automation</strong>,
+                        <strong>Python development</strong>, and <strong>graphic design</strong>. I enjoy shipping
+                        features with cross-functional teams and turning messy ideas into clear workflows and polished
+                        experiences.</p>
                     <div class="about-info">
                         <div class="info-item">
                             <i class="fas fa-envelope"></i>
-                            <span>tahlil.shaikh@gmail.com</span>
+                            <a href="mailto:tahlil.shaikh2004@gmail.com">tahlil.shaikh2004@gmail.com</a>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-location-dot"></i>
@@ -120,60 +249,55 @@
     <!-- Education & Skills -->
     <section id="education" class="edu-skills section">
         <div class="container">
-            <div class="dual-layout">
+            <div class="section-header reveal">
+                <h2>Education &amp; Skills</h2>
+            </div>
+
+            <div class="edu-skills-clean reveal">
                 <!-- Education -->
-                <div class="education-section reveal-left">
-                    <div class="section-header">
-                        <h2>My <span>Education</span></h2>
-                        <div class="line"></div>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="date">Currently Pursuing</span>
-                                <h3>B.Tech in Computer Science Engineering</h3>
-                                <p class="institution">Geetanjali Institute of Technical Studies</p>
-                                <p class="desc">Focusing on core computer science subjects, programming, and software
-                                    engineering principles.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="edu-clean">
+                    <p class="clean-kicker">Education</p>
+                    <h3>B.Tech in Computer Science Engineering</h3>
+                    <p class="edu-clean-school">Geetanjali Institute of Technical Studies</p>
+                    <span class="edu-clean-badge"><span class="pulse-dot"></span> Currently Pursuing</span>
+                    <p class="edu-clean-desc">Focusing on programming, software engineering, and building real products alongside academics.</p>
                 </div>
 
                 <!-- Skills -->
-                <div id="skills" class="skills-section reveal-right">
-                    <div class="section-header">
-                        <h2>My <span>Skills</span></h2>
-                        <div class="line"></div>
-                    </div>
+                <div id="skills" class="skills-simple">
+                    <p class="clean-kicker">Skills</p>
 
-                    <div class="skill-group">
-                        <h3>Technical Skills</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
-                            <span class="skill-tag"><i class="fab fa-html5"></i> HTML</span>
-                            <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</span>
-                            <span class="skill-tag"><i class="fab fa-js"></i> JS</span>
-                            <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
-                            <span class="skill-tag"><i class="fas fa-fire"></i> Firebase</span>
+                    <div class="simple-group">
+                        <h4>Technical</h4>
+                        <div class="simple-tags">
+                            <span>Python</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>GitHub</span>
+                            <span>Firebase</span>
                         </div>
                     </div>
 
-                    <div class="skill-group mt-4">
-                        <h3>Creative Skills</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag"><i class="fas fa-paint-brush"></i> Graphic Design</span>
-                            <span class="skill-tag"><img
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
-                                    alt="Canva" style="width: 16px; margin-right: 5px; vertical-align: middle;">
-                                Canva</span>
-                            <span class="skill-tag"><img
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                                    alt="Figma" style="width: 16px; margin-right: 5px; vertical-align: middle;">
-                                Figma</span>
-                            <span class="skill-tag"><i class="fas fa-stamp"></i> Branding</span>
-                            <span class="skill-tag"><i class="fas fa-share-alt"></i> Social Media Design</span>
+                    <div class="simple-group">
+                        <h4>Product Tools</h4>
+                        <div class="simple-tags">
+                            <span>Jira</span>
+                            <span>Leantime</span>
+                            <span>Notion</span>
+                            <span>Slack</span>
+                            <span>GitHub Projects</span>
+                        </div>
+                    </div>
+
+                    <div class="simple-group">
+                        <h4>Design</h4>
+                        <div class="simple-tags">
+                            <span>Figma</span>
+                            <span>Canva</span>
+                            <span>Graphic Design</span>
+                            <span>Branding</span>
+                            <span>Social Media Design</span>
                         </div>
                     </div>
                 </div>
@@ -182,39 +306,88 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="experience section bg-light">
+    <section id="experience" class="experience section">
         <div class="container">
-            <div class="section-header text-center reveal">
-                <h2>Work <span>Experience</span></h2>
-                <div class="line mx-auto"></div>
+            <div class="section-header reveal">
+                <h2>Work Experience</h2>
             </div>
-            <div class="experience-cards">
-                <div class="exp-card reveal">
-                    <div class="exp-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
+
+            <div class="exp-bento reveal">
+                <div class="exp-area-card">
+                    <div class="exp-chart-wrap" data-chart-wrap>
+                        <svg class="exp-area-chart" viewBox="0 0 880 260" role="img" aria-label="Career growth area chart">
+                            <defs>
+                                <linearGradient id="expFill" x1="0" y1="0" x2="0" y2="1">
+                                    <stop class="exp-stop-top" offset="0%" stop-opacity="0.42"/>
+                                    <stop class="exp-stop-mid" offset="65%" stop-opacity="0.1"/>
+                                    <stop class="exp-stop-bot" offset="100%" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+
+                            <g class="exp-guides">
+                                <line x1="60" y1="20" x2="60" y2="200"/>
+                                <line x1="195" y1="20" x2="195" y2="200"/>
+                                <line x1="330" y1="20" x2="330" y2="200"/>
+                                <line x1="465" y1="20" x2="465" y2="200"/>
+                                <line x1="600" y1="20" x2="600" y2="200"/>
+                                <line x1="735" y1="20" x2="735" y2="200"/>
+                                <line x1="820" y1="20" x2="820" y2="200"/>
+                            </g>
+
+                            <path class="exp-fill"
+                                d="M60,175 C120,168 160,155 195,150 C250,142 290,160 330,148 C380,134 420,155 465,120 C510,90 550,110 600,85 C650,62 700,70 735,55 C770,42 800,40 820,34 L820,200 L60,200 Z"/>
+
+                            <path class="exp-line" data-path
+                                d="M60,175 C120,168 160,155 195,150 C250,142 290,160 330,148 C380,134 420,155 465,120 C510,90 550,110 600,85 C650,62 700,70 735,55 C770,42 800,40 820,34"
+                                fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            <line class="exp-cross" data-crosshair x1="600" y1="20" x2="600" y2="200"/>
+
+                            <!-- Wide hover plane -->
+                            <rect class="exp-hover-plane" x="40" y="10" width="800" height="200" data-hover-plane/>
+
+                            <g class="exp-dots">
+                                <circle class="exp-hit" cx="60" cy="175" r="4" data-point data-name="Websenor" data-date="Jan 2025" data-note="Started design at Websenor" data-x="60" data-y="175"/>
+                                <circle class="exp-hit" cx="195" cy="150" r="4" data-point data-name="Craft" data-date="Jul 2025" data-note="Building design craft" data-x="195" data-y="150"/>
+                                <circle class="exp-hit" cx="330" cy="148" r="4" data-point data-name="Level up" data-date="Jan 2026" data-note="Stronger delivery systems" data-x="330" data-y="148"/>
+                                <circle class="exp-hit" cx="465" cy="120" r="4" data-point data-name="Pivot" data-date="Mar 2026" data-note="Pivot into product" data-x="465" data-y="120"/>
+                                <circle class="exp-hit is-active" cx="600" cy="85" r="4" data-point data-name="ToBa Tech" data-date="Apr 2026" data-note="Joined ToBa Tech as PM Intern" data-x="600" data-y="85"/>
+                                <circle class="exp-hit" cx="735" cy="55" r="4" data-point data-name="Shipping" data-date="Jun 2026" data-note="Shipping AI features" data-x="735" data-y="55"/>
+                                <circle class="exp-hit" cx="820" cy="34" r="4" data-point data-name="Present" data-date="Now" data-note="Growing in product ownership" data-x="820" data-y="34"/>
+                            </g>
+
+                            <g class="exp-marker" data-marker>
+                                <circle class="exp-marker-ring" cx="600" cy="85" r="8"/>
+                                <circle class="exp-marker-dot" cx="600" cy="85" r="3.5"/>
+                            </g>
+                        </svg>
+
+                        <div class="exp-float-label" data-float-label>
+                            <i></i>
+                            <span data-float-name>ToBa Tech</span>
+                        </div>
                     </div>
-                    <div class="exp-details">
-                        <span class="exp-date">Recent</span>
-                        <h3>Graphic Designer intern </h3>
-                        <p class="exp-company">Websenor</p>
-                        <p class="exp-desc">As a Graphic Design Intern, I assisted in creating logos, banners, posters,
-                            and social media graphics while ensuring brand consistency across projects. I supported the
-                            design team in developing visual concepts, editing images, and preparing layouts for digital
-                            and print materials.</p>
+
+                    <div class="exp-chart-foot">
+                        <span data-exp-date>Apr 2026</span>
+                        <span data-exp-metric>Joined ToBa Tech as PM Intern</span>
                     </div>
                 </div>
-                <!-- <div class="exp-card reveal" style="transition-delay: 0.1s;">
-                    <div class="exp-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <div class="exp-details">
-                        <span class="exp-date">Ongoing</span>
-                        <h3>Graphic Design Projects</h3>
-                        <p class="exp-company">Freelance / Independent Work</p>
-                        <p class="exp-desc">Created branding assets, social media creatives, and visual designs for
-                            various college events and independent clients.</p>
-                    </div>
-                </div> -->
+
+                <div class="exp-entries">
+                    <article class="exp-entry design">
+                        <span class="exp-date">Jan 2025 – Mar 2026</span>
+                        <h3>Graphic Designer Intern</h3>
+                        <p class="exp-company">Websenor</p>
+                        <p class="exp-desc">Built brand-consistent logos, banners, and social creatives for digital and print campaigns.</p>
+                    </article>
+                    <article class="exp-entry product">
+                        <span class="exp-date">April 2026 – Present</span>
+                        <h3>Product Manager Intern</h3>
+                        <p class="exp-company">ToBa Tech Solutions, Udaipur</p>
+                        <p class="exp-desc">Help plan and ship AI automation features for the US market with eng, design, and QA.</p>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
@@ -222,83 +395,320 @@
     <!-- Projects -->
     <section id="projects" class="projects section">
         <div class="container">
-            <div class="section-header text-center reveal">
-                <h2>Featured <span>Projects</span></h2>
-                <div class="line mx-auto"></div>
+            <div class="section-header reveal">
+                <h2>Featured Projects</h2>
             </div>
-            <div class="project-grid">
-                <!-- Project 1 -->
-                <div class="project-card reveal">
-                    <div class="project-img placeholder-bg-1">
-                        <i class="fas fa-newspaper"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>ByteMind News</h3>
-                        <p>A modern news platform that fetches and displays the latest news in a clean and responsive
-                            interface.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>Flask</span>
-                            <span>HTML/CSS</span>
+
+            <div class="carousel" data-carousel data-autoplay="4000">
+                <button class="carousel-btn prev" type="button" aria-label="Previous projects">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-img placeholder-bg-1">
+                                    <div class="project-preview">
+                                        <i class="fas fa-newspaper"></i>
+                                        <span>ByteMind News</span>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3>ByteMind News</h3>
+                                    <p>A modern news platform that fetches and displays the latest news in a clean and responsive interface.</p>
+                                    <div class="tech-stack">
+                                        <span>Python</span>
+                                        <span>Flask</span>
+                                        <span>HTML/CSS</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://bytemind-news.onrender.com" target="_blank" rel="noopener" class="btn-sm"><i class="fas fa-external-link-alt"></i> Live</a>
+                                        <a href="https://github.com/tahlil29/bytemind-news.git" target="_blank" rel="noopener" class="btn-sm"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://bytemind-news.onrender.com" target="_blank" class="btn-sm">
-                                <i class="fas fa-external-link-alt"></i> Live
-                            </a>
-                            <a href="https://github.com/tahlil29/bytemind-news.git" target="_blank" class="btn-sm">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
+
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-img placeholder-bg-2">
+                                    <div class="project-preview">
+                                        <i class="fas fa-vote-yea"></i>
+                                        <span>Voting System</span>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3>Online Voting System</h3>
+                                    <p>A secure web-based voting system where users can vote for candidates and view real-time results.</p>
+                                    <div class="tech-stack">
+                                        <span>Python</span>
+                                        <span>Flask</span>
+                                        <span>SQLite</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://voting-site-1.onrender.com" target="_blank" rel="noopener" class="btn-sm"><i class="fas fa-external-link-alt"></i> Live</a>
+                                        <a href="https://github.com/tahlil29/Voting-Site.git" target="_blank" rel="noopener" class="btn-sm"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-img placeholder-bg-3">
+                                    <div class="project-preview">
+                                        <i class="fas fa-seedling"></i>
+                                        <span>Flowera Shop</span>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3>Flowera – Online Flower Shop</h3>
+                                    <p>A responsive flower shop website where users can browse flower collections, view product details, and explore a modern shopping-style interface.</p>
+                                    <div class="tech-stack">
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://flowera.onrender.com/" target="_blank" rel="noopener" class="btn-sm"><i class="fas fa-external-link-alt"></i> Live</a>
+                                        <a href="https://github.com/tahlil29/Flowera.git" target="_blank" rel="noopener" class="btn-sm"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-img placeholder-bg-4">
+                                    <div class="project-preview">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <span>Portfolio Site</span>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3>Personal Portfolio Website</h3>
+                                    <p>This site — a responsive portfolio showcasing projects, skills, product experience, and contact options with modern UI and dark mode.</p>
+                                    <div class="tech-stack">
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://portfolio-x8op.onrender.com/" target="_blank" rel="noopener" class="btn-sm"><i class="fas fa-external-link-alt"></i> Live</a>
+                                        <a href="https://github.com/tahlil29/Portfolio.git" target="_blank" rel="noopener" class="btn-sm"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-img placeholder-bg-5">
+                                    <div class="project-preview">
+                                        <i class="fas fa-pen-nib"></i>
+                                        <span>Design Work</span>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3>Brand &amp; Social Design Showcase</h3>
+                                    <p>Design work from the Websenor internship — logos, banners, posters, and social media creatives with brand-consistent layouts for digital and print.</p>
+                                    <div class="tech-stack">
+                                        <span>Canva</span>
+                                        <span>Figma</span>
+                                        <span>Branding</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="#experience" class="btn-sm"><i class="fas fa-briefcase"></i> Experience</a>
+                                        <a href="https://www.linkedin.com/in/tahlil-shaikh-223993268" target="_blank" rel="noopener" class="btn-sm"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <button class="carousel-btn next" type="button" aria-label="Next projects">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
 
-                <!-- Project 2 -->
-                <div class="project-card reveal" style="transition-delay: 0.1s;">
-                    <div class="project-img placeholder-bg-2">
-                        <i class="fas fa-vote-yea"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Online Voting System</h3>
-                        <p>A secure web-based voting system where users can vote for candidates and view real-time
-                            results.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>Flask</span>
-                            <span>SQLite</span>
+    <!-- Case Studies -->
+    <section id="case-studies" class="case-studies section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Project Case Studies</h2>
+                <p class="section-sub text-muted">A closer look at problem, role, process, and outcome.</p>
+            </div>
+
+            <div class="carousel" data-carousel data-autoplay="5000">
+                <button class="carousel-btn prev" type="button" aria-label="Previous case study">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                        <div class="carousel-slide case-slide">
+                            <article class="case-card">
+                                <span class="case-label">Case Study 01</span>
+                                <h3>ByteMind News</h3>
+                                <div class="case-block">
+                                    <h4>Problem</h4>
+                                    <p>People needed a simple way to scan current headlines without a cluttered news experience.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>My Role</h4>
+                                    <p>Designed and built the full stack — Flask backend, news fetch flow, and responsive frontend.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>What I Shipped</h4>
+                                    <p>A live news platform with clean category browsing and a mobile-friendly layout, deployed on Render.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>Outcome</h4>
+                                    <p>Published a working product end-to-end and strengthened skills in Python, Flask, and UI structure.</p>
+                                </div>
+                                <a href="https://bytemind-news.onrender.com" target="_blank" rel="noopener" class="case-link">View live project <i class="fas fa-arrow-right"></i></a>
+                            </article>
                         </div>
-                        <div class="project-links">
-                            <a href="https://voting-site-1.onrender.com" target="_blank" class="btn-sm">
-                                <i class="fas fa-external-link-alt"></i> Live
-                            </a>
-                            <a href="https://github.com/tahlil29/Voting-Site.git" target="_blank" class="btn-sm">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
+
+                        <div class="carousel-slide case-slide">
+                            <article class="case-card">
+                                <span class="case-label">Case Study 02</span>
+                                <h3>Online Voting System</h3>
+                                <div class="case-block">
+                                    <h4>Problem</h4>
+                                    <p>Manual voting is slow and hard to audit. Teams needed a digital flow with clear results.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>My Role</h4>
+                                    <p>Built the voting workflow, candidate listing, and SQLite-backed result tracking in Flask.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>What I Shipped</h4>
+                                    <p>A secure web voting system where users can cast votes and see results update in real time.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>Outcome</h4>
+                                    <p>Delivered a complete demo product covering auth flow concepts, data persistence, and result visibility.</p>
+                                </div>
+                                <a href="https://voting-site-1.onrender.com" target="_blank" rel="noopener" class="case-link">View live project <i class="fas fa-arrow-right"></i></a>
+                            </article>
+                        </div>
+
+                        <div class="carousel-slide case-slide">
+                            <article class="case-card">
+                                <span class="case-label">Case Study 03</span>
+                                <h3>Flowera – Online Flower Shop</h3>
+                                <div class="case-block">
+                                    <h4>Problem</h4>
+                                    <p>Small flower shops needed a clean digital storefront to showcase collections without a heavy ecommerce setup.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>My Role</h4>
+                                    <p>Designed and coded the full frontend experience — product browsing, detail pages, and responsive layout.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>What I Shipped</h4>
+                                    <p>A polished shopping-style website with collection views and product pages, live on Render.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>Outcome</h4>
+                                    <p>Improved frontend craft and UI consistency while shipping a complete customer-facing demo.</p>
+                                </div>
+                                <a href="https://flowera.onrender.com/" target="_blank" rel="noopener" class="case-link">View live project <i class="fas fa-arrow-right"></i></a>
+                            </article>
+                        </div>
+
+                        <div class="carousel-slide case-slide">
+                            <article class="case-card">
+                                <span class="case-label">Case Study 04</span>
+                                <h3>Personal Portfolio Website</h3>
+                                <div class="case-block">
+                                    <h4>Problem</h4>
+                                    <p>Needed one place to present product, engineering, and design work clearly for recruiters and collaborators.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>My Role</h4>
+                                    <p>Owned structure, content, UI, dark mode, and deployment for the full personal site.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>What I Shipped</h4>
+                                    <p>A responsive portfolio with experience, projects, case studies, and contact — hosted on Render.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>Outcome</h4>
+                                    <p>Created a cleaner personal brand presence that connects product work with shipped projects.</p>
+                                </div>
+                                <a href="https://portfolio-x8op.onrender.com/" target="_blank" rel="noopener" class="case-link">View live project <i class="fas fa-arrow-right"></i></a>
+                            </article>
+                        </div>
+
+                        <div class="carousel-slide case-slide">
+                            <article class="case-card">
+                                <span class="case-label">Case Study 05</span>
+                                <h3>Brand &amp; Social Design at Websenor</h3>
+                                <div class="case-block">
+                                    <h4>Problem</h4>
+                                    <p>Fast social and print deadlines needed on-brand visuals without losing consistency across assets.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>My Role</h4>
+                                    <p>Created logos, banners, posters, and social graphics while supporting layout and visual concept work.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>What I Shipped</h4>
+                                    <p>Reusable creative outputs for digital and print that matched brand guidelines across campaigns.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>Outcome</h4>
+                                    <p>Built stronger design systems thinking and faster delivery under real client-style timelines.</p>
+                                </div>
+                                <a href="#experience" class="case-link">View experience <i class="fas fa-arrow-right"></i></a>
+                            </article>
                         </div>
                     </div>
                 </div>
+                <button class="carousel-btn next" type="button" aria-label="Next case study">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
 
-                <!-- Project 3 -->
-                <div class="project-card reveal" style="transition-delay: 0.2s;">
-                    <div class="project-img placeholder-bg-3">
-                        <i class="fas fa-seedling"></i>
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Feedback &amp; Highlights</h2>
+                <p class="section-sub text-muted">Replace these with quotes from managers, mentors, or teammates when
+                    ready.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>“Tahlil consistently delivered clean, on-brand visuals and was reliable with deadlines across
+                        social and print assets.”</p>
+                    <div class="testimonial-author">
+                        <strong>Design Lead</strong>
+                        <span>Websenor</span>
                     </div>
-                    <div class="project-content">
-                        <h3>Flowera – Online Flower Shop</h3>
-                        <p>A responsive flower shop website where users can browse flower collections, view product
-                            details, and explore a modern shopping-style interface.</p>
-                        <div class="tech-stack">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://flowera.onrender.com/" target="_blank" class="btn-sm">
-                                <i class="fas fa-external-link-alt"></i> Live
-                            </a>
-                            <a href="https://github.com/tahlil29/Flowera.git" target="_blank" class="btn-sm">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay: 0.1s;">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>“Strong mix of product thinking and execution — clear requirement notes, good sprint follow-ups,
+                        and practical collaboration with eng and design.”</p>
+                    <div class="testimonial-author">
+                        <strong>Product Team</strong>
+                        <span>ToBa Tech Solutions</span>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay: 0.2s;">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>“Shows ownership from idea to deployment. Flask projects were structured, documented, and
+                        presented clearly.”</p>
+                    <div class="testimonial-author">
+                        <strong>Project Mentor</strong>
+                        <span>Academic / College Projects</span>
                     </div>
                 </div>
             </div>
@@ -306,11 +716,10 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section bg-light">
+    <section id="contact" class="contact section">
         <div class="container">
-            <div class="section-header text-center reveal">
-                <h2>Get In <span>Touch</span></h2>
-                <div class="line mx-auto"></div>
+            <div class="section-header reveal">
+                <h2>Get In Touch</h2>
                 <p class="contact-subtitle mt-4 text-muted">I'm currently open for new opportunities and collaborations.
                 </p>
             </div>
@@ -321,31 +730,36 @@
                         <div class="icon-circle"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h4>Email Me</h4>
-                            <p>tahlil.shaikh2004@gmail.com</p>
+                            <p><a href="mailto:tahlil.shaikh2004@gmail.com">tahlil.shaikh2004@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="info-box">
                         <div class="icon-circle"><i class="fab fa-linkedin-in"></i></div>
                         <div>
                             <h4>LinkedIn</h4>
-                            <p>www.linkedin.com/in/tahlil-shaikh-223993268</p>
+                            <p><a href="https://www.linkedin.com/in/tahlil-shaikh-223993268" target="_blank"
+                                    rel="noopener">linkedin.com/in/tahlil-shaikh-223993268</a></p>
                         </div>
                     </div>
                     <div class="info-box">
                         <div class="icon-circle"><i class="fab fa-github"></i></div>
                         <div>
                             <h4>GitHub</h4>
-                            <p>https://github.com/tahlil29</p>
+                            <p><a href="https://github.com/tahlil29" target="_blank"
+                                    rel="noopener">github.com/tahlil29</a></p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="icon-circle"><i class="fas fa-file-arrow-down"></i></div>
+                        <div>
+                            <h4>Resume</h4>
+                            <p><a href="resume.html" target="_blank" rel="noopener">View / download resume</a></p>
                         </div>
                     </div>
                 </div>
 
                 <form id="contactForm" action="https://formsubmit.co/tahlil.shaikh2004@gmail.com" method="POST"
                     class="contact-form reveal-right">
-                    <!-- Disable Captcha optionally (uncomment if you want to bypass the captcha screen) -->
-                    <!-- <input type="hidden" name="_captcha" value="false"> -->
-                    <!-- Configure the success page (Replace with your actual website URL when deployed) -->
-                    <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html"> -->
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
                     </div>
@@ -369,21 +783,26 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">Tahlil Ullah Shaikh</div>
-                <div class="social-links">
-                    <a href="https://github.com/tahlil29" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="www.linkedin.com/in/tahlil-shaikh-223993268" aria-label="LinkedIn"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <!-- <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                <div class="footer-actions">
+                    <a href="resume/Tahlil_Shaikh_Resume.pdf" class="footer-resume" download="Tahlil_Shaikh_Resume.pdf">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <div class="social-links">
+                        <a href="https://github.com/tahlil29" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/tahlil-shaikh-223993268" target="_blank" rel="noopener"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:tahlil.shaikh2004@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Tahlil Ullah Shaikh. All rights reserved.</p>
+                <p>Built with curiosity, shipped with care — product, code &amp; design by Tahlil · &copy; 2026</p>
             </div>
         </div>
     </footer>
 
-    <script src="js.js"></script>
+    <script src="js.js?v=20260727themes"></script>
 </body>
 
 </html>

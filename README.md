@@ -1,132 +1,54 @@
-Personal Portfolio Website 💻
+# Personal Portfolio Website
 
-This is my personal developer portfolio website where I showcase my projects, skills, education, and experience as a Python Developer and Graphic Designer.
+Personal developer portfolio for **Tahlil Ullah Shaikh** — Product Manager Intern, Python Developer, and Graphic Designer.
 
-The website is designed to provide a clean and professional overview of my work and allow visitors to explore my projects and contact me easily.
+**Live site:** https://portfolio-x8op.onrender.com/
 
-🌐 Live Website
+## Features
 
-Visit the portfolio here:
+- Responsive modern layout with dark mode toggle
+- Hero “currently working on” banner + resume download
+- Education, skills (tags + proficiency bars), certifications
+- Work experience (ToBa Tech + Websenor)
+- Featured projects, case studies, blog teasers, testimonials
+- Live GitHub repos via GitHub API
+- Contact form + fixed social links
+- Printable resume page (`resume.html`)
 
-https://portfolio-x8op.onrender.com/
+## Local preview
 
-📌 Project Overview
+```bash
+python -m http.server 8080
+```
 
-The portfolio website highlights my journey as a Computer Science student and developer. It includes sections that display my background, technical skills, projects, and contact information.
+Open http://localhost:8080
 
-The main goal of this project is to create a professional online presence that represents my work and achievements.
+## Custom domain (optional)
 
-🚀 Features
+1. Buy a domain (e.g. `tahlilshaikh.dev`)
+2. In Render → your static site → **Custom Domains**, add the domain
+3. Point DNS:
+   - `A` / `CNAME` records as Render instructs
+4. Update Open Graph URLs in `index.html` to the new domain
 
-Modern and responsive design
+## Google Analytics (optional)
 
-Smooth scrolling navigation
+1. Create a GA4 property at https://analytics.google.com
+2. In `index.html`, uncomment the Analytics script block in `<head>`
+3. Replace `G-XXXXXXXXXX` with your Measurement ID
 
-Dedicated sections for projects and skills
+## Resume PDF
 
-Professional portfolio layout
+1. Open `/resume.html`
+2. Print → Save as PDF
+3. Optionally save as `resume/Tahlil_Shaikh_Resume.pdf` and link that file from the hero CTA
 
-Mobile-friendly interface
+## Tech stack
 
-Contact form for collaboration and opportunities
+HTML · CSS · JavaScript · Font Awesome · Google Fonts · FormSubmit · GitHub API · Render
 
-📂 Website Sections
+## Author
 
-The portfolio contains the following sections:
-
-⭐Home
-
-Introduction with name, role, and quick navigation to important sections.
-
-![Home Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133509.png?raw=true)
-
-⭐About Me
-
-Information about my background, interests, and goals as a developer.
-
-⭐Education
-
-Details about my B.Tech in Computer Science Engineering at Geetanjali Institute of Technical Studies.
-
-⭐Skills
-
-Technical and creative skills including:
-
-Python
-
-Java
-
-C++
-
-Database Basics
-
-Graphic Design
-
-Branding
-
-UI Design
-
-![Skills Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133536.png?raw=true)
-
-⭐Projects
-
-Some of my major projects include:
-
-ByteMind News – Online news platform built with Python and Flask
-
-Online Voting System – Digital voting platform with database integration
-
-Flowera – Frontend flower shop website
-
-![Project Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133548.png?raw=true)
-
-⭐Contact
-
-Visitors can reach out through the contact form or connect via GitHub and LinkedIn.
-
-![contact Page](https://github.com/tahlil29/Portfolio/blob/main/Screenshot%202026-03-10%20133600.png?raw=true)
-
-🛠️ Technologies Used
-
-Frontend:
-
-HTML
-
-CSS
-
-JavaScript
-
-Design:
-
-Responsive UI design
-
-Modern portfolio layout
-
-Deployment:
-
-Render hosting
-
-📈 Future Improvements
-
-Planned improvements for the portfolio include:
-
-Adding more project case studies
-
-Integrating GitHub API for automatic project display
-
-Adding dark mode
-
-Improving animations and UI design
-
-Adding blog section
-
-👨‍💻 Author
-
-Tahlil Ullah Shaikh
-
-B.Tech Computer Science Engineering
-Python Developer | Graphic Designer
-
+**Tahlil Ullah Shaikh**  
+B.Tech Computer Science Engineering  
 GitHub: https://github.com/tahlil29
-
-⭐ If you like this project, consider giving it a star on GitHub.
