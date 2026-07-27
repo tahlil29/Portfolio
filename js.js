@@ -360,3 +360,49 @@ document.querySelectorAll('.exp-bento').forEach(block => {
     const initial = block.querySelector('.exp-hit.is-active') || points[4] || points[0];
     if (initial) activate(initial, false);
 });
+
+// Contact form — AJAX FormSubmit with inline status
+(() => {
+    const form = document.getElementById('contactForm');
+    const btn = document.getElementById('submitBtn');
+    const msg = document.getElementById('formMessage');
+    if (!form || !btn || !msg) return;
+
+    const showMessage = (text, type) => {
+        msg.hidden = false;
+        msg.textContent = text;
+        msg.classList.remove('is-success', 'is-error');
+        msg.classList.add(type === 'success' ? 'is-success' : 'is-error');
+    };
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const honey = form.querySelector('[name="_honey"]');
+        if (honey && honey.value) return;
+
+        btn.disabled = true;
+        const original = btn.innerHTML;
+        btn.innerHTML = 'Sending… <i class="fas fa-spinner fa-spin"></i>';
+        msg.hidden = true;
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { Accept: 'application/json' }
+            });
+
+            if (response.ok) {
+                form.reset();
+                showMessage('Message sent — I’ll get back to you soon.', 'success');
+            } else {
+                showMessage('Couldn’t send right now. Email me directly instead.', 'error');
+            }
+        } catch (_) {
+            showMessage('Network issue. Try again or email me directly.', 'error');
+        } finally {
+            btn.disabled = false;
+            btn.innerHTML = original;
+        }
+    });
+})();
