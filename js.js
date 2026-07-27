@@ -1,8 +1,46 @@
-// Billboard — idle sway on pin items
+// Billboard — idle sway + phone scale-to-fit (full board, not stacked)
 (() => {
     const board = document.querySelector('[data-pin-board]');
+    const fit = document.querySelector('.board-fit');
     if (!board) return;
+
     requestAnimationFrame(() => board.classList.add('is-live'));
+
+    const fitBoard = () => {
+        if (!fit) return;
+        const mq = window.matchMedia('(max-width: 900px)');
+        if (!mq.matches) {
+            fit.style.removeProperty('--board-scale');
+            fit.style.removeProperty('--board-natural-height');
+            fit.style.height = '';
+            return;
+        }
+
+        const designWidth = parseFloat(getComputedStyle(fit).getPropertyValue('--board-design-width')) || 980;
+        const available = fit.clientWidth || (window.innerWidth - 16);
+        const scale = Math.min(1, available / designWidth);
+        fit.style.setProperty('--board-scale', String(scale));
+
+        // Measure natural height without the scaled wrapper constraint
+        fit.style.height = 'auto';
+        const inner = board.querySelector('.board') || board;
+        const shellStyles = getComputedStyle(board);
+        const padY = (parseFloat(shellStyles.paddingTop) || 0) + (parseFloat(shellStyles.paddingBottom) || 0);
+        const naturalHeight = (inner.scrollHeight || inner.offsetHeight) + padY;
+
+        if (naturalHeight > 0) {
+            fit.style.setProperty('--board-natural-height', `${naturalHeight}px`);
+            fit.style.height = `${naturalHeight * scale}px`;
+        }
+    };
+
+    const scheduleFit = () => requestAnimationFrame(fitBoard);
+
+    scheduleFit();
+    window.addEventListener('resize', scheduleFit);
+    window.addEventListener('orientationchange', scheduleFit);
+    if (document.fonts?.ready) document.fonts.ready.then(scheduleFit);
+    window.addEventListener('load', scheduleFit);
 })();
 
 // Theme toggle

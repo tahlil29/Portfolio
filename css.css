@@ -1078,6 +1078,14 @@ ul {
     box-shadow: 0 16px 30px rgba(78, 61, 39, 0.2);
 }
 
+.board-fit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .board-shell .pin-item,
     .board-shell.is-live .pin-item {
@@ -1086,57 +1094,136 @@ ul {
     }
 }
 
+/* Tablet: keep full board composition, slightly tighter */
 @media (max-width: 1120px) {
-    .bb-page { width: min(1000px, 94vw); }
-    .bb-top-row { grid-template-columns: 1fr 1.3fr 1fr; gap: 1rem; }
-    .bb-content-row { grid-template-columns: 150px minmax(0, 1fr) 150px; gap: 0.75rem; }
-    .bb-sticky { font-size: 1.15rem; }
-    .bb-columns { gap: 0.55rem; }
-    .note-card { grid-template-columns: 32px 1fr; font-size: 0.72rem; }
+    .bb-page { width: min(1000px, 96vw); }
+    .bb-top-row { grid-template-columns: 1fr 1.35fr 1fr; gap: 0.85rem; }
+    .bb-content-row { grid-template-columns: 140px minmax(0, 1fr) 140px; gap: 0.65rem; }
+    .bb-sticky { font-size: 1.1rem; padding: 1.25rem 0.9rem 0.85rem; }
+    .bb-columns { gap: 0.5rem; }
+    .note-card { grid-template-columns: 30px 1fr; font-size: 0.7rem; padding: 0.5rem 0.45rem; }
     .bb-plant, .bb-pencils { display: none; }
 }
 
+/*
+ * Phone / small tablet: scale the FULL desktop board to fit width
+ * instead of stacking into a list.
+ */
 @media (max-width: 900px) {
     .hero.section,
-    .hero-board { padding-top: 4rem; padding-bottom: 1.75rem; }
-    .bb-title { font-size: clamp(1.85rem, 6vw, 2.6rem); }
-    .board {
-        padding: 1.25rem 0.95rem;
-        min-height: 0;
+    .hero-board { padding-top: 4rem; padding-bottom: 1.25rem; }
+
+    .bb-page {
+        width: 100%;
+        padding: 0 0.4rem;
         overflow: visible;
     }
-    .bb-top-row { grid-template-columns: 1fr; gap: 1rem; }
-    .bb-top-row .bb-sticky { max-width: 360px; margin: 0 auto; width: 100%; }
-    .bb-identity { order: -1; width: min(580px, 100%); margin: 0 auto; }
-    .bb-content-row { grid-template-columns: 1fr; gap: 1.25rem; }
-    .bb-side { display: grid; grid-template-columns: 1fr 1fr; height: auto; gap: 0.85rem; }
-    .bb-columns { grid-template-columns: 1fr; }
-    .note-card { min-height: auto; }
-    .bb-metric { width: 100%; min-width: 0; }
+
+    .bb-title { font-size: clamp(1.55rem, 6.5vw, 2.2rem); }
+    .bb-subtitle { margin-bottom: 0.75rem; font-size: 0.92rem; }
+
+    .board-fit {
+        --board-design-width: 980px;
+        --board-scale: 1;
+        height: calc(var(--board-natural-height, 640px) * var(--board-scale));
+        overflow: hidden;
+        align-items: flex-start;
+    }
+
+    .board-fit .board-shell {
+        width: var(--board-design-width);
+        flex: 0 0 auto;
+        align-self: flex-start;
+        height: auto;
+        min-height: min-content;
+        transform: scale(var(--board-scale));
+        transform-origin: top center;
+        padding: 0.55rem;
+        border-radius: 1.5rem;
+    }
+
+    .board {
+        padding: 1rem 1.05rem 1.05rem;
+        min-height: 0;
+        overflow: visible;
+        border-radius: 1.15rem;
+    }
+
+    /* Keep full pinboard grid — do not stack */
+    .bb-top-row {
+        grid-template-columns: 1fr 1.5fr 1fr;
+        gap: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .bb-top-row .bb-sticky {
+        max-width: none;
+        margin: 0;
+        width: auto;
+    }
+
+    .bb-identity {
+        order: 0;
+        width: auto;
+        margin: 0.55rem 0 0;
+    }
+
+    .bb-content-row {
+        grid-template-columns: 155px minmax(0, 1fr) 155px;
+        gap: 0.75rem;
+    }
+
+    .bb-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.85rem;
+        height: 100%;
+    }
+
+    .bb-columns {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.55rem;
+    }
+
+    .bb-sticky {
+        font-size: 1.15rem;
+        min-height: 0;
+        padding: 1.3rem 0.95rem 0.9rem;
+        color: #1c1917;
+    }
+
+    .bb-metric {
+        width: min(70%, 420px);
+        min-width: min(100%, 240px);
+    }
+
     .tiny-tape { display: none; }
+
+    /* Keep gentle pin tilt on phone */
     .board-shell .pin-item,
     .board-shell.is-live .pin-item {
-        --r: 0deg !important;
-        animation: none;
-        transform: none;
+        transform: rotate(var(--r));
     }
+
+    .board-shell.is-live .pin-item {
+        animation: bbSway var(--sway) ease-in-out infinite;
+        animation-delay: var(--d);
+    }
+
     .board-shell.is-live .pin-item:hover {
-        transform: translateY(-3px);
+        transform: rotate(0deg) translateY(-4px) scale(1.02);
     }
 }
 
 @media (max-width: 560px) {
-    .bb-page { width: 100%; padding: 0 0.15rem; }
-    .board-shell { padding: 0.4rem; border-radius: 1.35rem; }
-    .board { border-radius: 1.05rem; padding: 1rem 0.7rem; }
-    .bb-side { grid-template-columns: 1fr; }
-    .bb-identity { padding: 1.75rem 1rem 1.25rem; }
-    .bb-identity h2 { font-size: 1.4rem; }
-    .bb-subtitle { margin-bottom: 1rem; font-size: 0.98rem; }
-    .bb-sticky { min-height: 0; font-size: 1.3rem; padding: 1.6rem 1.1rem 1.1rem; }
-    .bb-metric { grid-template-columns: 44px 1fr; padding: 0.85rem; font-size: 0.9rem; }
-    .column-title { font-size: 0.72rem; }
-    .note-card { font-size: 0.82rem; padding: 0.75rem; }
+    .bb-page { padding: 0 0.35rem; }
+    .board-fit { --board-design-width: 920px; }
+    .bb-subtitle { margin-bottom: 0.65rem; font-size: 0.88rem; }
+}
+
+@media (max-width: 400px) {
+    .board-fit { --board-design-width: 880px; }
 }
 
 /* About */
