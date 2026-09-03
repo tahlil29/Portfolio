@@ -35,7 +35,7 @@
         rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css.css?v=20260727polish">
+    <link rel="stylesheet" href="css.css?v=20260903pm">
 
     <!--
       Google Analytics (optional):
@@ -299,6 +299,9 @@
                             <span>Notion</span>
                             <span>Slack</span>
                             <span>GitHub Projects</span>
+                            <span>User stories</span>
+                            <span>Acceptance criteria</span>
+                            <span>Sprint planning</span>
                         </div>
                     </div>
 
@@ -397,7 +400,13 @@
                         <span class="exp-date">April 2026 – Present</span>
                         <h3>Product Manager Intern</h3>
                         <p class="exp-company">ToBa Tech Solutions, Udaipur</p>
-                        <p class="exp-desc">Help plan and ship AI automation features for the US market with eng, design, and QA.</p>
+                        <p class="exp-desc">Help plan and ship AI Agents &amp; Workflow Automation releases for the US market with eng, design, and QA.</p>
+                        <ul class="exp-bullets">
+                            <li>Turn product intent into requirement notes, workflow docs, and sprint-ready acceptance criteria.</li>
+                            <li>Help prioritize sprint goals and track delivery across eng, design, and QA.</li>
+                            <li>Keep handoffs clear so the team can ship without guessing what “done” means.</li>
+                            <li>Use a CS / Python background to write buildable tickets and catch gaps early.</li>
+                        </ul>
                     </article>
                 </div>
             </div>
@@ -424,8 +433,9 @@
                                 </div>
                                 <div class="project-content">
                                     <h3>ByteMind News</h3>
-                                    <p>AI news aggregator with search, categories, and a clean reading UI — built end-to-end in Flask and deployed live.</p>
+                                    <p>AI news aggregator with search, categories, and a clean reading UI — built end-to-end in Flask and deployed live. MVP choice: fast scan + categories, not a heavy social feed.</p>
                                     <div class="tech-stack">
+                                        <span>Product</span>
                                         <span>Python</span>
                                         <span>Flask</span>
                                         <span>HTML/CSS</span>
@@ -445,8 +455,9 @@
                                 </div>
                                 <div class="project-content">
                                     <h3>Online Voting System</h3>
-                                    <p>Digital voting flow with candidate listing and live results — SQLite-backed so votes persist and stay easy to audit.</p>
+                                    <p>Digital voting flow with candidate listing and live results — SQLite-backed so votes persist and stay easy to audit. Product choice: persistent, auditable results over a UI-only demo.</p>
                                     <div class="tech-stack">
+                                        <span>Product</span>
                                         <span>Python</span>
                                         <span>Flask</span>
                                         <span>SQLite</span>
@@ -466,8 +477,9 @@
                                 </div>
                                 <div class="project-content">
                                     <h3>Flowera – Online Flower Shop</h3>
-                                    <p>Shopping-style storefront for flower collections and product pages — focused on clear browsing without heavy ecommerce setup.</p>
+                                    <p>Shopping-style storefront for flower collections and product pages — focused on clear browsing without heavy ecommerce setup. MVP choice: browse and collections first, not payments or checkout.</p>
                                     <div class="tech-stack">
+                                        <span>Product</span>
                                         <span>HTML</span>
                                         <span>CSS</span>
                                         <span>JavaScript</span>
@@ -547,22 +559,26 @@
                         <div class="carousel-slide case-slide">
                             <article class="case-card">
                                 <span class="case-label">Case Study 01 · Product</span>
-                                <h3>ToBa Tech — AI Automation Features</h3>
+                                <h3>ToBa Tech — AI Agents &amp; Workflow Automation Releases</h3>
                                 <div class="case-block">
                                     <h4>Problem</h4>
-                                    <p>US-facing AI automation work needed clearer scoping so engineering, design, and QA could ship without fuzzy handoffs.</p>
+                                    <p>US small-business AI automation work (intake, follow-ups, scheduling, and related workflows) needed clearer scoping so engineering, design, and QA could ship without fuzzy handoffs — requests often arrived as ideas, not buildable tickets.</p>
                                 </div>
                                 <div class="case-block">
                                     <h4>My Role</h4>
-                                    <p>As PM Intern I wrote requirement notes, helped prioritize sprint goals, tracked delivery, and connected product intent with buildable tickets.</p>
+                                    <p>As PM Intern I owned requirement notes, acceptance criteria, workflow docs, and delivery tracking for these releases. I did not own the full roadmap; I connected product intent with tickets the team could actually build.</p>
+                                </div>
+                                <div class="case-block">
+                                    <h4>Tradeoff</h4>
+                                    <p>When a request was too broad for one sprint, I pushed for a smaller, testable slice first — so eng and QA had a clear “done,” instead of a vague epic that stalled.</p>
                                 </div>
                                 <div class="case-block">
                                     <h4>What I Shipped</h4>
-                                    <p>Clearer feature briefs, sprint-ready acceptance notes, and day-to-day coordination across eng, design, and QA for AI automation releases.</p>
+                                    <p>Sprint-ready feature briefs and acceptance notes for AI agents &amp; workflow automation releases, plus day-to-day coordination across eng, design, and QA — written so a CS-minded intern could catch gaps early.</p>
                                 </div>
                                 <div class="case-block">
                                     <h4>Outcome</h4>
-                                    <p>Reduced ambiguity in handoffs and helped the team move from ideas to shipped automation features with fewer rework loops.</p>
+                                    <p>Clearer handoffs and fewer “what did we mean?” loops when moving from idea to shipped automation work for the US market.</p>
                                 </div>
                                 <a href="#experience" class="case-link">View experience <i class="fas fa-arrow-right"></i></a>
                             </article>
@@ -570,7 +586,7 @@
 
                         <div class="carousel-slide case-slide">
                             <article class="case-card">
-                                <span class="case-label">Case Study 02</span>
+                                <span class="case-label">Case Study 02 · Product + Build</span>
                                 <h3>ByteMind News</h3>
                                 <div class="case-block">
                                     <h4>Problem</h4>
@@ -578,15 +594,15 @@
                                 </div>
                                 <div class="case-block">
                                     <h4>My Role</h4>
-                                    <p>Designed and built the full stack — Flask backend, news fetch flow, and responsive frontend.</p>
+                                    <p>Owned product scope and the full stack — chose the MVP, then built Flask backend, news fetch flow, and responsive frontend.</p>
                                 </div>
                                 <div class="case-block">
                                     <h4>What I Shipped</h4>
-                                    <p>A live news platform with search, category browsing, and a mobile-friendly layout on Render.</p>
+                                    <p>A live news platform with search, category browsing, and a mobile-friendly layout on Render. Cut social / feed complexity so launch stayed focused.</p>
                                 </div>
                                 <div class="case-block">
                                     <h4>Outcome</h4>
-                                    <p>A public product recruiters can click — not just a repo — covering fetch, UI, and deployment.</p>
+                                    <p>A public product recruiters can click — not just a repo — covering problem framing, MVP cut, fetch, UI, and deployment.</p>
                                 </div>
                                 <a href="https://bytemind-news.onrender.com" target="_blank" rel="noopener" class="case-link">View live project <i class="fas fa-arrow-right"></i></a>
                             </article>
@@ -707,7 +723,7 @@
                 <article class="highlight-card reveal">
                     <div class="highlight-icon"><i class="fas fa-diagram-project"></i></div>
                     <h3>Product at ToBa Tech</h3>
-                    <p>PM Intern helping plan and ship AI automation features for the US market with eng, design, and QA.</p>
+                    <p>PM Intern on AI Agents &amp; Workflow Automation releases for the US market — requirement notes, sprint goals, and clear handoffs with eng, design, and QA.</p>
                     <a href="#experience" class="highlight-link">See experience <i class="fas fa-arrow-right"></i></a>
                 </article>
                 <article class="highlight-card reveal" style="transition-delay: 0.1s;">

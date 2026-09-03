@@ -1709,6 +1709,22 @@ ul {
     margin: 0;
 }
 
+.exp-bullets {
+    margin: 0.85rem 0 0;
+    padding-left: 1.15rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.exp-bullets li {
+    margin-bottom: 0.35rem;
+}
+
+.exp-bullets li:last-child {
+    margin-bottom: 0;
+}
+
 /* Projects */
 .project-card {
     background: var(--card-bg);
