@@ -183,142 +183,60 @@ window.addEventListener('scroll', () => {
 })();
 
 (() => {
-    const root = document.querySelector('[data-growth-root]');
+    document.querySelectorAll('a.back-link[data-back]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const fallback = link.getAttribute('href');
+            if (window.history.length <= 1) return;
+            e.preventDefault();
+            const referrer = document.referrer;
+            if (referrer) {
+                try {
+                    if (new URL(referrer).origin === window.location.origin) {
+                        window.history.back();
+                        return;
+                    }
+                } catch (_) { /* ignore */ }
+            }
+            if (fallback) window.location.href = fallback;
+        });
+    });
+
+    document.querySelectorAll('a.proto-back-link[data-back]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const fallback = link.getAttribute('href');
+            if (window.history.length <= 1) return;
+            e.preventDefault();
+            const referrer = document.referrer;
+            if (referrer) {
+                try {
+                    if (new URL(referrer).origin === window.location.origin) {
+                        window.history.back();
+                        return;
+                    }
+                } catch (_) { /* ignore */ }
+            }
+            if (fallback) window.location.href = fallback;
+        });
+    });
+})();
+
+(() => {
+    const root = document.querySelector('[data-journey-root]');
     if (!root) return;
 
-    const chart = root.querySelector('[data-growth-chart]');
-    const tooltip = root.querySelector('#growth-tooltip');
-    const path = root.querySelector('[data-growth-path]');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    const milestones = [
-        {
-            year: '2024',
-            title: 'Design',
-            highlights: ['Visual design', 'Creative work', 'User-facing digital experiences'],
-            scroll: '#experience',
-            note: ''
-        },
-        {
-            year: '2025',
-            title: 'Development & product building',
-            highlights: ['Web development', 'Python / Flask', 'Personal projects', 'Thinking beyond implementation'],
-            scroll: '#projects',
-            note: ''
-        },
-        {
-            year: '2026',
-            title: 'Product operations',
-            highlights: ['ToBa Tech', 'Product operations', 'Task & workflow management', 'Stakeholder communication'],
-            scroll: '#experience',
-            note: ''
-        },
-        {
-            year: '2026',
-            title: 'Product strategy',
-            highlights: ['Product case studies', 'Retention analysis & UX', 'Experiment design', 'Product & strategy work'],
-            scroll: '#work',
-            note: ''
-        },
-        {
-            year: '2027',
-            title: 'PM / APM · target direction',
-            highlights: ['Product Management', 'Associate Product Management', 'Product Operations', 'Discovery → execution ownership'],
-            scroll: '#contact',
-            note: 'Career direction — not a role already held.'
-        }
-    ];
-
-    milestones.forEach((m, i) => {
-        const sr = root.querySelector(`#growth-tip-${i}`);
-        if (sr) sr.textContent = `${m.year} ${m.title}: ${m.highlights.join(', ')}`;
-    });
-
-    const renderTooltip = (m, node) => {
-        if (!tooltip || !node) return;
-        const list = m.highlights.map((h) => `<li>${h}</li>`).join('');
-        const note = m.note ? `<p class="growth-tip-note">${m.note}</p>` : '';
-        tooltip.innerHTML = `<strong>${m.year} · ${m.title}</strong><ul>${list}</ul>${note}`;
-        tooltip.hidden = false;
-
-        const wrap = chart.getBoundingClientRect();
-        const rect = node.getBoundingClientRect();
-        const left = rect.left - wrap.left + rect.width / 2;
-        const top = rect.top - wrap.top;
-        tooltip.style.left = `${Math.min(Math.max(left, 120), wrap.width - 120)}px`;
-        tooltip.style.top = `${Math.max(top - 12, 8)}px`;
-        tooltip.style.transform = 'translate(-50%, -100%)';
-    };
-
-    const hideTooltip = () => {
-        if (tooltip) tooltip.hidden = true;
-        root.querySelectorAll('.growth-node.is-active').forEach((n) => n.classList.remove('is-active'));
-    };
-
-    const goTo = (selector) => {
-        const el = document.querySelector(selector);
-        if (el) el.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
-    };
-
-    root.querySelectorAll('.growth-node[data-growth-index]').forEach((node) => {
-        const index = Number(node.dataset.growthIndex);
-        const m = milestones[index];
-        if (!m) return;
-
-        node.addEventListener('mouseenter', () => {
-            root.querySelectorAll('.growth-node').forEach((n) => n.classList.remove('is-active'));
-            node.classList.add('is-active');
-            renderTooltip(m, node);
-        });
-        node.addEventListener('focus', () => {
-            node.classList.add('is-active');
-            renderTooltip(m, node);
-        });
-        node.addEventListener('mouseleave', hideTooltip);
-        node.addEventListener('blur', hideTooltip);
-        node.addEventListener('click', () => goTo(m.scroll));
-        node.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                goTo(m.scroll);
-            }
-        });
-    });
-
-    root.querySelectorAll('.growth-mobile .growth-milestone[data-growth-index]').forEach((card) => {
-        const index = Number(card.dataset.growthIndex);
-        const m = milestones[index];
-        if (!m) return;
-        const activate = () => goTo(m.scroll);
-        card.addEventListener('click', activate);
-        card.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                activate();
-            }
-        });
-    });
-
-    if (chart && path && !reducedMotion) {
-        const length = path.getTotalLength();
-        path.style.strokeDasharray = `${length}`;
-        path.style.strokeDashoffset = `${length}`;
-
-        const io = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
-                chart.classList.add('is-visible');
-                path.style.strokeDashoffset = '0';
-                observer.unobserve(entry.target);
-            });
-        }, { threshold: 0.35 });
-
-        io.observe(chart);
-    } else if (chart) {
-        chart.classList.add('is-visible');
-        if (path) {
-            path.style.strokeDasharray = 'none';
-            path.style.strokeDashoffset = '0';
-        }
+    if (reducedMotion) {
+        root.classList.add('is-visible');
+        return;
     }
+
+    const io = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            root.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        });
+    }, { threshold: 0.18 });
+
+    io.observe(root);
 })();

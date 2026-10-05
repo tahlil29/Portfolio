@@ -107,6 +107,19 @@ def main():
         ],
     )
     pdf.ln(1)
+    job(pdf, "Product Manager Intern", "Yaveta Solutions", "September 2025 - March 2026")
+    bullets(
+        pdf,
+        [
+            "Supported product planning and execution across ongoing product initiatives, helping translate requirements into actionable tasks and deliverables.",
+            "Worked with cross-functional teams to coordinate feature requirements, development activities, testing, and product delivery.",
+            "Assisted in preparing and maintaining product documentation, requirements, user stories, and project updates.",
+            "Used Jira to track tasks, monitor sprint progress, manage issues, and coordinate day-to-day product execution.",
+            "Collaborated with UI/UX teams using Figma to review designs and align product requirements with the intended user experience.",
+            "Supported stakeholder and technical-team communication to clarify requirements and keep product initiatives moving forward.",
+        ],
+    )
+    pdf.ln(1)
     job(pdf, "Graphic Designer Intern", "Websenor", "Jan 2025 - Mar 2026")
     bullets(
         pdf,
