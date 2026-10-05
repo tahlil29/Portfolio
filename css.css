@@ -2613,6 +2613,10 @@ footer {
         font-size: 2.75rem;
     }
 
+    .pm-hero .name {
+        font-size: clamp(2.85rem, 12vw, 3.85rem);
+    }
+
     .about-info {
         justify-content: flex-start;
     }
@@ -2744,6 +2748,10 @@ footer {
 
     .name {
         font-size: 2.2rem;
+    }
+
+    .pm-hero .name {
+        font-size: clamp(2.65rem, 14vw, 3.35rem);
     }
 
     .subtitle {
@@ -4027,8 +4035,8 @@ footer {
 .pm-hero {
     position: relative;
     text-align: center;
-    padding-top: 6rem;
-    padding-bottom: 4rem;
+    padding-top: clamp(5.5rem, 12vh, 8.5rem);
+    padding-bottom: clamp(4rem, 10vh, 6.5rem);
     overflow: hidden;
 }
 
@@ -4064,12 +4072,12 @@ footer {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    font-size: 0.65rem;
+    font-size: clamp(0.72rem, 1.1vw, 0.88rem);
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: color-mix(in srgb, var(--accent-lavender) 45%, var(--text-muted));
-    opacity: 0.55;
+    opacity: 0.62;
 }
 
 .hero-float-labels span:nth-child(1) { position: absolute; left: 8%; top: 28%; }
@@ -4080,32 +4088,57 @@ footer {
 .pm-hero-inner {
     position: relative;
     z-index: 1;
-    max-width: 42rem;
+    max-width: 52rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.pm-hero .name {
-    font-size: clamp(2.4rem, 6vw, 3.5rem);
-    margin-bottom: 0.75rem;
+.pm-hero .pm-kicker {
+    font-size: clamp(0.82rem, 1.35vw, 1rem);
+    letter-spacing: 0.14em;
+    margin-bottom: 1.15rem;
 }
 
-.pm-lede {
+.pm-hero .name {
+    font-size: clamp(3.15rem, 9.5vw, 5.5rem);
+    margin-bottom: 1.1rem;
+    letter-spacing: -0.04em;
+    line-height: 1.02;
+}
+
+.pm-hero .pm-lede {
+    font-size: clamp(1.2rem, 2.35vw, 1.5rem);
+    max-width: 44rem;
+    margin-bottom: 2.25rem;
+    line-height: 1.55;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
-.pm-cred {
+.pm-hero .pm-cred {
+    font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+    margin-top: 1.85rem;
     text-align: center;
-    max-width: 36rem;
+    max-width: 40rem;
 }
 
 .pm-hero .cta-group {
+    gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.pm-hero .cta-group .btn {
+    padding: 0.95rem 1.65rem;
+    font-size: 1.02rem;
+}
+
+.pm-cred {
+    text-align: center;
+    max-width: 36rem;
 }
 
 .section-label {
