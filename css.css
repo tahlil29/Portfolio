@@ -1,73 +1,96 @@
 :root {
+    --color-mint: #4E806F;
+    --color-lavender: #7168A8;
+    --color-blue: #4E78A8;
+    --color-coral: #B9685B;
+    --color-amber: #9A741E;
+    --color-teal: #4E8A84;
     --primary: #17181B;
     --primary-light: #60646D;
     --primary-dark: #0f1012;
-    --secondary: #756DB3;
-    --accent: #4E7F70;
-    --accent-pink: #756DB3;
-    --accent-mint: #4E7F70;
-    --accent-lavender: #756DB3;
-    --accent-blue: #5a8fc4;
-    --on-accent: #F6F3ED;
+    --secondary: var(--color-lavender);
+    --accent: var(--color-mint);
+    --accent-pink: var(--color-lavender);
+    --accent-mint: var(--color-mint);
+    --accent-lavender: var(--color-lavender);
+    --accent-blue: var(--color-blue);
+    --accent-coral: var(--color-coral);
+    --accent-amber: var(--color-amber);
+    --accent-teal: var(--color-teal);
+    --on-accent: #0A0C10;
     --dark: #17181B;
     --dark-light: #60646D;
     --light: #F6F3ED;
     --white: #FFFFFF;
     --text-main: #17181B;
     --text-muted: #60646D;
-    --text-soft: #777D88;
+    --text-soft: #777D89;
     --border: rgba(0, 0, 0, 0.10);
     --nav-bg: rgba(246, 243, 237, 0.92);
     --card-bg: #FFFFFF;
-    --card-elevated: #FFFFFF;
+    --card-elevated: #FAF8F4;
+    --card-hover: #F3F0EA;
     --section-alt: transparent;
     --bar-track: rgba(0, 0, 0, 0.08);
-    --bar-fill: #4E7F70;
-    --chart: #4E7F70;
-    --chart-soft: rgba(78, 127, 112, 0.22);
+    --bar-fill: var(--color-mint);
+    --chart: var(--color-mint);
+    --chart-soft: rgba(78, 128, 111, 0.22);
     --footer-bg: #17181B;
     --radius: 1.25rem;
     --shadow-sm: 0 1px 2px rgba(23, 24, 27, 0.06);
     --shadow-md: 0 12px 32px rgba(23, 24, 27, 0.08);
     --shadow-lg: 0 20px 48px rgba(23, 24, 27, 0.12);
     --transition: all 0.28s ease;
-    --hero-glow-mint: rgba(78, 127, 112, 0.12);
-    --hero-glow-lavender: rgba(117, 109, 179, 0.10);
+    --hero-glow-mint: rgba(78, 128, 111, 0.10);
+    --hero-glow-lavender: rgba(113, 104, 168, 0.08);
+    --hero-glow-blue: rgba(78, 120, 168, 0.07);
+    --border-hover-mix: 0.30;
 }
 
 [data-theme="dark"] {
-    --primary: #F4F1EA;
-    --primary-light: #A7ABB5;
-    --primary-dark: #777D88;
-    --secondary: #AAA0FF;
-    --accent: #A8D5C2;
-    --accent-pink: #AAA0FF;
-    --accent-mint: #A8D5C2;
-    --accent-lavender: #AAA0FF;
-    --accent-blue: #8DB9E8;
-    --on-accent: #0B0C0F;
-    --dark: #F4F1EA;
-    --dark-light: #A7ABB5;
-    --light: #0B0C0F;
-    --white: #15171C;
-    --text-main: #F4F1EA;
-    --text-muted: #A7ABB5;
-    --text-soft: #777D88;
-    --border: rgba(255, 255, 255, 0.10);
-    --nav-bg: rgba(11, 12, 15, 0.92);
-    --card-bg: #15171C;
-    --card-elevated: #1B1E25;
+    --color-mint: #A8DCC8;
+    --color-lavender: #B4A7FF;
+    --color-blue: #8DBFFF;
+    --color-coral: #FF9D8D;
+    --color-amber: #F2C879;
+    --color-teal: #78CFC8;
+    --primary: #F5F2EA;
+    --primary-light: #B2B5BE;
+    --primary-dark: #777D89;
+    --secondary: var(--color-lavender);
+    --accent: var(--color-mint);
+    --accent-pink: var(--color-lavender);
+    --accent-mint: var(--color-mint);
+    --accent-lavender: var(--color-lavender);
+    --accent-blue: var(--color-blue);
+    --accent-coral: var(--color-coral);
+    --accent-amber: var(--color-amber);
+    --accent-teal: var(--color-teal);
+    --on-accent: #0A0C10;
+    --dark: #F5F2EA;
+    --dark-light: #B2B5BE;
+    --light: #0A0C10;
+    --white: #171A21;
+    --text-main: #F5F2EA;
+    --text-muted: #B2B5BE;
+    --text-soft: #777D89;
+    --border: rgba(255, 255, 255, 0.08);
+    --nav-bg: rgba(10, 12, 16, 0.88);
+    --card-bg: #171A21;
+    --card-elevated: #11141A;
+    --card-hover: #1D212A;
     --section-alt: transparent;
     --bar-track: rgba(255, 255, 255, 0.08);
-    --bar-fill: #A8D5C2;
-    --chart: #A8D5C2;
-    --chart-soft: rgba(168, 213, 194, 0.22);
-    --footer-bg: #0B0C0F;
+    --bar-fill: var(--color-mint);
+    --chart: var(--color-mint);
+    --chart-soft: rgba(168, 220, 200, 0.18);
+    --footer-bg: #0A0C10;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
-    --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.35);
-    --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.45);
-    --hero-glow-mint: rgba(168, 213, 194, 0.14);
-    --hero-glow-lavender: rgba(170, 160, 255, 0.12);
+    --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.40);
+    --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.48);
+    --hero-glow-mint: rgba(168, 220, 200, 0.08);
+    --hero-glow-lavender: rgba(180, 167, 255, 0.07);
+    --hero-glow-blue: rgba(141, 191, 255, 0.06);
 }
 
 * {
@@ -99,11 +122,12 @@ body {
 }
 
 [data-theme="dark"] body {
-    background-color: #0B0C0F;
+    background-color: #0A0C10;
     background-image:
-        radial-gradient(ellipse 70% 45% at 50% -15%, var(--hero-glow-mint), transparent 52%),
-        radial-gradient(ellipse 45% 35% at 85% 5%, var(--hero-glow-lavender), transparent 48%),
-        linear-gradient(180deg, #0B0C0F 0%, #111318 100%);
+        radial-gradient(circle at 30% 20%, var(--hero-glow-mint), transparent 35%),
+        radial-gradient(circle at 75% 30%, var(--hero-glow-lavender), transparent 35%),
+        radial-gradient(circle at 55% 0%, var(--hero-glow-blue), transparent 40%),
+        linear-gradient(180deg, #0A0C10 0%, #11141A 100%);
 }
 
 h1, h2, h3, h4, h5, h6, .logo {
@@ -223,7 +247,7 @@ ul {
 }
 
 [data-theme="dark"] .btn-primary:hover {
-    background: color-mix(in srgb, var(--accent-mint) 80%, #fff);
+    background: var(--color-teal);
     color: var(--on-accent);
 }
 
@@ -234,7 +258,7 @@ ul {
 }
 
 .btn-secondary:hover {
-    border-color: var(--dark);
+    border-color: color-mix(in srgb, var(--color-lavender) 45%, var(--border));
     color: var(--dark);
     transform: translateY(-1px);
     background: transparent;
@@ -384,7 +408,7 @@ ul {
 }
 
 [data-theme="dark"] .btn-nav:hover {
-    background: color-mix(in srgb, var(--accent-mint) 80%, #fff);
+    background: var(--color-teal);
     color: var(--on-accent) !important;
 }
 
@@ -450,9 +474,10 @@ ul {
 }
 
 [data-theme="dark"] .btn-outline:hover {
-    background: #f5f2ed;
-    color: #1c1917;
-    border-color: #f5f2ed;
+    background: var(--card-bg);
+    color: var(--text-main);
+    border-color: color-mix(in srgb, var(--color-lavender) 55%, var(--border));
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--color-lavender) 12%, transparent);
 }
 
 .hero-content {
@@ -3448,8 +3473,15 @@ footer {
     width: 100%;
     transform-origin: left center;
     transform: scaleX(0);
-    background: linear-gradient(90deg, var(--accent-mint), var(--accent-lavender), var(--accent-blue));
-    opacity: 0.9;
+    background: linear-gradient(
+        90deg,
+        var(--color-mint),
+        var(--color-blue),
+        var(--color-lavender),
+        var(--color-coral),
+        var(--color-amber)
+    );
+    opacity: 0.75;
     transition: transform 0.85s cubic-bezier(0.4, 0, 0.2, 1) 0.05s;
 }
 
@@ -3836,12 +3868,12 @@ footer {
     color: var(--text-muted);
 }
 
-.pm-label--problem { color: color-mix(in srgb, var(--accent-pink) 70%, var(--text-muted)); }
-.pm-label--insight { color: color-mix(in srgb, #8ab4d4 65%, var(--text-muted)); }
-.pm-label--hypothesis { color: color-mix(in srgb, #b69cff 55%, var(--text-muted)); }
-.pm-label--decision { color: var(--accent-mint); }
-.pm-label--metric { color: color-mix(in srgb, var(--accent-mint) 80%, #c4a574); }
-.pm-label--tradeoff { color: color-mix(in srgb, var(--accent-pink) 55%, var(--text-muted)); }
+.pm-label--problem { color: color-mix(in srgb, var(--color-lavender) 82%, var(--text-muted)); }
+.pm-label--insight { color: color-mix(in srgb, var(--color-blue) 75%, var(--text-muted)); }
+.pm-label--hypothesis { color: color-mix(in srgb, var(--color-blue) 88%, var(--text-muted)); }
+.pm-label--decision { color: var(--color-mint); }
+.pm-label--metric { color: color-mix(in srgb, var(--color-amber) 85%, var(--text-muted)); }
+.pm-label--tradeoff { color: color-mix(in srgb, var(--color-coral) 70%, var(--text-muted)); }
 
 .pm-callout {
     margin: 1rem 0 0;
@@ -4005,10 +4037,12 @@ footer {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 55% 45% at 50% 20%, var(--hero-glow-mint), transparent 65%),
-        radial-gradient(ellipse 40% 35% at 80% 30%, var(--hero-glow-lavender), transparent 60%);
+        radial-gradient(circle at 30% 20%, var(--hero-glow-mint), transparent 35%),
+        radial-gradient(circle at 75% 30%, var(--hero-glow-lavender), transparent 35%),
+        radial-gradient(circle at 55% 10%, var(--hero-glow-blue), transparent 38%),
+        radial-gradient(ellipse 55% 45% at 50% 20%, var(--hero-glow-mint), transparent 65%);
     pointer-events: none;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .hero-grid-noise {
@@ -4522,3 +4556,474 @@ textarea:focus-visible {
         transform: none !important;
     }
 }
+
+/* ——— Color depth pass (palette + accents only) ——— */
+
+.nav-links a:hover:not(.btn-nav) {
+    color: color-mix(in srgb, var(--color-mint) 75%, var(--dark));
+}
+
+[data-theme="dark"] .nav-links a:hover:not(.btn-nav) {
+    color: var(--color-mint);
+}
+
+.nav-links a.active:not(.btn-nav) {
+    color: var(--dark);
+    background: color-mix(in srgb, var(--color-lavender) 14%, color-mix(in srgb, var(--color-mint) 10%, transparent));
+}
+
+[data-theme="dark"] .nav-links a.active:not(.btn-nav) {
+    color: var(--text-main);
+    background: color-mix(in srgb, var(--color-lavender) 12%, color-mix(in srgb, var(--color-mint) 8%, transparent));
+}
+
+#about .section-label {
+    color: color-mix(in srgb, var(--color-mint) 90%, var(--text-muted));
+    padding-left: 0.65rem;
+    border-left: 2px solid color-mix(in srgb, var(--color-mint) 50%, transparent);
+}
+
+#journey .journey-kicker {
+    color: color-mix(in srgb, var(--color-blue) 85%, var(--text-muted));
+}
+
+#experience .section-header h2 {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-teal) 50%, transparent);
+    text-underline-offset: 0.32em;
+    text-decoration-thickness: 2px;
+}
+
+#cases .section-label {
+    color: color-mix(in srgb, var(--color-lavender) 88%, var(--text-muted));
+}
+
+#thinking .section-label {
+    color: color-mix(in srgb, var(--color-coral) 82%, var(--text-muted));
+}
+
+#artifacts .section-header h2 {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-amber) 55%, transparent);
+    text-underline-offset: 0.32em;
+    text-decoration-thickness: 2px;
+}
+
+#projects .section-header h2 {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-blue) 50%, transparent);
+    text-underline-offset: 0.32em;
+    text-decoration-thickness: 2px;
+}
+
+#contact .section-header h2 {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-mint) 50%, transparent);
+    text-underline-offset: 0.32em;
+    text-decoration-thickness: 2px;
+}
+
+.text-link {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: color-mix(in srgb, var(--color-mint) 70%, var(--text-main));
+    transition: color 0.2s ease;
+}
+
+.text-link:hover {
+    color: var(--color-mint);
+}
+
+.journey-rail-nodes .journey-node:nth-child(1),
+.journey-body-col:nth-child(1) .journey-node--stack {
+    border-color: color-mix(in srgb, var(--color-mint) 58%, var(--border));
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--color-mint) 11%, transparent);
+}
+
+.journey-rail-nodes .journey-node:nth-child(2),
+.journey-body-col:nth-child(2) .journey-node--stack {
+    border-color: color-mix(in srgb, var(--color-blue) 58%, var(--border));
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--color-blue) 11%, transparent);
+}
+
+.journey-rail-nodes .journey-node:nth-child(3),
+.journey-body-col:nth-child(3) .journey-node--stack {
+    border-color: color-mix(in srgb, var(--color-teal) 58%, var(--border));
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--color-teal) 11%, transparent);
+}
+
+.journey-rail-nodes .journey-node:nth-child(4),
+.journey-body-col:nth-child(4) .journey-node--stack {
+    border-color: color-mix(in srgb, var(--color-lavender) 58%, var(--border));
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--color-lavender) 11%, transparent);
+}
+
+.journey-rail-nodes .journey-node:nth-child(5),
+.journey-body-col:nth-child(5) .journey-node--stack {
+    border-color: color-mix(in srgb, var(--color-coral) 55%, var(--color-amber));
+    box-shadow:
+        0 0 0 6px color-mix(in srgb, var(--color-coral) 14%, transparent),
+        0 0 20px color-mix(in srgb, var(--color-amber) 10%, transparent);
+}
+
+.journey-rail-nodes .journey-node:nth-child(1) .journey-node-inner,
+.journey-body-col:nth-child(1) .journey-node--stack .journey-node-inner {
+    background: color-mix(in srgb, var(--color-mint) 92%, #fff);
+}
+
+.journey-rail-nodes .journey-node:nth-child(2) .journey-node-inner,
+.journey-body-col:nth-child(2) .journey-node--stack .journey-node-inner {
+    background: color-mix(in srgb, var(--color-blue) 92%, #fff);
+}
+
+.journey-rail-nodes .journey-node:nth-child(3) .journey-node-inner,
+.journey-body-col:nth-child(3) .journey-node--stack .journey-node-inner {
+    background: color-mix(in srgb, var(--color-teal) 92%, #fff);
+}
+
+.journey-rail-nodes .journey-node:nth-child(4) .journey-node-inner,
+.journey-body-col:nth-child(4) .journey-node--stack .journey-node-inner {
+    background: color-mix(in srgb, var(--color-lavender) 92%, #fff);
+}
+
+.journey-rail-nodes .journey-node:nth-child(5) .journey-node-inner,
+.journey-body-col:nth-child(5) .journey-node--stack .journey-node-inner {
+    background: linear-gradient(135deg, var(--color-coral), var(--color-amber));
+}
+
+.journey-body-col.is-future .journey-title {
+    color: color-mix(in srgb, var(--color-coral) 55%, var(--dark));
+}
+
+.journey-body-col:nth-child(1) .journey-tags span:nth-child(1) {
+    background: color-mix(in srgb, var(--color-mint) 10%, transparent);
+    border-color: color-mix(in srgb, var(--color-mint) 26%, var(--border));
+    color: color-mix(in srgb, var(--color-mint) 82%, var(--text-muted));
+}
+
+.journey-body-col:nth-child(1) .journey-tags span:nth-child(2) {
+    background: color-mix(in srgb, var(--color-lavender) 10%, transparent);
+    border-color: color-mix(in srgb, var(--color-lavender) 26%, var(--border));
+    color: color-mix(in srgb, var(--color-lavender) 82%, var(--text-muted));
+}
+
+.journey-body-col:nth-child(2) .journey-tags span:nth-child(1) {
+    background: color-mix(in srgb, var(--color-blue) 10%, transparent);
+    border-color: color-mix(in srgb, var(--color-blue) 26%, var(--border));
+    color: color-mix(in srgb, var(--color-blue) 82%, var(--text-muted));
+}
+
+.journey-body-col:nth-child(2) .journey-tags span:nth-child(2),
+.journey-body-col:nth-child(2) .journey-tags span:nth-child(3) {
+    background: color-mix(in srgb, var(--color-blue) 8%, transparent);
+    border-color: color-mix(in srgb, var(--color-blue) 22%, var(--border));
+    color: color-mix(in srgb, var(--color-blue) 75%, var(--text-muted));
+}
+
+.journey-body-col:nth-child(3) .journey-tags span:nth-child(1) {
+    background: color-mix(in srgb, var(--color-teal) 10%, transparent);
+    border-color: color-mix(in srgb, var(--color-teal) 26%, var(--border));
+    color: color-mix(in srgb, var(--color-teal) 82%, var(--text-muted));
+}
+
+.journey-body-col:nth-child(3) .journey-tags span:nth-child(2) {
+    background: color-mix(in srgb, var(--color-amber) 10%, transparent);
+    border-color: color-mix(in srgb, var(--color-amber) 26%, var(--border));
+    color: color-mix(in srgb, var(--color-amber) 82%, var(--text-muted));
+}
+
+.journey-body-col:nth-child(4) .journey-tags span:nth-child(1),
+.journey-body-col:nth-child(4) .journey-tags span:nth-child(3) {
+    background: color-mix(in srgb, var(--color-lavender) 10%, transparent);
+    border-color: color-mix(in srgb, var(--color-lavender) 26%, var(--border));
+    color: color-mix(in srgb, var(--color-lavender) 82%, var(--text-muted));
+}
+
+.journey-body-col:nth-child(5) .journey-tags span:nth-child(2) {
+    background: color-mix(in srgb, var(--color-lavender) 10%, transparent);
+    border-color: color-mix(in srgb, var(--color-lavender) 26%, var(--border));
+    color: color-mix(in srgb, var(--color-lavender) 82%, var(--text-muted));
+}
+
+.journey-body-col:nth-child(5) .journey-tags span:nth-child(3) {
+    background: color-mix(in srgb, var(--color-amber) 10%, transparent);
+    border-color: color-mix(in srgb, var(--color-amber) 26%, var(--border));
+    color: color-mix(in srgb, var(--color-amber) 82%, var(--text-muted));
+}
+
+.exp-timeline {
+    border-left-color: color-mix(in srgb, var(--color-mint) 22%, var(--border));
+}
+
+.exp-timeline-item:nth-child(1)::before {
+    border-color: color-mix(in srgb, var(--color-teal) 55%, var(--color-mint));
+}
+
+.exp-timeline-item:nth-child(1) .exp-timeline-date {
+    color: color-mix(in srgb, var(--color-mint) 85%, var(--text-muted));
+}
+
+.exp-timeline-item:nth-child(1) .exp-timeline-role {
+    color: color-mix(in srgb, var(--color-teal) 70%, var(--text-muted));
+}
+
+.exp-timeline-item:nth-child(1):hover .exp-timeline-body {
+    border-color: color-mix(in srgb, var(--color-teal) 32%, var(--border));
+    box-shadow: 0 10px 28px color-mix(in srgb, var(--color-teal) 10%, transparent);
+}
+
+.exp-timeline-item:nth-child(2)::before {
+    border-color: color-mix(in srgb, var(--color-lavender) 55%, var(--color-blue));
+}
+
+.exp-timeline-item:nth-child(2) .exp-timeline-date {
+    color: color-mix(in srgb, var(--color-lavender) 80%, var(--text-muted));
+}
+
+.exp-timeline-item:nth-child(2) .exp-timeline-role {
+    color: color-mix(in srgb, var(--color-blue) 72%, var(--text-muted));
+}
+
+.exp-timeline-item:nth-child(2):hover .exp-timeline-body {
+    border-color: color-mix(in srgb, var(--color-lavender) 30%, var(--border));
+    box-shadow: 0 10px 28px color-mix(in srgb, var(--color-lavender) 10%, transparent);
+}
+
+.exp-timeline-item.is-foundation::before {
+    border-color: color-mix(in srgb, var(--color-coral) 50%, var(--color-amber));
+}
+
+.exp-timeline-item.is-foundation .exp-timeline-date {
+    color: color-mix(in srgb, var(--color-coral) 78%, var(--text-muted));
+}
+
+.exp-timeline-item.is-foundation .exp-timeline-role {
+    color: color-mix(in srgb, var(--color-amber) 75%, var(--text-muted));
+}
+
+.exp-timeline-item.is-foundation:hover .exp-timeline-body {
+    border-color: color-mix(in srgb, var(--color-coral) 28%, var(--border));
+}
+
+.work-grid.four .work-card:nth-child(1) .work-cat,
+.work-grid.four .work-card:nth-child(1) .work-index {
+    color: color-mix(in srgb, var(--color-teal) 80%, var(--color-blue));
+}
+
+.work-grid.four .work-card:nth-child(1):hover {
+    border-color: color-mix(in srgb, var(--color-teal) 32%, var(--border));
+    box-shadow: 0 14px 32px color-mix(in srgb, var(--color-teal) 12%, transparent);
+}
+
+.work-grid.four .work-card:nth-child(1) .work-link:hover {
+    color: var(--color-teal);
+}
+
+.work-grid.four .work-card:nth-child(2) .work-cat {
+    color: color-mix(in srgb, var(--color-mint) 70%, var(--color-lavender));
+}
+
+.work-grid.four .work-card:nth-child(2):hover {
+    border-color: color-mix(in srgb, var(--color-lavender) 30%, var(--border));
+    box-shadow: 0 14px 32px color-mix(in srgb, var(--color-mint) 10%, transparent);
+}
+
+.work-grid.four .work-card:nth-child(2) .work-link:hover {
+    color: var(--color-mint);
+}
+
+.work-grid.four .work-card:nth-child(3) .work-cat {
+    color: color-mix(in srgb, var(--color-lavender) 75%, var(--color-coral));
+}
+
+.work-grid.four .work-card:nth-child(3):hover {
+    border-color: color-mix(in srgb, var(--color-lavender) 28%, var(--border));
+}
+
+.work-grid.four .work-card:nth-child(3) .work-link:hover {
+    color: var(--color-lavender);
+}
+
+.work-grid.four .work-card:nth-child(4) .work-cat {
+    color: color-mix(in srgb, var(--color-blue) 72%, var(--color-amber));
+}
+
+.work-grid.four .work-card:nth-child(4):hover {
+    border-color: color-mix(in srgb, var(--color-blue) 30%, var(--border));
+}
+
+.work-grid.four .work-card:nth-child(4) .work-link:hover {
+    color: var(--color-blue);
+}
+
+.project-visual-grid .project-visual-card:nth-child(1) .project-visual-media {
+    background:
+        radial-gradient(ellipse 80% 70% at 20% 30%, color-mix(in srgb, var(--color-blue) 22%, transparent), transparent 55%),
+        radial-gradient(ellipse 70% 60% at 85% 70%, color-mix(in srgb, var(--color-lavender) 18%, transparent), transparent 50%),
+        #11141A;
+}
+
+.project-visual-grid .project-visual-card:nth-child(1) .project-visual-cat {
+    color: color-mix(in srgb, var(--color-blue) 78%, var(--color-lavender));
+}
+
+.project-visual-grid .project-visual-card:nth-child(1):hover {
+    border-color: color-mix(in srgb, var(--color-blue) 32%, var(--border));
+}
+
+.project-visual-grid .project-visual-card:nth-child(2) .project-visual-media {
+    background:
+        radial-gradient(ellipse 75% 65% at 30% 40%, color-mix(in srgb, var(--color-teal) 22%, transparent), transparent 55%),
+        radial-gradient(ellipse 60% 50% at 80% 20%, color-mix(in srgb, var(--color-mint) 16%, transparent), transparent 50%),
+        #11141A;
+}
+
+.project-visual-grid .project-visual-card:nth-child(2) .project-visual-cat {
+    color: color-mix(in srgb, var(--color-teal) 80%, var(--color-mint));
+}
+
+.project-visual-grid .project-visual-card:nth-child(2):hover {
+    border-color: color-mix(in srgb, var(--color-teal) 30%, var(--border));
+}
+
+.project-visual-grid .project-visual-card:nth-child(3) .project-visual-media {
+    background:
+        radial-gradient(ellipse 70% 60% at 25% 35%, color-mix(in srgb, var(--color-mint) 18%, transparent), transparent 55%),
+        radial-gradient(ellipse 65% 55% at 75% 65%, color-mix(in srgb, var(--color-coral) 16%, transparent), transparent 50%),
+        #11141A;
+}
+
+.project-visual-grid .project-visual-card:nth-child(3) .project-visual-cat {
+    color: color-mix(in srgb, var(--color-mint) 70%, var(--color-coral));
+}
+
+.project-visual-grid .project-visual-card:nth-child(3):hover {
+    border-color: color-mix(in srgb, var(--color-coral) 28%, var(--border));
+}
+
+.project-visual-grid .project-visual-card:nth-child(4) .project-visual-media {
+    background:
+        radial-gradient(ellipse 75% 65% at 35% 30%, color-mix(in srgb, var(--color-lavender) 20%, transparent), transparent 55%),
+        radial-gradient(ellipse 60% 50% at 85% 75%, color-mix(in srgb, var(--color-blue) 18%, transparent), transparent 50%),
+        #11141A;
+}
+
+.project-visual-grid .project-visual-card:nth-child(4) .project-visual-cat {
+    color: color-mix(in srgb, var(--color-lavender) 75%, var(--color-blue));
+}
+
+.project-visual-grid .project-visual-card:nth-child(4):hover {
+    border-color: color-mix(in srgb, var(--color-lavender) 30%, var(--border));
+}
+
+.artifact-grid .artifact-card-v2:nth-child(1) .artifact-index { color: var(--color-mint); }
+.artifact-grid .artifact-card-v2:nth-child(2) .artifact-index { color: var(--color-blue); }
+.artifact-grid .artifact-card-v2:nth-child(3) .artifact-index { color: var(--color-lavender); }
+.artifact-grid .artifact-card-v2:nth-child(4) .artifact-index { color: var(--color-teal); }
+.artifact-grid .artifact-card-v2:nth-child(5) .artifact-index { color: var(--color-coral); }
+.artifact-grid .artifact-card-v2:nth-child(6) .artifact-index { color: var(--color-amber); }
+
+.artifact-grid .artifact-card-v2:nth-child(1):hover { border-color: color-mix(in srgb, var(--color-mint) 30%, var(--border)); box-shadow: 0 12px 28px color-mix(in srgb, var(--color-mint) 10%, transparent); }
+.artifact-grid .artifact-card-v2:nth-child(2):hover { border-color: color-mix(in srgb, var(--color-blue) 30%, var(--border)); box-shadow: 0 12px 28px color-mix(in srgb, var(--color-blue) 10%, transparent); }
+.artifact-grid .artifact-card-v2:nth-child(3):hover { border-color: color-mix(in srgb, var(--color-lavender) 30%, var(--border)); box-shadow: 0 12px 28px color-mix(in srgb, var(--color-lavender) 10%, transparent); }
+.artifact-grid .artifact-card-v2:nth-child(4):hover { border-color: color-mix(in srgb, var(--color-teal) 30%, var(--border)); box-shadow: 0 12px 28px color-mix(in srgb, var(--color-teal) 10%, transparent); }
+.artifact-grid .artifact-card-v2:nth-child(5):hover { border-color: color-mix(in srgb, var(--color-coral) 30%, var(--border)); box-shadow: 0 12px 28px color-mix(in srgb, var(--color-coral) 10%, transparent); }
+.artifact-grid .artifact-card-v2:nth-child(6):hover { border-color: color-mix(in srgb, var(--color-amber) 30%, var(--border)); box-shadow: 0 12px 28px color-mix(in srgb, var(--color-amber) 10%, transparent); }
+
+.artifact-grid .artifact-card-v2:nth-child(1) .artifact-preview { background: color-mix(in srgb, var(--color-mint) 6%, #11141A); }
+.artifact-grid .artifact-card-v2:nth-child(2) .artifact-preview { background: color-mix(in srgb, var(--color-blue) 6%, #11141A); }
+.artifact-grid .artifact-card-v2:nth-child(3) .artifact-preview { background: color-mix(in srgb, var(--color-lavender) 6%, #11141A); }
+.artifact-grid .artifact-card-v2:nth-child(4) .artifact-preview { background: color-mix(in srgb, var(--color-teal) 6%, #11141A); }
+.artifact-grid .artifact-card-v2:nth-child(5) .artifact-preview { background: color-mix(in srgb, var(--color-coral) 6%, #11141A); }
+.artifact-grid .artifact-card-v2:nth-child(6) .artifact-preview { background: color-mix(in srgb, var(--color-amber) 6%, #11141A); }
+
+.pm-flow::before {
+    background: linear-gradient(90deg, var(--color-lavender), var(--color-blue), var(--color-mint), var(--color-coral), var(--color-teal), var(--color-amber));
+    opacity: 0.4;
+}
+
+.pm-flow-step[data-accent="coral"] .pm-flow-num,
+.pm-flow-step[data-accent="coral"] .pm-flow-icon {
+    color: var(--color-coral);
+}
+
+.pm-flow-step[data-accent="coral"] .pm-flow-icon {
+    background: color-mix(in srgb, var(--color-coral) 16%, transparent);
+}
+
+.pm-flow-step[data-accent="teal"] .pm-flow-num,
+.pm-flow-step[data-accent="teal"] .pm-flow-icon {
+    color: var(--color-teal);
+}
+
+.pm-flow-step[data-accent="teal"] .pm-flow-icon {
+    background: color-mix(in srgb, var(--color-teal) 16%, transparent);
+}
+
+.pm-flow-step[data-accent="amber"] .pm-flow-num,
+.pm-flow-step[data-accent="amber"] .pm-flow-icon {
+    color: var(--color-amber);
+}
+
+.pm-flow-step[data-accent="amber"] .pm-flow-icon {
+    background: color-mix(in srgb, var(--color-amber) 16%, transparent);
+}
+
+.pm-flow-step[data-accent="lavender"] .pm-flow-num { color: var(--color-lavender); }
+.pm-flow-step[data-accent="blue"] .pm-flow-num { color: var(--color-blue); }
+.pm-flow-step[data-accent="mint"] .pm-flow-num { color: var(--color-mint); }
+
+.pm-flow-step[data-accent="lavender"]:hover { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-lavender) 35%, transparent); border-radius: 12px; }
+.pm-flow-step[data-accent="blue"]:hover { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-blue) 35%, transparent); border-radius: 12px; }
+.pm-flow-step[data-accent="mint"]:hover { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-mint) 35%, transparent); border-radius: 12px; }
+.pm-flow-step[data-accent="coral"]:hover { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-coral) 35%, transparent); border-radius: 12px; }
+.pm-flow-step[data-accent="teal"]:hover { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-teal) 35%, transparent); border-radius: 12px; }
+.pm-flow-step[data-accent="amber"]:hover { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-amber) 35%, transparent); border-radius: 12px; }
+
+.work-card:hover,
+.artifact-card:hover,
+.project-visual-card:hover {
+    background: var(--card-bg);
+}
+
+[data-theme="dark"] .work-card:hover,
+[data-theme="dark"] .artifact-card:hover,
+[data-theme="dark"] .project-visual-card:hover,
+[data-theme="dark"] .journey-led-card:hover {
+    background: var(--card-hover);
+}
+
+.cs-block:has(.experiment-diagram) > h2 {
+    color: color-mix(in srgb, var(--color-coral) 75%, var(--text-main));
+}
+
+@media (max-width: 768px) {
+    .journey-body-grid::before {
+        background: linear-gradient(
+            180deg,
+            var(--color-mint),
+            var(--color-blue),
+            var(--color-teal),
+            var(--color-lavender),
+            var(--color-coral),
+            var(--color-amber)
+        );
+        opacity: 0.65;
+    }
+}
+
+html:not([data-theme="dark"]) .project-visual-grid .project-visual-card .project-visual-media {
+    background-color: #EDEAE3 !important;
+    background-blend-mode: multiply;
+}
+
+html:not([data-theme="dark"]) .artifact-grid .artifact-card-v2 .artifact-preview {
+    background-color: var(--card-elevated) !important;
+}
+
+html:not([data-theme="dark"]) .artifact-grid .artifact-card-v2:nth-child(1) .artifact-preview { background: color-mix(in srgb, var(--color-mint) 10%, var(--card-elevated)) !important; }
+html:not([data-theme="dark"]) .artifact-grid .artifact-card-v2:nth-child(2) .artifact-preview { background: color-mix(in srgb, var(--color-blue) 10%, var(--card-elevated)) !important; }
+html:not([data-theme="dark"]) .artifact-grid .artifact-card-v2:nth-child(3) .artifact-preview { background: color-mix(in srgb, var(--color-lavender) 10%, var(--card-elevated)) !important; }
+html:not([data-theme="dark"]) .artifact-grid .artifact-card-v2:nth-child(4) .artifact-preview { background: color-mix(in srgb, var(--color-teal) 10%, var(--card-elevated)) !important; }
+html:not([data-theme="dark"]) .artifact-grid .artifact-card-v2:nth-child(5) .artifact-preview { background: color-mix(in srgb, var(--color-coral) 10%, var(--card-elevated)) !important; }
+html:not([data-theme="dark"]) .artifact-grid .artifact-card-v2:nth-child(6) .artifact-preview { background: color-mix(in srgb, var(--color-amber) 10%, var(--card-elevated)) !important; }
