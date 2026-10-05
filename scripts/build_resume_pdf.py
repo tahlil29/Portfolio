@@ -100,10 +100,11 @@ def main():
     bullets(
         pdf,
         [
-            "Support planning and prioritization for AI Agents & Workflow Automation releases (US market).",
-            "Write requirement notes, workflow docs, and sprint-ready acceptance criteria.",
-            "Coordinate with engineering, design, and QA to track delivery and clarify done criteria.",
-            "Use a CS / Python background to write buildable tickets and catch gaps early.",
+            "Worked on product planning, feature requirements, user stories, sprint tracking, documentation, and delivery coordination.",
+            "Coordinated with development, UI/UX, artists, and QA teams to track work, resolve blockers, and support releases.",
+            "Contributed to CricketX, QuizVerse, and Red Light: Space Crew across product, gameplay/features, UI, QA, and backlog management.",
+            "Created product documents, requirement notes, bug trackers, backlog/sprint sheets, and stakeholder/task reports.",
+            "Supported playtesting, issue tracking, fix verification, monetization, analytics, ASO, marketing, and user-funnel initiatives.",
         ],
     )
     pdf.ln(1)
