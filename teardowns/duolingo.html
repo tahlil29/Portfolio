@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duolingo Retention Teardown | Tahlil Shaikh</title>
+    <meta name="theme-color" content="#1c1917">
+    <link rel="icon" href="../image/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css.css?v=20261005pm">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Tahlil Shaikh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#teardowns">Teardowns</a></li>
+                <li><a href="../index.html#contact" class="btn-nav">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+    <main class="article-page">
+        <article class="container article">
+            <p class="article-kicker">Teardown · Duolingo</p>
+            <h1>Retention without fatigue</h1>
+            <p class="lede">How could a gamified learning product increase user retention without increasing user fatigue?</p>
+
+            <section class="cs-block">
+                <h2>Product overview</h2>
+                <p>Duolingo turns language practice into short, game-like lessons. Streaks, leagues, reminders, and Super upsells sit on top of a path of bite-sized units.</p>
+            </section>
+            <section class="cs-block">
+                <h2>Target user</h2>
+                <p>Casual learners who want progress without committing to a class — and who are easy to lose when practice feels like a chore or a guilt loop.</p>
+            </section>
+            <section class="cs-block">
+                <h2>User journey</h2>
+                <div class="flow">
+                    <span>Open app / reminder</span>
+                    <span class="arrow">↓ Path + streak pressure</span>
+                    <span class="arrow">↓ Lesson (timed, hearts, XP)</span>
+                    <span class="arrow">↓ Reward / league update</span>
+                    <span class="arrow">↓ Tomorrow's streak at risk</span>
+                </div>
+            </section>
+            <section class="cs-block">
+                <h2>What works</h2>
+                <ul>
+                    <li>Session length is short enough to start.</li>
+                    <li>Streak + path make progress visible.</li>
+                    <li>XP and leagues create optional competition.</li>
+                </ul>
+            </section>
+            <section class="cs-block">
+                <h2>Pain points</h2>
+                <ul>
+                    <li>Streak loss can feel punitive rather than motivating.</li>
+                    <li>Hearts and timers add anxiety in what should be a learning moment.</li>
+                    <li>Notifications + league ranking can push volume over quality.</li>
+                </ul>
+            </section>
+            <section class="cs-block">
+                <h2>Opportunities</h2>
+                <ul>
+                    <li>A "rest day" that protects streak without zeroing the habit identity.</li>
+                    <li>Lesson modes that trade speed for confidence after a miss.</li>
+                    <li>Fatigue-aware reminders: skip the ping if the user already met a weekly goal.</li>
+                </ul>
+            </section>
+            <section class="cs-block">
+                <h2>Prioritization</h2>
+                <p>P0: reduce streak-break shame (high emotion, medium effort). P1: post-mistake calm mode. P2: smarter reminder caps. I would not add more league pressure first — that likely increases fatigue.</p>
+            </section>
+            <section class="cs-block">
+                <h2>Experiment</h2>
+                <p>Hypothesis: offering one protected rest day per week increases D7 and D30 among users who currently break streaks, without lowering weekly XP among highly engaged users (guardrail).</p>
+            </section>
+            <section class="cs-block">
+                <h2>Metrics</h2>
+                <ul>
+                    <li>D7 / D30 retention, streak continuation</li>
+                    <li>Lessons / week (guardrail: shouldn't collapse)</li>
+                    <li>Notification opt-out rate, session abandon after heart loss</li>
+                </ul>
+            </section>
+            <p class="back-row"><a class="btn btn-outline" href="../index.html#teardowns">All teardowns</a></p>
+        </article>
+    </main>
+    <script src="../js.js?v=20261005pm"></script>
+</body>
+</html>

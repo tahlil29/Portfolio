@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Prioritization | Tahlil Shaikh</title>
+    <meta name="theme-color" content="#1c1917">
+    <link rel="icon" href="../image/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css.css?v=20261005pm">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Tahlil Shaikh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#artifacts">Artifacts</a></li>
+                <li><a href="../index.html#contact" class="btn-nav">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+    <main class="article-page">
+        <article class="container article">
+            <p class="article-kicker">Artifact 03 · Prioritization</p>
+            <h1>Feature Prioritization</h1>
+            <p class="lede">Impact vs Effort for Unroad retention, with a RICE-style check so P0 is not just "what sounds exciting."</p>
+
+            <section class="cs-block">
+                <h2>Impact × Effort</h2>
+                <div style="overflow-x:auto">
+                    <table class="prio-table">
+                        <thead>
+                            <tr><th>Feature</th><th>Impact</th><th>Effort</th><th>Priority</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Daily Challenge</td><td>High</td><td>Medium</td><td>P0</td></tr>
+                            <tr><td>Progress / Streak</td><td>High</td><td>Low</td><td>P0</td></tr>
+                            <tr><td>Daily Calendar</td><td>Medium</td><td>Low</td><td>P1</td></tr>
+                            <tr><td>Rewards</td><td>High</td><td>Medium</td><td>P1</td></tr>
+                            <tr><td>Leaderboard</td><td>Medium</td><td>Medium</td><td>P2</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="cs-block">
+                <h2>RICE-style check</h2>
+                <p>Reach is all new + returning learners. Impact is highest on Daily Challenge because it changes the home-screen job-to-be-done. Confidence is higher on Progress/Streak because it is a known retention pattern and cheaper to ship. Effort keeps Leaderboard in P2: social surfaces create moderation and comparison risk before the core loop is proven.</p>
+            </section>
+            <section class="cs-block">
+                <h2>Decision</h2>
+                <p>Ship Daily Challenge + Progress/Streak together. Calendar and Rewards follow once participation is instrumented. Leaderboard waits until the loop works without social pressure.</p>
+            </section>
+            <p class="back-row"><a class="btn btn-outline" href="../index.html#artifacts">All artifacts</a></p>
+        </article>
+    </main>
+    <script src="../js.js?v=20261005pm"></script>
+</body>
+</html>

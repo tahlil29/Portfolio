@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato UX Teardown | Tahlil Shaikh</title>
+    <meta name="theme-color" content="#1c1917">
+    <link rel="icon" href="../image/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css.css?v=20261005pm">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Tahlil Shaikh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#teardowns">Teardowns</a></li>
+                <li><a href="../index.html#contact" class="btn-nav">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+    <main class="article-page">
+        <article class="container article">
+            <p class="article-kicker">Teardown · Zomato</p>
+            <h1>Discovery → decision → order</h1>
+            <p class="lede">How could Zomato improve the restaurant discovery → decision → ordering journey?</p>
+
+            <section class="cs-block">
+                <h2>Product overview</h2>
+                <p>Zomato is a food ordering and restaurant discovery surface. The job is not "browse restaurants" — it is "decide what to eat, then complete an order with acceptable time, price, and trust."</p>
+            </section>
+            <section class="cs-block">
+                <h2>Target user</h2>
+                <p>Hungry, time-constrained users (often repeating a small set of cuisines) plus occasional explorers. Decision fatigue is the default state.</p>
+            </section>
+            <section class="cs-block">
+                <h2>User journey</h2>
+                <div class="flow">
+                    <span>Open app / search / location</span>
+                    <span class="arrow">↓ Feed of restaurants, ads, offers</span>
+                    <span class="arrow">↓ Filter, compare ratings, delivery time</span>
+                    <span class="arrow">↓ Menu, cart, upsells</span>
+                    <span class="arrow">↓ Checkout, tracking</span>
+                </div>
+            </section>
+            <section class="cs-block">
+                <h2>What works</h2>
+                <ul>
+                    <li>Strong local inventory and delivery promise.</li>
+                    <li>Ratings, photos, and offers reduce some uncertainty.</li>
+                    <li>Reorder and search help repeat users skip discovery.</li>
+                </ul>
+            </section>
+            <section class="cs-block">
+                <h2>Pain points</h2>
+                <ul>
+                    <li>Home can feel like a marketplace of competing CTAs rather than a decision aid.</li>
+                    <li>Comparing two restaurants (time vs price vs rating) takes too many taps.</li>
+                    <li>Menu → cart still fights upsells when the user already decided.</li>
+                </ul>
+            </section>
+            <section class="cs-block">
+                <h2>Opportunities</h2>
+                <ul>
+                    <li>"Decide for me" based on time remaining + last 5 orders, with an easy reject.</li>
+                    <li>Side-by-side compare for two shortlisted restaurants.</li>
+                    <li>Quiet checkout path that defers offers until after place-order.</li>
+                </ul>
+            </section>
+            <section class="cs-block">
+                <h2>Prioritization</h2>
+                <p>P0: faster decision for repeat users (high frequency). P1: compare two shortlists. P2: quieter checkout. I would not add more promotional modules to home first — that likely slows decide time.</p>
+            </section>
+            <section class="cs-block">
+                <h2>Experiment</h2>
+                <p>Hypothesis: a "likely order" card on home (from history + ETA) reduces time-to-cart for returning users without lowering AOV (guardrail: attach rate of extras).</p>
+            </section>
+            <section class="cs-block">
+                <h2>Metrics</h2>
+                <ul>
+                    <li>Time to first restaurant tap, time to cart, checkout completion</li>
+                    <li>Search vs feed mix, filter usage</li>
+                    <li>Guardrails: AOV, offer attach, session bounce</li>
+                </ul>
+            </section>
+            <p class="back-row"><a class="btn btn-outline" href="../index.html#teardowns">All teardowns</a></p>
+        </article>
+    </main>
+    <script src="../js.js?v=20261005pm"></script>
+</body>
+</html>

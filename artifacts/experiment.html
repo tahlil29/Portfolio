@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Design | Tahlil Shaikh</title>
+    <meta name="theme-color" content="#1c1917">
+    <link rel="icon" href="../image/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css.css?v=20261005pm">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Tahlil Shaikh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#artifacts">Artifacts</a></li>
+                <li><a href="../index.html#contact" class="btn-nav">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+    <main class="article-page">
+        <article class="container article">
+            <p class="article-kicker">Artifact 06 · Experiment</p>
+            <h1>Experiment Design</h1>
+            <p class="lede">A proposed test for Unroad Daily Challenge. Not a live A/B — structure I would use before shipping.</p>
+
+            <section class="cs-block">
+                <h2>Hypothesis</h2>
+                <p>If new users see a single Daily Challenge on home after first session, then D1 return rate will increase because the next visit has a clear job to do.</p>
+            </section>
+            <section class="cs-block">
+                <h2>Structure</h2>
+                <ul>
+                    <li><strong>Audience:</strong> users who complete first-session onboarding.</li>
+                    <li><strong>Control:</strong> current home (activity collection).</li>
+                    <li><strong>Treatment:</strong> Daily Challenge module pinned first + streak on completion.</li>
+                    <li><strong>Duration:</strong> enough new users to read D1 and a first look at D7 (not a one-day peek).</li>
+                </ul>
+            </section>
+            <section class="cs-block">
+                <h2>Success metrics</h2>
+                <ul>
+                    <li>Primary: D1 retention</li>
+                    <li>Secondary: challenge participation, lesson completion, sessions / user</li>
+                    <li>Guardrail: time-to-first-lesson should not get worse (challenge must not block content)</li>
+                </ul>
+            </section>
+            <section class="cs-block">
+                <h2>Decision criteria</h2>
+                <ul>
+                    <li>Ship if D1 lifts without hurting first-lesson completion.</li>
+                    <li>Iterate copy/placement if challenge start is low.</li>
+                    <li>Kill or redesign if users start challenges but completion collapses vs control.</li>
+                </ul>
+            </section>
+            <p class="back-row"><a class="btn btn-outline" href="../index.html#artifacts">All artifacts</a></p>
+        </article>
+    </main>
+    <script src="../js.js?v=20261005pm"></script>
+</body>
+</html>

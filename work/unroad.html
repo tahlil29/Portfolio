@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unroad Day-1 Retention | Tahlil Shaikh</title>
+    <meta name="description" content="Case study: designing a daily learning loop to improve Unroad day-1 retention.">
+    <meta name="theme-color" content="#1c1917">
+    <link rel="icon" href="../image/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css.css?v=20261005pm">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Tahlil Shaikh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#thinking">Thinking</a></li>
+                <li><a href="../index.html#artifacts">Artifacts</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#contact" class="btn-nav">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-page">
+        <article class="container article">
+            <p class="article-kicker">Case Study 01 · Unroad</p>
+            <h1>Improving Day-1 Retention for Unroad</h1>
+            <p class="lede">Designed a retention-focused product experience based on observed gaps in user motivation and repeat engagement.</p>
+            <div class="tag-row">
+                <span>Product Strategy</span><span>UX</span><span>Retention</span><span>Growth</span><span>Prototyping</span>
+            </div>
+
+            <section class="cs-block">
+                <h2>01 — Context</h2>
+                <p>Unroad provides a learning experience designed to help users build knowledge through structured lessons and activities.</p>
+            </section>
+            <section class="cs-block">
+                <h2>02 — Problem</h2>
+                <p>While the onboarding experience communicates the product's value, users may have limited motivation to return after completing their initial session.</p>
+            </section>
+            <section class="cs-block">
+                <h2>03 — Observation</h2>
+                <p>The product provides learning content, but the experience can be strengthened by creating a clearer sense of progress, challenge and daily motivation.</p>
+            </section>
+            <section class="cs-block">
+                <h2>04 — Product Opportunity</h2>
+                <p>How might we create a stronger reason for users to return to Unroad every day?</p>
+            </section>
+            <section class="cs-block">
+                <h2>05 — Proposed Solution</h2>
+                <p><strong>Daily Learning Loop</strong></p>
+                <div class="flow" aria-label="Daily learning loop">
+                    <span>Open App</span>
+                    <span class="arrow">↓ Daily Challenge</span>
+                    <span class="arrow">↓ Complete Learning Activity</span>
+                    <span class="arrow">↓ Earn Points</span>
+                    <span class="arrow">↓ Progress / Streak</span>
+                    <span class="arrow">↓ Leaderboard</span>
+                    <span class="arrow">↓ Come Back Tomorrow</span>
+                </div>
+            </section>
+            <section class="cs-block">
+                <h2>06 — Features</h2>
+                <ul>
+                    <li><strong>Daily Challenges</strong> — Give users a clear task to complete each day.</li>
+                    <li><strong>Rewards</strong> — Introduce points/rewards for completing learning activities.</li>
+                    <li><strong>Progress</strong> — Show users how far they've progressed.</li>
+                    <li><strong>Leaderboard</strong> — Create optional social motivation.</li>
+                    <li><strong>Daily Calendar</strong> — Give users a visual reason to maintain their learning streak.</li>
+                    <li><strong>Connected Activities</strong> — Make the home screen feel like a journey rather than a collection of independent features.</li>
+                </ul>
+            </section>
+            <section class="cs-block">
+                <h2>07 — Prioritization</h2>
+                <p>Impact × Effort, used to sequence what should ship first.</p>
+                <div style="overflow-x:auto">
+                    <table class="prio-table">
+                        <thead>
+                            <tr><th>Feature</th><th>Impact</th><th>Effort</th><th>Priority</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Daily Challenge</td><td>High</td><td>Medium</td><td>P0</td></tr>
+                            <tr><td>Progress / Streak</td><td>High</td><td>Low</td><td>P0</td></tr>
+                            <tr><td>Daily Calendar</td><td>Medium</td><td>Low</td><td>P1</td></tr>
+                            <tr><td>Rewards</td><td>High</td><td>Medium</td><td>P1</td></tr>
+                            <tr><td>Leaderboard</td><td>Medium</td><td>Medium</td><td>P2</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="cs-block">
+                <h2>08 — Success metrics I would track</h2>
+                <p>This was a product proposal rather than a live experiment, so these are the metrics I would instrument — not claimed results.</p>
+                <ul>
+                    <li>D1 retention</li>
+                    <li>D7 retention</li>
+                    <li>Lesson completion rate</li>
+                    <li>Daily challenge participation</li>
+                    <li>Sessions per user</li>
+                    <li>Average learning activities / user</li>
+                    <li>Streak continuation rate</li>
+                </ul>
+            </section>
+            <section class="cs-block">
+                <h2>09 — Prototype</h2>
+                <p>A low-fidelity home → challenge → progress loop. Full wireframes live in the prototype artifact.</p>
+                <div class="wire-grid">
+                    <div class="phone"><div class="bar"></div><h3>Home</h3><div class="row"></div><div class="row dim"></div><div class="row dim"></div><p>Today's challenge sits first so the home screen is a journey, not a menu.</p></div>
+                    <div class="phone"><div class="bar"></div><h3>Daily Challenge</h3><div class="row"></div><div class="row"></div><div class="row dim"></div><p>One clear task, then points on completion.</p></div>
+                    <div class="phone"><div class="bar"></div><h3>Progress</h3><div class="row"></div><div class="row dim"></div><div class="row dim"></div><p>Streak + calendar make returning tomorrow feel earned.</p></div>
+                </div>
+                <p><a class="work-link" href="../artifacts/prototype.html">Open prototype artifact <i class="fas fa-arrow-right"></i></a></p>
+            </section>
+            <section class="cs-block">
+                <h2>10 — Learning</h2>
+                <p>This project strengthened my understanding of retention loops, user motivation, feature prioritization and translating qualitative product observations into actionable product solutions.</p>
+            </section>
+            <p class="back-row"><a class="btn btn-outline" href="../index.html#work">Back to selected work</a></p>
+        </article>
+    </main>
+    <script src="../js.js?v=20261005pm"></script>
+</body>
+</html>

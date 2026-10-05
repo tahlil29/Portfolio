@@ -1406,7 +1406,7 @@ ul {
     color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.65;
-    max-width: 340px;
+    max-width: 42rem;
     margin: 0;
 }
 
@@ -2503,6 +2503,15 @@ footer {
     transform: translate(0);
 }
 
+/* Keep linked cards clickable before scroll-reveal fires */
+.work-card.reveal,
+.think-card.reveal,
+.artifact-card.reveal,
+.product-chip.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Responsive */
 @media (max-width: 1100px) {
     .logo {
@@ -2725,6 +2734,347 @@ footer {
 
     .carousel-slide {
         flex: 0 0 100%;
+    }
+}
+
+/* PM portfolio layout */
+.pm-hero {
+    padding-top: 5.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.pm-hero-inner {
+    max-width: 720px;
+}
+
+.pm-kicker {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-mint);
+    margin-bottom: 0.85rem;
+}
+
+.pm-lede {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 38rem;
+    line-height: 1.6;
+    margin: 0 0 1.75rem;
+}
+
+.pm-cred {
+    margin-top: 1.35rem;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+
+.about-copy {
+    max-width: 42rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.about-copy p {
+    font-size: 1.05rem;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.15rem;
+}
+
+.work-grid.two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.work-card,
+.think-card,
+.artifact-card,
+.product-chip {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.35rem;
+    box-shadow: var(--shadow-sm);
+    color: inherit;
+}
+
+.work-card:hover,
+.artifact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: color-mix(in srgb, var(--accent-mint) 45%, var(--border));
+}
+
+.work-index {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-mint);
+    margin-bottom: 0.7rem;
+}
+
+.work-card h3,
+.think-card h3,
+.artifact-card h3,
+.product-chip h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.65rem;
+}
+
+.work-card p,
+.think-card p,
+.artifact-card p,
+.product-chip p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    flex: 1;
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 1rem 0;
+}
+
+.tag-row span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.28rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--text-main);
+}
+
+.work-link,
+.artifact-card a {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.35rem;
+}
+
+.product-strip,
+.think-grid,
+.artifact-grid {
+    display: grid;
+    gap: 1.15rem;
+}
+
+.product-strip {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.think-grid,
+.artifact-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pm-skills {
+    margin-top: 2.5rem;
+}
+
+.exp-stack {
+    display: grid;
+    gap: 1.15rem;
+    max-width: 760px;
+}
+
+.subnav a {
+    color: var(--text-muted);
+}
+
+.article-page {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+
+.article {
+    max-width: 760px;
+}
+
+.article-kicker {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-mint);
+    margin-bottom: 0.7rem;
+}
+
+.article h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 0.85rem;
+}
+
+.article .lede {
+    font-size: 1.08rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.cs-block {
+    margin: 2rem 0;
+}
+
+.cs-block h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+}
+
+.cs-block p,
+.cs-block li {
+    color: var(--text-main);
+}
+
+.cs-block ul,
+.cs-block ol {
+    padding-left: 1.15rem;
+    display: grid;
+    gap: 0.4rem;
+}
+
+.cs-block ul {
+    list-style: disc;
+}
+
+.cs-block ol {
+    list-style: decimal;
+}
+
+.flow {
+    display: grid;
+    gap: 0.35rem;
+    margin: 1rem 0;
+    font-weight: 600;
+}
+
+.flow span {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.flow .arrow {
+    color: var(--text-muted);
+    font-weight: 400;
+    padding-left: 0.35rem;
+}
+
+.prio-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    margin: 1rem 0;
+}
+
+.prio-table th,
+.prio-table td {
+    text-align: left;
+    padding: 0.7rem 0.6rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.prio-table th {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.q-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+    margin-top: 1rem;
+}
+
+.q-card {
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1rem 1.05rem;
+    background: var(--card-bg);
+    font-weight: 600;
+}
+
+.wire-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.85rem;
+    margin: 1.25rem 0;
+}
+
+.phone {
+    border: 1px solid var(--border);
+    border-radius: 1.4rem;
+    padding: 0.85rem 0.75rem 1rem;
+    background: var(--card-bg);
+    min-height: 280px;
+}
+
+.phone .bar {
+    height: 8px;
+    width: 36%;
+    border-radius: 99px;
+    background: var(--bar-track);
+    margin: 0 auto 0.85rem;
+}
+
+.phone h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.55rem;
+}
+
+.phone .row {
+    height: 28px;
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--accent-mint) 18%, var(--bar-track));
+    margin-bottom: 0.4rem;
+}
+
+.phone .row.dim {
+    background: var(--bar-track);
+}
+
+.phone p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.back-row {
+    margin: 2rem 0 0;
+}
+
+@media (max-width: 1100px) {
+    .work-grid,
+    .work-grid.two,
+    .think-grid,
+    .artifact-grid,
+    .product-strip,
+    .wire-grid,
+    .q-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pm-hero-inner,
+    .hero-text {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .pm-hero .cta-group {
+        justify-content: flex-start;
     }
 }
 
