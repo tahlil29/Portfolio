@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unrot Daily Challenge | Tahlil Shaikh</title>
+    <meta name="description" content="Case study: hypothesis-led intervention to improve Unrot D1 retention through daily challenges, progress, and experimentation.">
+    <meta name="theme-color" content="#1c1917">
+    <link rel="icon" href="../image/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css.css?v=20261005unrot">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Tahlil Shaikh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#artifacts">Artifacts</a></li>
+                <li><a href="../index.html#contact" class="btn-nav">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-page">
+        <article class="container article cs-wide">
+            <p class="article-kicker">Case Study 02 · Unrot</p>
+            <h1>Unrot Daily Challenge</h1>
+            <p class="cs-subtitle">Turning 5-minute learning into a daily habit</p>
+            <div class="tag-row">
+                <span>Product Strategy</span><span>Retention</span><span>UX</span><span>Experimentation</span><span>Prototyping</span>
+            </div>
+            <p class="lede">A product intervention designed to improve Day-1 retention by turning an episodic learning experience into a lightweight daily habit — <strong>without redesigning the entire product.</strong></p>
+
+            <div class="cs-cta-row">
+                <a class="btn btn-primary" href="unrot-prototype.html" target="_blank" rel="noopener">View prototype <i class="fas fa-arrow-right"></i></a>
+                <a class="btn btn-outline" href="Unrot_Slide_Deck.pdf" target="_blank" rel="noopener">View deck (PDF) <i class="fas fa-file-pdf"></i></a>
+            </div>
+
+            <section class="cs-block">
+                <h2>The problem</h2>
+                <p class="cs-pull">Learning happened. Returning didn't.</p>
+                <p>Unrot helps users learn AI, but the experience could feel episodic rather than habitual. Three gaps stood out:</p>
+                <ul>
+                    <li>No clear next action after completing a lesson</li>
+                    <li>Progress wasn't sufficiently visible</li>
+                    <li>No compelling reason to return the following day</li>
+                </ul>
+                <blockquote class="hypothesis-card">
+                    <strong>The problem wasn't the value of learning. It was the lack of a reason to return.</strong>
+                    <p>Users could discover lessons and learn, but after completing a lesson there was no strong next action, visible progress or compelling reason to come back tomorrow.</p>
+                </blockquote>
+            </section>
+
+            <section class="cs-block">
+                <h2>Product opportunity</h2>
+                <p><strong>How might we turn learning into a daily habit?</strong></p>
+                <p>Introduce a lightweight daily challenge that gives users a clear next action, visible progress and a reason to return.</p>
+                <p class="muted-note">This was a focused intervention on the existing experience — not a full product redesign.</p>
+            </section>
+
+            <section class="cs-block">
+                <h2>Hypothesis</h2>
+                <blockquote class="hypothesis-card is-accent">
+                    If we give users an immediate product experience and introduce a lightweight daily challenge with visible progress and rewards, users will have stronger motivation to return the following day, improving D1 retention.
+                </blockquote>
+                <p class="muted-note">Framed as a hypothesis to validate — not a guaranteed result. No fabricated retention lift.</p>
+            </section>
+
+            <section class="cs-block cs-highlight">
+                <h2>Behavioral loop</h2>
+                <p>The intervention transforms a single learning session into a repeatable loop: users learn, complete a challenge, earn a reward, see progress and receive a clear reason to return.</p>
+                <div class="flow loop-flow" aria-label="Behavioral loop">
+                    <span>Discover</span>
+                    <span class="arrow">↓ Learn</span>
+                    <span class="arrow">↓ Complete</span>
+                    <span class="arrow">↓ Earn</span>
+                    <span class="arrow">↓ Track progress</span>
+                    <span class="arrow">↓ Return ↺</span>
+                </div>
+            </section>
+
+            <section class="cs-block">
+                <h2>Deliver value before asking for commitment</h2>
+                <p>Rather than redesigning onboarding, I identified a smaller intervention with potentially higher leverage: let users experience the product's value before asking them to form a daily habit.</p>
+                <div class="flow">
+                    <span>Existing onboarding</span>
+                    <span class="arrow">↓ Interests + goals</span>
+                    <span class="arrow">↓ First lesson preview</span>
+                    <span class="arrow">↓ User experiences real value</span>
+                    <span class="arrow">↓ Home</span>
+                    <span class="arrow">↓ Daily challenge</span>
+                </div>
+            </section>
+
+            <section class="cs-block cs-highlight">
+                <h2>7-screen product experience</h2>
+                <p>Prototype follows Unrot's visual language: dark UI, white typography, purple accents and rounded cards.</p>
+                <div class="proto-nav" data-proto-nav>
+                    <button type="button" class="is-active" data-screen="0">Onboarding</button>
+                    <button type="button" data-screen="1">First lesson</button>
+                    <button type="button" data-screen="2">Daily challenge</button>
+                    <button type="button" data-screen="3">Lesson</button>
+                    <button type="button" data-screen="4">Reward</button>
+                    <button type="button" data-screen="5">Home</button>
+                    <button type="button" data-screen="6">Progress</button>
+                </div>
+                <div class="proto-stage" data-proto-stage>
+                    <div class="phone unrot-phone">
+                        <div class="bar"></div>
+                        <h3 data-proto-title>Onboarding</h3>
+                        <p data-proto-body>Personalized questions → interests and goals → path into first value.</p>
+                        <div class="row"></div><div class="row dim"></div>
+                    </div>
+                </div>
+                <p class="proto-map">Flow: Onboarding → First lesson → Challenge → Lesson → Reward → Home → Progress</p>
+                <p><a class="work-link" href="unrot-prototype.html" target="_blank" rel="noopener">Open interactive prototype <i class="fas fa-arrow-right"></i></a></p>
+            </section>
+
+            <section class="cs-block">
+                <h2>The daily challenge loop</h2>
+                <div class="challenge-steps">
+                    <div class="challenge-step">
+                        <h3>Today's challenge</h3>
+                        <p>Complete your first AI lesson<br><span class="muted">5 minutes · +50 XP</span></p>
+                    </div>
+                    <div class="challenge-arrow">↓</div>
+                    <div class="challenge-step">
+                        <h3>Completion</h3>
+                        <p><strong>+50 XP</strong> · 1 day streak</p>
+                    </div>
+                    <div class="challenge-arrow">↓</div>
+                    <div class="challenge-step">
+                        <h3>Tomorrow</h3>
+                        <p>Understand AI Agents · 5 min</p>
+                    </div>
+                </div>
+                <blockquote class="hypothesis-card">
+                    <strong>The reward screen doesn't just close today's loop. It opens tomorrow's loop.</strong>
+                </blockquote>
+            </section>
+
+            <section class="cs-block">
+                <h2>Reduce decision fatigue</h2>
+                <p><strong>Action → Progress → Exploration</strong></p>
+                <ol>
+                    <li><strong>What should I do?</strong> Today's learning.</li>
+                    <li><strong>Why should I keep doing it?</strong> Progress, streak and XP.</li>
+                    <li><strong>What else can I explore?</strong> AI News, Workshops, Interview Prep.</li>
+                </ol>
+            </section>
+
+            <section class="cs-block">
+                <h2>Gamification is a layer — not the product</h2>
+                <p>Core loop: <strong>Learning → XP → Progress → Streak → Return</strong></p>
+                <p>Leaderboard: <strong>optional motivation layer</strong> — users should still experience the full habit loop even if they ignore it.</p>
+                <p>I treated gamification as a supporting mechanism rather than the core product experience. XP and streaks reinforce learning behavior, while the leaderboard remains optional.</p>
+            </section>
+
+            <section class="cs-block cs-highlight">
+                <h2>How would we know it worked?</h2>
+                <p class="metric-hero">Primary metric: <strong>D1 retention</strong> — percentage of users who return the following day.</p>
+                <div class="metric-grid">
+                    <div class="metric-card"><h3>Challenge completion</h3><p>Daily challenge completion rate</p></div>
+                    <div class="metric-card"><h3>Lesson completion</h3><p>Lesson completion during first session</p></div>
+                    <div class="metric-card"><h3>First-session start</h3><p>Rate of users starting the lesson</p></div>
+                    <div class="metric-card"><h3>Reward → return</h3><p>Next-day return from the reward experience</p></div>
+                    <div class="metric-card"><h3>Streak continuation</h3><p>Percentage maintaining their streak</p></div>
+                    <div class="metric-card"><h3>Weekly challenge</h3><p>5/5-day challenge completion</p></div>
+                </div>
+            </section>
+
+            <section class="cs-block">
+                <h2>Experiment design</h2>
+                <pre class="experiment-diagram" aria-label="Experiment diagram">                 UNROT USERS
+                     │
+             ┌───────┴───────┐
+             ↓               ↓
+         CONTROL           TEST
+             │               │
+     Existing product   First lesson preview
+                         Daily challenge
+                         XP / streak / progress
+             │               │
+             └───────┬───────┘
+                     ↓
+                D1 RETENTION</pre>
+                <p><strong>Control:</strong> existing Unrot experience.</p>
+                <p><strong>Test:</strong> First Lesson Preview + Daily Challenge + XP/Streak + visible progress.</p>
+                <p class="muted-note">Validate the intervention through experimentation rather than assuming the design will improve retention.</p>
+            </section>
+
+            <section class="cs-block">
+                <h2>Execution plan</h2>
+                <div class="timeline">
+                    <div class="timeline-item"><span>Week 1</span><p>Prototype + UX validation</p></div>
+                    <div class="timeline-item"><span>Week 2</span><p>Daily challenge + reward flow</p></div>
+                    <div class="timeline-item"><span>Week 3</span><p>Home + progress + leaderboard</p></div>
+                    <div class="timeline-item"><span>Week 4</span><p>QA + experiment setup + launch</p></div>
+                </div>
+            </section>
+
+            <section class="cs-block cs-summary">
+                <h2>The bet</h2>
+                <p>Turn a 5-minute lesson into a reason to come back tomorrow.</p>
+                <h2>The method</h2>
+                <p>Hypothesis-led, lightweight to build and designed to validate retention impact rather than assume it.</p>
+                <h2>The final loop</h2>
+                <p><strong>Discover → Learn → Complete → Earn → Track → Return</strong></p>
+            </section>
+
+            <p class="back-row">
+                <a class="btn btn-outline" href="../index.html#work">Back to selected work</a>
+                <a class="btn btn-primary" href="unrot-prototype.html" target="_blank" rel="noopener">View prototype</a>
+            </p>
+        </article>
+    </main>
+    <script src="../js.js?v=20261005unrot"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unrot — Full Product Flow</title>
+<style>
+:root{--bg:#191919;--card:#242326;--card2:#211f25;--text:#f7f5f8;--muted:#aaa6ae;--line:#39363d;--purple:#9a78ff;--purple2:#7655dc;--green:#62ca8b;--yellow:#f1b64c}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(800px 500px at 70% 0%,#2c2048 0%,transparent 55%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}button{font:inherit;color:inherit;cursor:pointer}.hidden{display:none!important}
+.app{min-height:100vh;display:flex}.side{width:285px;background:#242424;border-right:1px solid #303030;padding:28px 20px;position:fixed;inset:0 auto 0 0}.brand{font-size:25px;font-weight:800;display:flex;gap:13px;align-items:center;margin:20px 10px 48px}.mark{width:40px;height:40px;border-radius:50%;background:#b286ff;display:grid;place-items:center;font-size:23px}.nav{display:grid;gap:8px}.nav button{border:0;background:none;text-align:left;padding:14px;border-radius:12px;color:#c2bec5;font-size:16px}.nav button.active,.nav button:hover{background:#302d35;color:white}.main{margin-left:285px;flex:1}.top{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;letter-spacing:2px}.page{width:min(980px,calc(100% - 48px));margin:auto;padding:48px 0 100px}
+.center{text-align:center}.eyebrow{color:#b69cff;text-transform:uppercase;letter-spacing:2px;font-weight:800;font-size:12px}.eyebrow.green{color:var(--green)}
+h1{font-size:52px;line-height:1.03;letter-spacing:-.045em;margin:15px 0}h2{font-size:30px;margin:0 0 12px}h3{font-size:20px;margin:8px 0}.lead{color:#c4c0c7;font-size:18px;line-height:1.6}.muted{color:var(--muted);line-height:1.6}
+.btn{border:0;background:linear-gradient(135deg,var(--purple),var(--purple2));padding:16px 28px;border-radius:13px;font-weight:800;font-size:16px;box-shadow:0 14px 32px #6d4dd52b}.btn.secondary{background:#28262b;border:1px solid var(--line);box-shadow:none}
+.panel{background:rgba(34,33,38,.9);border:1px solid var(--line);border-radius:22px;padding:30px;margin-top:25px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.choice{text-align:left;background:#1f1e21;border:1px solid var(--line);border-radius:14px;padding:18px;font-weight:700}.choice:hover,.choice.selected{border-color:var(--purple);background:#2a2534}
+.dots{display:flex;gap:7px;justify-content:center;margin:24px 0}.dots i{width:7px;height:7px;border-radius:50%;background:#454148}.dots i.on{background:var(--purple)}
+.hero-card{position:relative;overflow:hidden;min-height:610px;border:1px solid #44375a;border-radius:30px;padding:55px;background:linear-gradient(135deg,#282137,#211f25 48%);display:grid;grid-template-columns:1.05fr .95fr;gap:30px}.hero-card:after{content:"";position:absolute;width:440px;height:440px;border-radius:50%;right:-170px;top:-160px;background:#9a78ff18;filter:blur(10px)}.hero-copy{align-self:center;position:relative;z-index:2}.hero-card h1{font-size:68px}.meta{display:flex;gap:9px;flex-wrap:wrap;margin:25px 0}.pill{padding:9px 13px;border:1px solid var(--line);border-radius:999px;background:#ffffff08;font-size:13px;font-weight:700}.checks{border-top:1px solid var(--line);padding-top:20px;margin-top:24px;display:grid;gap:9px;color:#cbc8cf}.check{color:var(--green);margin-right:8px}.art{display:grid;place-items:center;position:relative;z-index:1}.orb{position:absolute;width:370px;height:370px;border-radius:50%;background:radial-gradient(circle,#b18bff42,transparent 68%)}svg{width:min(410px,100%);filter:drop-shadow(0 25px 35px #0005)}.float{position:absolute;padding:11px 13px;background:#1d1b22dd;border:1px solid var(--line);border-radius:13px;font-size:12px;font-weight:800}.a{right:0;top:17%}.b{left:0;bottom:20%}.c{right:7%;bottom:8%}
+.lesson-head{display:flex;align-items:center;gap:15px;color:#a9a4ad;font-size:13px;font-weight:800}.bar{height:6px;background:#353139;border-radius:99px;flex:1}.bar span{display:block;width:12%;height:100%;background:var(--purple);border-radius:99px}.lesson-card{max-width:760px;margin:50px auto}.lesson-card h1{font-size:48px}.tip{border-left:4px solid var(--green);background:#202a24;padding:20px;border-radius:14px;margin-top:25px}.tip b{color:var(--green)}.quiz{margin-top:24px}.answers{display:grid;gap:11px;margin-top:18px}
+.reward{padding-top:70px}.reward .emoji{font-size:70px}.xp{font-size:25px;margin:15px}.xp b{color:var(--yellow)}.streak{max-width:520px;margin:28px auto;padding:27px;background:#242128;border:1px solid #443a54;border-radius:20px}.streak strong{font-size:40px}.tomorrow{display:inline-block;margin-top:10px;padding:13px 17px;background:#2c2736;border:1px solid #4b3c67;border-radius:12px;color:#d4c5ff;font-weight:800}
+.homegrid{display:grid;grid-template-columns:1.7fr 1fr;gap:16px}.daily{background:linear-gradient(135deg,#2b2437,#242326);border-color:#46375c}.tag{color:#b69cff;font-weight:800;font-size:12px;letter-spacing:1.5px}.stat{font-size:35px;font-weight:800}.home-lesson{margin-top:22px}.home-lesson .btn{margin-top:16px}
+.footer{margin-top:25px;color:#77737b;font-size:12px;text-align:center}
+@media(max-width:850px){.side{display:none}.main{margin-left:0}.page{width:calc(100% - 30px)}.hero-card{grid-template-columns:1fr;padding:35px;min-height:auto}.hero-card h1{font-size:52px}.art{min-height:290px}.homegrid,.grid{grid-template-columns:1fr}h1{font-size:40px}}
+</style>
+</head>
+<body>
+<a href="unrot.html" style="position:fixed;z-index:9999;top:12px;right:12px;padding:8px 14px;background:#1d1b22dd;border:1px solid #39363d;border-radius:999px;color:#f7f5f8;font-size:12px;font-weight:700;text-decoration:none;font-family:system-ui,sans-serif">← Case study</a>
+<aside class="side"><div class="brand"><div class="mark">🧠</div>unrot</div><div class="nav">
+<button id="navHome" class="active" onclick="state='home';render()">⌂ &nbsp; Home</button>
+<button onclick="state='lesson';lesson=0;choice=null;render()">▣ &nbsp; Lesson</button>
+<button>▤ &nbsp; AI Library</button>
+<button>▤ &nbsp; News</button>
+<button>🏆 &nbsp; Interview</button>
+<button id="navRewards" onclick="showRewards()">🎁 &nbsp; Rewards</button>
+<button id="navLeaderboard" onclick="showLeaderboard()">🏆 &nbsp; Leaderboard</button>
+<button>♙ &nbsp; You</button>
+</div></aside>
+<main class="main"><header class="top" id="top">UNROT</header><div class="page" id="page"></div></main>
+<script>
+const questions=[
+["What best describes your role?",["Software Role","Data & Analytics","Management / Leadership","Product Manager, Marketing & Sales","Founder / Self-Employed","Student"]],
+["Why learn AI right now?",["Build AI-powered products","Don’t want to fall behind","My team is already using AI","Curious about AI","I have a specific project in mind"]],
+["Where can AI help you most?",["Users & research","PRDs & prioritization","Product data & insights","Ideas & experimentation","Daily productivity"]],
+["What would make this journey worth it?",["Talk confidently about AI","Build an AI prototype","Launch an AI feature","Use AI every day","Create an AI product strategy"]],
+["How did you find Unrot?",["LinkedIn","Instagram","Google Search","YouTube","Friend / Colleague","App Store"]],
+["How would you describe your AI experience?",["Complete beginner","Curious builder","Technical explorer","Experienced developer"]],
+["How much time do you want to dedicate?",["Casual","Regular","Serious","Intense"]]
+];
+let state="onboard",q=0,choice=null,earned=0,streak=0,lesson=0;
+function render(){
+ const p=document.getElementById("page");
+ const side=document.querySelector(".side");
+ const main=document.querySelector(".main");
+ const top=document.getElementById("top");
+ const isOnboarding=state==="onboard";
+ side.style.display=isOnboarding?"none":"block";
+ main.style.marginLeft=isOnboarding?"0":"260px";
+ top.style.display=isOnboarding?"none":"block";
+ document.body.classList.toggle("onboarding",isOnboarding);
+ document.getElementById("top").textContent=
+   state==="home"?"UNROT":
+   state==="preview"?"YOUR FIRST LESSON":
+   state==="lesson"?"5-MINUTE LESSON":
+   state==="reward"?"CHALLENGE COMPLETE":
+   state==="rewards"?"REWARDS":
+   state==="leaderboard"?"LEADERBOARD":"GETTING TO KNOW YOU";
+
+ if(state==="onboard") onboard(p);
+ if(state==="preview") preview(p);
+ if(state==="home") home(p);
+ if(state==="lesson") lessonPage(p);
+ if(state==="reward") rewardPage(p);
+ if(state==="rewards") rewardsPage(p);
+ if(state==="leaderboard") leaderboardPage(p);
+
+ document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));
+ const active = {
+   home:"navHome", rewards:"navRewards", leaderboard:"navLeaderboard"
+ }[state];
+ if(active) document.getElementById(active)?.classList.add("active");
+}
+function onboard(p){
+ if(q===0&&choice===null){p.innerHTML=`<div class="center" style="padding-top:70px"><div class="eyebrow">Welcome to Unrot</div><h1>Learn AI.<br>5 minutes at a time.</h1><p class="lead">Let’s personalize your learning path with a few quick questions.</p><button class="btn" onclick="choice='go';render()">Let’s Go →</button><div class="footer">Personalized learning • Practical lessons • Built for your goals</div></div>`;return}
+ if(q>=questions.length){state="preview";choice=null;render();return}
+ const [title,opts]=questions[q];
+ p.innerHTML=`<div class="center"><div class="eyebrow">Personalize your journey</div><h1>${title}</h1><p class="lead">Choose the answer that fits you best.</p><div class="grid" style="max-width:760px;margin:30px auto">${opts.map((x,i)=>`<button class="choice ${choice===i?"selected":""}" onclick="choice=${i};render()"> ${x}</button>`).join("")}</div><div class="dots">${questions.map((_,i)=>`<i class="${i<=q?"on":""}"></i>`).join("")}</div><button class="btn ${choice===null?"secondary":""}" ${choice===null?"disabled":""} onclick="q++;choice=null;render()">Continue →</button><p class="muted">Question ${q+1} of ${questions.length}</p></div>`;
+}
+function preview(p){
+ p.innerHTML=`<section class="hero-card"><div class="hero-copy"><div class="eyebrow">Your personalized first lesson</div><h1>What Is<br>Generative AI?</h1><p class="lead">A practical 5-minute introduction to what makes generative AI different, what it can create, and where it can help you.</p><div class="meta"><span class="pill">◷ 5 min</span><span class="pill">◈ 9 cards</span><span class="pill">● Beginner</span></div><button class="btn" onclick="state='lesson';lesson=0;render()">Start 5-Min Lesson →</button><div class="checks"><div><span class="check">✓</span>Traditional AI vs. Generative AI</div><div><span class="check">✓</span>Real-world GenAI examples</div><div><span class="check">✓</span>Try a hands-on AI activity</div></div></div><div class="art"><div class="orb"></div><span class="float a">✨ Creates new content</span><span class="float b">Text · Images · Code</span><span class="float c">AI that can create</span><svg viewBox="0 0 500 500"><defs><radialGradient id="g"><stop stop-color="#d7b6ff"/><stop offset=".5" stop-color="#a56cf0"/><stop offset="1" stop-color="#6740c8"/></radialGradient></defs><path d="M250 80c-48-34-105 3-101 51-55 4-72 72-35 103-28 44 6 88 52 85 8 55 74 72 108 40 34 32 100 15 108-40 46 3 80-41 52-85 37-31 20-99-35-103 4-48-53-85-101-51-16-28-32-28-48 0z" fill="url(#g)" stroke="#eadbff" stroke-width="5"/><g fill="none" stroke="#7144c6" stroke-width="11" stroke-linecap="round"><path d="M176 142c-19 23-4 47 19 44 20-3 20-30 4-39"/><path d="M225 112c-20 23-2 44 20 38 18-5 16-28 1-36"/><path d="M285 111c-15 20-1 42 19 39 20-3 22-27 7-38"/><path d="M333 143c-17 18-10 43 12 45 21 2 31-23 16-40"/><path d="M147 205c-20 19-11 47 14 49 23 2 32-27 15-44"/><path d="M199 201c-20 21-8 48 17 47 25-1 30-31 12-46"/><path d="M252 191c-21 23-7 53 18 52 25-1 31-33 12-49"/><path d="M307 200c-19 18-9 46 14 47 25 1 32-27 15-45"/><path d="M354 207c-19 18-12 44 11 47 24 3 35-25 19-43"/></g><g fill="#fff"><circle cx="205" cy="230" r="27"/><circle cx="295" cy="230" r="27"/></g><g fill="#35204e"><circle cx="210" cy="236" r="11"/><circle cx="300" cy="236" r="11"/></g><path d="M230 283q20 22 40 0" fill="none" stroke="#3b2058" stroke-width="9" stroke-linecap="round"/></svg></div></section>`; 
+}
+function home(p){
+ p.innerHTML=`<div class="eyebrow">Your learning path</div><h1>Good to see you.</h1><p class="lead">Your daily AI practice lives here. One small challenge, every day.</p><div class="homegrid"><div class="panel daily"><div class="tag">TODAY'S CHALLENGE</div><h2>What Is Generative AI?</h2><p class="muted">5 minutes · Beginner · +50 XP</p><button class="btn home-lesson" onclick="state='lesson';lesson=0;render()">Start Daily Challenge →</button></div><div class="panel"><div class="eyebrow">Your progress</div><div class="stat">${earned} XP</div><p class="muted">🔥 ${streak} day streak</p><p class="muted">Complete today’s challenge to keep your streak alive.</p></div></div><div class="panel"><h2>Learning activity</h2><p class="muted">Today’s goal: 5 minutes</p><div style="height:8px;background:#39363d;border-radius:99px"><div style="width:${earned?100:0}%;height:100%;background:var(--purple);border-radius:99px"></div></div><p class="muted">${earned? "Challenge completed. Come back tomorrow.":"0 of 1 daily challenges completed"}</p></div>`;
+}
+
+function rewardsPage(p){
+ p.innerHTML=`<div class="eyebrow">Rewards</div><h1>Make learning feel rewarding.</h1>
+ <p class="lead">Earn XP from daily challenges and unlock small milestones as you build the habit.</p>
+ <div class="homegrid">
+   <div class="panel daily"><div class="tag">YOUR XP</div><div class="stat">1,250 XP</div><p class="muted">+50 XP available from today’s challenge</p><button class="btn" onclick="state='home';render()">Back to Home</button></div>
+   <div class="panel"><div class="eyebrow">Current streak</div><div class="stat">7 🔥</div><p class="muted">7 days in a row</p></div>
+ </div>
+ <div class="panel"><h2>Milestones</h2>
+ <div class="grid">
+   <div class="choice">🏅 <b>First Step</b><br><span class="muted">Complete your first challenge · ✓ Unlocked</span></div>
+   <div class="choice">🔥 <b>7-Day Streak</b><br><span class="muted">Learn for 7 days · ✓ Unlocked</span></div>
+   <div class="choice">⚡ <b>500 XP</b><br><span class="muted">Earn 500 XP · ✓ Unlocked</span></div>
+   <div class="choice">🚀 <b>30-Day Builder</b><br><span class="muted">Keep a 30-day streak · 23/30 days</span></div>
+ </div></div>`;
+}
+function leaderboardPage(p){
+ const rows=[["1","Aarav","2,840 XP","18 🔥"],["2","Maya","2,610 XP","16 🔥"],["3","Jordan","2,430 XP","14 🔥"],["4","You","1,250 XP","7 🔥"],["5","Noah","1,180 XP","6 🔥"]];
+ p.innerHTML=`<div class="eyebrow">Leaderboard</div><h1>Learn together. Stay in the game.</h1>
+ <p class="lead">A lightweight social layer to make daily learning more motivating — without turning Unrot into a competition.</p>
+ <div class="panel"><div style="display:grid;gap:9px">${rows.map(r=>`<div class="choice" style="display:grid;grid-template-columns:45px 1fr 120px 80px;align-items:center"><b>#${r[0]}</b><span>${r[1]}</span><span>${r[2]}</span><span>${r[3]}</span></div>`).join("")}</div></div>
+ <div class="panel daily"><div class="tag">YOUR POSITION</div><h2>#4 this week</h2><p class="muted">You’re 1,180 XP behind #3. Complete today’s challenge to keep climbing.</p><button class="btn" onclick="state='home';render()">Back to Home</button></div>`;
+}
+
+function lessonPage(p){
+ const cards=[
+  ["Not Your Old School AI",`<p class="lead">Traditional AI classifies and predicts. It answers <b>“Is this spam?”</b> or forecasts sales.</p><p class="lead"><b>Generative AI creates.</b> It writes code, designs images, composes music, and drafts emails from scratch.</p><div class="tip"><b>💡 TIP</b><p>Think of traditional AI as a calculator. Generative AI is the artist with the calculator — it does not just compute, it invents.</p></div>`],
+  ["Quick Check",`<p class="lead">What is the core difference between traditional AI and generative AI?</p><div class="answers">${["Traditional AI predicts; generative AI creates new content","Traditional AI is always faster","Generative AI uses smaller datasets","There is no real difference"].map((x,i)=>`<button class="choice ${choice===i?"selected":""}" onclick="choice=${i};render()">${String.fromCharCode(65+i)} &nbsp; ${x}</button>`).join("")}</div>`],
+  ["Meet the Makers",`<p class="lead">ChatGPT creates human-like text. DALL-E creates images from text. Sora generates video. GitHub Copilot suggests code.</p><div class="panel"><h3>One idea to remember</h3><p class="muted">Generative AI can create many kinds of content — not just chat responses.</p></div>`],
+  ["Why It Matters",`<p class="lead">Generative AI is moving from experimentation into everyday work. The opportunity is not only using a tool, but redesigning workflows around it.</p><div class="panel"><p class="lead">The best users combine AI speed with human judgment.</p></div>`],
+  ["Try It Yourself",`<p class="lead">Create an image with an AI generator, change one detail, generate a second version, and compare the outputs.</p><div class="panel"><b>TRY IT YOURSELF</b><p class="lead">“A minimalist illustration of a robot reading a book, soft pastel colors, clean lines, white background.”</p></div>`],
+  ["One Last Check",`<p class="lead">Which statement is true?</p><div class="answers">${["AI always produces 100% accurate facts","GenAI can create text, images, code, and video","GenAI requires no training data","GenAI is only used by tech companies"].map((x,i)=>`<button class="choice ${choice===i?"selected":""}" onclick="choice=${i};render()">${String.fromCharCode(65+i)} &nbsp; ${x}</button>`).join("")}</div>`]
+ ];
+ const card=cards[Math.min(lesson,cards.length-1)];
+ p.innerHTML=`<div class="lesson-head">CARD ${lesson+1} OF ${cards.length}<div class="bar"><span style="width:${((lesson+1)/cards.length)*100}%"></span></div></div><div class="lesson-card"><div class="eyebrow">5-minute lesson</div><h1>${card[0]}</h1>${card[1]}<div style="display:flex;justify-content:space-between;margin-top:35px"><button class="btn secondary" onclick="lesson?lesson--:state='home';choice=null;render()">← Back</button><button class="btn" onclick="nextLesson()">Continue →</button></div></div>`;
+}
+function nextLesson(){
+ if((lesson===1||lesson===5)&&choice!==0&&lesson===1){alert("Pick A — traditional AI predicts; generative AI creates.");return}
+ if(lesson===5&&choice!==1){alert("Pick B — GenAI can create text, images, code, and video.");return}
+ choice=null;lesson++;
+ if(lesson>=6){state="reward";render()}else render();
+}
+function rewardPage(p){
+ earned=50;streak=1;
+ p.innerHTML=`<div class="center reward"><div class="emoji">🎉</div><div class="eyebrow green">Daily challenge complete</div><h1>You showed up today.</h1><div class="xp"><b>+50 XP</b> earned</div><div class="streak"><div style="font-size:48px">🔥</div><strong>1 day streak</strong><p class="muted">Your next challenge is waiting tomorrow.</p><div class="tomorrow">Tomorrow’s Challenge →</div></div><button class="btn" onclick="state='home';lesson=0;choice=null;render()">Return to Unrot Home</button></div>`;
+}
+function showRewards(){
+ state="rewards"; choice=null; render();
+}
+function showLeaderboard(){
+ state="leaderboard"; choice=null; render();
+}
+render();
+</script>
+</body></html>

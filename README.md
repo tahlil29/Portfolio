@@ -4,17 +4,14 @@ Product Management · APM · Product Operations portfolio with case studies, art
 
 **Live site:** https://portfolio-x8op.onrender.com/
 
-## Structure
+## Case studies (priority order)
 
-1. Hero — PM positioning, case study / resume / LinkedIn CTAs  
-2. About — product profile  
-3. Selected work — Unroad, ToBa Tech, QuizVerse (`work/`)  
-4. Product experience  
-5. How I think about products + PM skills  
-6. Product artifacts (`artifacts/`)  
-7. Product teardowns — Duolingo, Zomato (`teardowns/`)  
-8. Experience & education  
-9. Contact  
+1. **ToBa Tech** — `work/toba.html`
+2. **Unrot Daily Challenge** — `work/unrot.html` (+ `work/unrot-prototype.html`, `work/Unrot_Slide_Deck.pdf`)
+3. **Yaveta** — `work/yaveta.html`
+4. **QuizVerse** — `work/quizverse.html`
+
+`work/unroad.html` redirects to the Unrot case study.
 
 ## Local preview
 
@@ -23,12 +20,3 @@ python -m http.server 8080
 ```
 
 Open http://localhost:8080
-
-## Resume
-
-- Web: `resume.html`  
-- PDF: generate via `scripts/build_resume_pdf.py` or print from `resume.html` → `resume/Tahlil_Shaikh_Resume.pdf`
-
-## Tech
-
-HTML · CSS · JavaScript · Font Awesome · Google Fonts · FormSubmit · Render

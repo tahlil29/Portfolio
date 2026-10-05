@@ -153,3 +153,31 @@ window.addEventListener('scroll', () => {
         }
     });
 })();
+
+(() => {
+    const nav = document.querySelector('[data-proto-nav]');
+    if (!nav) return;
+
+    const titleEl = document.querySelector('[data-proto-title]');
+    const bodyEl = document.querySelector('[data-proto-body]');
+    const screens = [
+        ['Onboarding', 'Personalized questions → interests and goals → path into first value.'],
+        ['First lesson', 'First Lesson Preview inserted into existing onboarding — value before habit.'],
+        ['Daily challenge', 'Today\'s task: complete your first AI lesson · 5 min · +50 XP.'],
+        ['Lesson', '5-minute generative AI lesson with checks and hands-on activity.'],
+        ['Reward', '+50 XP · streak · tomorrow\'s challenge teased on the reward screen.'],
+        ['Home', 'Action → progress → exploration: challenge first, then streak/XP, then browse.'],
+        ['Progress', 'Streak, XP and calendar make returning tomorrow feel earned.']
+    ];
+
+    nav.querySelectorAll('button[data-screen]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const index = Number(btn.dataset.screen);
+            nav.querySelectorAll('button').forEach((b) => b.classList.remove('is-active'));
+            btn.classList.add('is-active');
+            const screen = screens[index];
+            if (screen && titleEl) titleEl.textContent = screen[0];
+            if (screen && bodyEl) bodyEl.textContent = screen[1];
+        });
+    });
+})();
