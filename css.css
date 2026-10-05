@@ -45,6 +45,7 @@
     --hero-glow-lavender: rgba(113, 104, 168, 0.08);
     --hero-glow-blue: rgba(78, 120, 168, 0.07);
     --border-hover-mix: 0.30;
+    --nav-height: 52px;
 }
 
 [data-theme="dark"] {
@@ -4032,12 +4033,41 @@ footer {
 }
 
 /* Final pass — hero, projects, artifacts, process, building, contact */
-.pm-hero {
+.hero.pm-hero,
+section#home.pm-hero {
     position: relative;
     text-align: center;
-    padding-top: clamp(5.5rem, 12vh, 8.5rem);
-    padding-bottom: clamp(4rem, 10vh, 6.5rem);
+    min-height: 100dvh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 0;
+    padding-bottom: clamp(3.5rem, 8vh, 6rem);
     overflow: hidden;
+    border-top: 0;
+}
+
+.hero.pm-hero.section,
+section#home.pm-hero.section {
+    padding-top: 0;
+    padding-bottom: clamp(3.5rem, 8vh, 6rem);
+}
+
+.pm-hero > .container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: min(88vh, calc(100svh - var(--nav-height)));
+    padding-top: calc(var(--nav-height) + clamp(0.5rem, 1.5vh, 1.25rem));
+    padding-bottom: clamp(1.25rem, 3vh, 2.5rem);
+    box-sizing: border-box;
+}
+
+#about.about.section {
+    scroll-margin-top: var(--nav-height);
 }
 
 .pm-hero::before {
@@ -4045,10 +4075,10 @@ footer {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at 30% 20%, var(--hero-glow-mint), transparent 35%),
-        radial-gradient(circle at 75% 30%, var(--hero-glow-lavender), transparent 35%),
-        radial-gradient(circle at 55% 10%, var(--hero-glow-blue), transparent 38%),
-        radial-gradient(ellipse 55% 45% at 50% 20%, var(--hero-glow-mint), transparent 65%);
+        radial-gradient(circle at 28% 42%, var(--hero-glow-mint), transparent 38%),
+        radial-gradient(circle at 72% 48%, var(--hero-glow-lavender), transparent 38%),
+        radial-gradient(circle at 50% 55%, var(--hero-glow-blue), transparent 42%),
+        radial-gradient(ellipse 70% 55% at 50% 50%, var(--hero-glow-mint), transparent 68%);
     pointer-events: none;
     opacity: 0.95;
 }
@@ -4072,6 +4102,19 @@ footer {
     position: absolute;
     inset: 0;
     pointer-events: none;
+    display: grid;
+    grid-template-columns: minmax(4rem, 1fr) minmax(0, 52rem) minmax(4rem, 1fr);
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    padding:
+        calc(var(--nav-height) + clamp(1rem, 4vh, 2.5rem))
+        clamp(1rem, 4vw, 3rem)
+        clamp(3rem, 10vh, 6rem);
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+.hero-float-label {
     font-size: clamp(0.72rem, 1.1vw, 0.88rem);
     font-weight: 700;
     letter-spacing: 0.14em;
@@ -4080,10 +4123,57 @@ footer {
     opacity: 0.62;
 }
 
-.hero-float-labels span:nth-child(1) { position: absolute; left: 8%; top: 28%; }
-.hero-float-labels span:nth-child(2) { position: absolute; right: 10%; top: 22%; color: color-mix(in srgb, var(--accent-mint) 50%, var(--text-muted)); }
-.hero-float-labels span:nth-child(3) { position: absolute; left: 12%; bottom: 28%; color: color-mix(in srgb, var(--accent-blue) 50%, var(--text-muted)); }
-.hero-float-labels span:nth-child(4) { position: absolute; right: 14%; bottom: 32%; }
+.hero-float-label--left {
+    justify-self: start;
+    text-align: left;
+}
+
+.hero-float-label--right {
+    justify-self: end;
+    text-align: right;
+}
+
+.hero-float-label--top {
+    align-self: end;
+    padding-bottom: clamp(0.75rem, 2vh, 1.25rem);
+}
+
+.hero-float-label--bottom {
+    align-self: start;
+    padding-top: clamp(0.75rem, 2vh, 1.25rem);
+}
+
+.hero-float-label--left.hero-float-label--top {
+    color: color-mix(in srgb, var(--accent-lavender) 50%, var(--text-muted));
+}
+
+.hero-float-label--left.hero-float-label--bottom {
+    color: color-mix(in srgb, var(--accent-blue) 50%, var(--text-muted));
+}
+
+.hero-float-label--right.hero-float-label--top {
+    color: color-mix(in srgb, var(--accent-mint) 50%, var(--text-muted));
+}
+
+.hero-float-label--right.hero-float-label--bottom {
+    color: color-mix(in srgb, var(--accent-lavender) 42%, var(--text-muted));
+}
+
+.hero-float-label--left {
+    grid-column: 1;
+}
+
+.hero-float-label--right {
+    grid-column: 3;
+}
+
+.hero-float-label--top {
+    grid-row: 1;
+}
+
+.hero-float-label--bottom {
+    grid-row: 2;
+}
 
 .pm-hero-inner {
     position: relative;
@@ -4574,7 +4664,28 @@ textarea:focus-visible {
     }
 
     .hero-float-labels {
+        grid-template-columns: 1fr;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        opacity: 0.45;
+    }
+
+    .hero-float-label--right {
         display: none;
+    }
+
+    .hero-float-label--left {
+        grid-column: 1;
+        justify-self: start;
+    }
+
+    .hero-float-label--left.hero-float-label--bottom {
+        display: none;
+    }
+
+    .pm-hero > .container {
+        min-height: min(86vh, calc(100svh - var(--nav-height)));
+        padding-top: calc(var(--nav-height) + 0.75rem);
     }
 }
 
