@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="User journey flow preview">
+  <rect width="640" height="360" fill="#15171C"/>
+  <circle cx="100" cy="180" r="28" fill="#1B1E25" stroke="#AAA0FF" stroke-width="2"/>
+  <circle cx="240" cy="120" r="28" fill="#1B1E25" stroke="#8DB9E8" stroke-width="2"/>
+  <circle cx="380" cy="180" r="28" fill="#1B1E25" stroke="#A8D5C2" stroke-width="2"/>
+  <circle cx="520" cy="140" r="28" fill="#1B1E25" stroke="#A8D5C2" stroke-width="2"/>
+  <path d="M128 172 L212 128" stroke="#777D88" stroke-width="2" fill="none"/>
+  <path d="M268 128 L352 172" stroke="#777D88" stroke-width="2" fill="none"/>
+  <path d="M408 172 L492 148" stroke="#777D88" stroke-width="2" fill="none"/>
+  <text x="72" y="240" fill="#A7ABB5" font-family="sans-serif" font-size="14">Entry</text>
+  <text x="212" y="80" fill="#A7ABB5" font-family="sans-serif" font-size="14">Learn</text>
+  <text x="352" y="240" fill="#A7ABB5" font-family="sans-serif" font-size="14">Complete</text>
+  <text x="492" y="200" fill="#A7ABB5" font-family="sans-serif" font-size="14">Return</text>
+</svg>

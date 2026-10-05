@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Metrics tree preview">
+  <rect width="640" height="360" fill="#15171C"/>
+  <rect x="260" y="48" width="120" height="36" rx="8" fill="#1B1E25" stroke="#A8D5C2"/>
+  <text x="278" y="72" fill="#F4F1EA" font-size="13" font-family="sans-serif">D1 Retention</text>
+  <line x1="320" y1="84" x2="320" y2="110" stroke="#777D88"/>
+  <line x1="160" y1="110" x2="480" y2="110" stroke="#777D88"/>
+  <line x1="160" y1="110" x2="160" y2="130" stroke="#777D88"/>
+  <line x1="320" y1="110" x2="320" y2="130" stroke="#777D88"/>
+  <line x1="480" y1="110" x2="480" y2="130" stroke="#777D88"/>
+  <rect x="100" y="130" width="120" height="32" rx="6" fill="#1B1E25" stroke="#8DB9E8"/>
+  <rect x="260" y="130" width="120" height="32" rx="6" fill="#1B1E25" stroke="#AAA0FF"/>
+  <rect x="420" y="130" width="120" height="32" rx="6" fill="#1B1E25" stroke="#8DB9E8"/>
+</svg>

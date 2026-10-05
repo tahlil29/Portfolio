@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="A/B experiment preview">
+  <rect width="640" height="360" fill="#15171C"/>
+  <rect x="80" y="80" width="200" height="200" rx="12" fill="#1B1E25" stroke="#8DB9E8"/>
+  <text x="130" y="120" fill="#8DB9E8" font-size="14" font-family="sans-serif">Control</text>
+  <rect x="110" y="200" width="140" height="12" rx="4" fill="#777D88"/>
+  <rect x="360" y="80" width="200" height="200" rx="12" fill="#1B1E25" stroke="#A8D5C2"/>
+  <text x="420" y="120" fill="#A8D5C2" font-size="14" font-family="sans-serif">Variant</text>
+  <rect x="390" y="180" width="140" height="12" rx="4" fill="#A8D5C2"/>
+  <text x="280" y="310" fill="#A7ABB5" font-size="13" font-family="sans-serif">Hypothesis ’ Test ’ Decision</text>
+</svg>

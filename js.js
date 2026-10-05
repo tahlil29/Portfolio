@@ -11,11 +11,11 @@ function applyTheme(theme) {
     if (theme === 'dark') {
         root.setAttribute('data-theme', 'dark');
         if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        if (metaTheme) metaTheme.setAttribute('content', '#121110');
+        if (metaTheme) metaTheme.setAttribute('content', '#0B0C0F');
     } else {
         root.removeAttribute('data-theme');
         if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        if (metaTheme) metaTheme.setAttribute('content', '#1c1917');
+        if (metaTheme) metaTheme.setAttribute('content', '#F6F3ED');
     }
 }
 
