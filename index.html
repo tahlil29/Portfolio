@@ -31,7 +31,7 @@
         href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css.css?v=20261005final">
+    <link rel="stylesheet" href="css.css?v=20261005ux1">
 </head>
 
 <body>
@@ -113,50 +113,51 @@
             </div>
 
             <div class="journey-card reveal" data-journey-root>
-                <ol class="journey-stages" aria-label="Product responsibility progression">
-                    <li class="journey-stage" style="--i:0">
+                <div class="journey-grid" role="list" aria-label="Product responsibility progression">
+                    <div class="journey-line-track" aria-hidden="true"><span class="journey-line-fill"></span></div>
+
+                    <article class="journey-col" style="--col: 1; --i: 0" role="listitem">
                         <span class="journey-stage-num">01</span>
                         <span class="journey-year">2024</span>
-                        <span class="journey-node" aria-hidden="true"></span>
+                        <span class="journey-node" aria-hidden="true"><span class="journey-node-inner"></span></span>
                         <h3 class="journey-title">Design</h3>
                         <p class="journey-desc">Started with visual design and learned how digital products communicate with users.</p>
                         <div class="journey-tags"><span>UX</span><span>Visual Design</span><span>Communication</span></div>
-                    </li>
-                    <li class="journey-stage" style="--i:1">
+                    </article>
+                    <article class="journey-col" style="--col: 2; --i: 1" role="listitem">
                         <span class="journey-stage-num">02</span>
                         <span class="journey-year">2025</span>
-                        <span class="journey-node" aria-hidden="true"></span>
+                        <span class="journey-node" aria-hidden="true"><span class="journey-node-inner"></span></span>
                         <h3 class="journey-title">Build</h3>
                         <p class="journey-desc">Moved from designing interfaces to building working digital products.</p>
                         <div class="journey-tags"><span>Development</span><span>Prototyping</span><span>Technical Thinking</span></div>
-                    </li>
-                    <li class="journey-stage" style="--i:2">
+                    </article>
+                    <article class="journey-col" style="--col: 3; --i: 2" role="listitem">
                         <span class="journey-stage-num">03</span>
                         <span class="journey-year">2026</span>
-                        <span class="journey-node" aria-hidden="true"></span>
+                        <span class="journey-node" aria-hidden="true"><span class="journey-node-inner"></span></span>
                         <h3 class="journey-title">Product Operations</h3>
                         <p class="journey-desc">Learned how teams coordinate, execute and maintain product visibility.</p>
                         <div class="journey-tags"><span>Product Ops</span><span>Execution</span><span>Stakeholders</span></div>
-                    </li>
-                    <li class="journey-stage" style="--i:3">
+                    </article>
+                    <article class="journey-col" style="--col: 4; --i: 3" role="listitem">
                         <span class="journey-stage-num">04</span>
                         <span class="journey-year">2026</span>
-                        <span class="journey-node" aria-hidden="true"></span>
+                        <span class="journey-node" aria-hidden="true"><span class="journey-node-inner"></span></span>
                         <h3 class="journey-title">Product Strategy</h3>
                         <p class="journey-desc">Started working more deeply with product problems, retention, prioritization and experimentation.</p>
                         <div class="journey-tags"><span>Discovery</span><span>Retention</span><span>Strategy</span></div>
-                    </li>
-                    <li class="journey-stage is-future" style="--i:4">
+                    </article>
+                    <article class="journey-col is-future" style="--col: 5; --i: 4" role="listitem">
                         <span class="journey-stage-num">05</span>
                         <span class="journey-year">2027</span>
-                        <span class="journey-node" aria-hidden="true"></span>
+                        <span class="journey-node" aria-hidden="true"><span class="journey-node-inner"></span></span>
                         <h3 class="journey-title">PM / APM</h3>
                         <p class="journey-desc">Moving toward owning product problems from discovery through execution and measurement.</p>
                         <div class="journey-tags"><span>Product Management</span><span>Strategy</span><span>Execution</span></div>
                         <span class="journey-future-label">Target direction</span>
-                    </li>
-                </ol>
-                <div class="journey-line-track" aria-hidden="true"><span class="journey-line-fill"></span></div>
+                    </article>
+                </div>
 
                 <div class="journey-shift">
                     <h3 class="journey-shift-title">What changed over time</h3>
@@ -165,9 +166,9 @@
                         <span class="journey-shift-arrow" aria-hidden="true">→</span>
                         <div class="journey-shift-pill" role="listitem"><strong>Build</strong>How products work</div>
                         <span class="journey-shift-arrow" aria-hidden="true">→</span>
-                        <div class="journey-shift-pill" role="listitem"><strong>Product ops</strong>How teams execute</div>
+                        <div class="journey-shift-pill" role="listitem"><strong>Product Operations</strong>How teams execute</div>
                         <span class="journey-shift-arrow" aria-hidden="true">→</span>
-                        <div class="journey-shift-pill" role="listitem"><strong>Strategy</strong>Why products should be built</div>
+                        <div class="journey-shift-pill" role="listitem"><strong>Product Strategy</strong>Why products should be built</div>
                         <span class="journey-shift-arrow" aria-hidden="true">→</span>
                         <div class="journey-shift-pill" role="listitem"><strong>PM / APM</strong>How problems become product decisions</div>
                     </div>
@@ -403,44 +404,79 @@
             <div class="section-header reveal">
                 <p class="section-label">Product thinking</p>
                 <h2>How I Think About Products</h2>
+                <p class="section-sub text-muted">I move from understanding the problem to measuring whether the solution actually worked.</p>
             </div>
-            <div class="process-grid">
-                <article class="process-step reveal">
-                    <span class="num">01</span>
-                    <div class="icon"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></div>
-                    <h3>Discover</h3>
-                    <p>Understand users, problems and context before jumping to solutions.</p>
-                </article>
-                <article class="process-step reveal">
-                    <span class="num">02</span>
-                    <div class="icon"><i class="fas fa-bullseye" aria-hidden="true"></i></div>
-                    <h3>Define</h3>
-                    <p>Clarify the problem, scope and what success should look like.</p>
-                </article>
-                <article class="process-step reveal">
-                    <span class="num">03</span>
-                    <div class="icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
-                    <h3>Prioritize</h3>
-                    <p>Choose opportunities by user value, impact and execution effort.</p>
-                </article>
-                <article class="process-step reveal">
-                    <span class="num">04</span>
-                    <div class="icon"><i class="fas fa-pen-ruler" aria-hidden="true"></i></div>
-                    <h3>Design</h3>
-                    <p>Translate ideas into flows, wireframes and prototypes teams can align on.</p>
-                </article>
-                <article class="process-step reveal">
-                    <span class="num">05</span>
-                    <div class="icon"><i class="fas fa-people-group" aria-hidden="true"></i></div>
-                    <h3>Execute</h3>
-                    <p>Break work into actionable tasks and ship with cross-functional teams.</p>
-                </article>
-                <article class="process-step reveal">
-                    <span class="num">06</span>
-                    <div class="icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
-                    <h3>Measure</h3>
-                    <p>Use metrics and experiments to learn what worked and what to do next.</p>
-                </article>
+
+            <div class="pm-process reveal" data-pm-process aria-label="Product thinking process">
+                <div class="pm-process-row pm-process-row-top">
+                    <article class="pm-process-module" style="--i:0" data-accent="lavender">
+                        <span class="pm-process-num">01</span>
+                        <div class="pm-process-icon"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></div>
+                        <h3>Discover</h3>
+                        <p>Understand users, problems and context before jumping to solutions.</p>
+                        <p class="pm-process-ask"><strong>What I ask:</strong> &ldquo;Who is experiencing the problem and why?&rdquo;</p>
+                        <p class="pm-process-out"><strong>Output:</strong> User insights / research notes</p>
+                    </article>
+                    <span class="pm-process-link h" aria-hidden="true"></span>
+                    <article class="pm-process-module" style="--i:1" data-accent="blue">
+                        <span class="pm-process-num">02</span>
+                        <div class="pm-process-icon"><i class="fas fa-bullseye" aria-hidden="true"></i></div>
+                        <h3>Define</h3>
+                        <p>Clarify the problem, scope and what success should look like.</p>
+                        <p class="pm-process-ask"><strong>What I ask:</strong> &ldquo;What exactly are we trying to solve?&rdquo;</p>
+                        <p class="pm-process-out"><strong>Output:</strong> Problem statement / opportunity</p>
+                    </article>
+                    <span class="pm-process-link h" aria-hidden="true"></span>
+                    <article class="pm-process-module is-branch" style="--i:2" data-accent="mint">
+                        <span class="pm-process-num">03</span>
+                        <div class="pm-process-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+                        <h3>Prioritize</h3>
+                        <p>Choose opportunities based on user value, impact and execution effort.</p>
+                        <p class="pm-process-ask"><strong>What I ask:</strong> &ldquo;What should we solve first?&rdquo;</p>
+                        <p class="pm-process-out"><strong>Output:</strong> Prioritization framework / roadmap</p>
+                    </article>
+                </div>
+                <div class="pm-process-branch" aria-hidden="true"><span class="pm-process-link v"></span></div>
+                <div class="pm-process-row pm-process-row-bottom">
+                    <article class="pm-process-module" style="--i:3" data-accent="lavender">
+                        <span class="pm-process-num">04</span>
+                        <div class="pm-process-icon"><i class="fas fa-pen-ruler" aria-hidden="true"></i></div>
+                        <h3>Design</h3>
+                        <p>Translate the chosen direction into flows, requirements and prototypes.</p>
+                        <p class="pm-process-ask"><strong>What I ask:</strong> &ldquo;What is the simplest useful solution?&rdquo;</p>
+                        <p class="pm-process-out"><strong>Output:</strong> PRD / user flow / prototype</p>
+                    </article>
+                    <span class="pm-process-link h" aria-hidden="true"></span>
+                    <article class="pm-process-module" style="--i:4" data-accent="blue">
+                        <span class="pm-process-num">05</span>
+                        <div class="pm-process-icon"><i class="fas fa-people-group" aria-hidden="true"></i></div>
+                        <h3>Execute</h3>
+                        <p>Break the solution into actionable work and align cross-functional teams.</p>
+                        <p class="pm-process-ask"><strong>What I ask:</strong> &ldquo;How do we actually ship this?&rdquo;</p>
+                        <p class="pm-process-out"><strong>Output:</strong> Tasks / alignment / shipped feature</p>
+                    </article>
+                    <span class="pm-process-link h" aria-hidden="true"></span>
+                    <article class="pm-process-module" style="--i:5" data-accent="mint">
+                        <span class="pm-process-num">06</span>
+                        <div class="pm-process-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                        <h3>Measure</h3>
+                        <p>Use metrics and experiments to learn what worked and what to do next.</p>
+                        <p class="pm-process-ask"><strong>What I ask:</strong> &ldquo;Did it work, and what did we learn?&rdquo;</p>
+                        <p class="pm-process-out"><strong>Output:</strong> Metrics / experiment / learning</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="pm-process-work reveal">
+                <h3 class="pm-process-work-title">How this shows up in my work</h3>
+                <ul class="pm-process-work-links">
+                    <li><span>Discover</span><a href="work/unrot.html">Unrot</a></li>
+                    <li><span>Define</span><a href="work/unrot.html">Unrot</a></li>
+                    <li><span>Prioritize</span><a href="artifacts/prioritization.html">Feature Prioritization</a></li>
+                    <li><span>Design</span><a href="artifacts/prototype.html">Unrot Prototype</a></li>
+                    <li><span>Execute</span><a href="work/toba.html">ToBa Tech</a></li>
+                    <li><span>Measure</span><a href="artifacts/experiment.html">Unrot Experiment Design</a></li>
+                </ul>
             </div>
 
             <div class="skills-simple pm-skills skills-priority reveal">
@@ -556,7 +592,7 @@
                     </div>
                 </article>
                 <article class="artifact-card artifact-card-v2 reveal">
-                    <div class="artifact-preview">
+                    <div class="artifact-preview artifact-preview--experiment">
                         <img src="image/artifacts/experiment.svg" alt="Experiment design A/B test preview" loading="lazy" width="640" height="360">
                     </div>
                     <div class="artifact-body">

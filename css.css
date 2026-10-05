@@ -3379,34 +3379,76 @@ footer {
     overflow: hidden;
 }
 
-.journey-stages {
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: auto auto 2.75rem minmax(4.25rem, auto) auto auto auto;
+    column-gap: clamp(0.75rem, 2vw, 1.25rem);
+    row-gap: 0.35rem;
+    position: relative;
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.journey-col {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: clamp(0.75rem, 2vw, 1.25rem);
-    position: relative;
-    z-index: 1;
-}
-
-.journey-stage {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-rows: subgrid;
+    grid-row: 1 / -1;
     gap: 0.35rem;
+    min-width: 0;
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(12px);
     transition: opacity 0.45s ease, transform 0.45s ease;
-    transition-delay: calc(0.06s + var(--i, 0) * 0.07s);
+    transition-delay: calc(0.05s + var(--i, 0) * 0.06s);
 }
 
-.journey-card.is-visible .journey-stage {
+.journey-card.is-visible .journey-col {
     opacity: 1;
     transform: translateY(0);
 }
 
+.journey-col.is-future .journey-title {
+    color: color-mix(in srgb, var(--accent-mint) 85%, var(--dark));
+}
+
+.journey-col:hover .journey-title {
+    color: var(--accent-mint);
+}
+
+.journey-line-track {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    align-self: center;
+    height: 2px;
+    z-index: 0;
+    margin-inline: 6%;
+    pointer-events: none;
+    background: color-mix(in srgb, var(--border) 70%, transparent);
+}
+
+.journey-line-fill {
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform-origin: left center;
+    transform: scaleX(0);
+    background: linear-gradient(
+        90deg,
+        var(--accent-mint),
+        var(--accent-lavender),
+        var(--accent-blue)
+    );
+    opacity: 0.85;
+    transition: transform 0.85s cubic-bezier(0.4, 0, 0.2, 1) 0.05s;
+}
+
+.journey-card.is-visible .journey-line-fill {
+    transform: scaleX(1);
+}
+
 .journey-stage-num {
+    grid-row: 1;
     font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -3414,6 +3456,7 @@ footer {
 }
 
 .journey-year {
+    grid-row: 2;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -3421,35 +3464,55 @@ footer {
 }
 
 .journey-node {
-    width: 10px;
-    height: 10px;
+    grid-row: 3;
+    justify-self: center;
+    align-self: center;
+    z-index: 2;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
+    display: grid;
+    place-items: center;
     background: var(--card-bg);
     border: 2px solid color-mix(in srgb, var(--accent-mint) 55%, var(--border));
-    margin: 0.35rem 0 0.25rem;
     box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-mint) 8%, transparent);
     transform: scale(0);
-    transition: transform 0.35s ease;
-    transition-delay: calc(0.12s + var(--i, 0) * 0.07s);
+    transition: transform 0.35s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    transition-delay: calc(0.1s + var(--i, 0) * 0.06s);
+}
+
+.journey-node-inner {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent-mint);
 }
 
 .journey-card.is-visible .journey-node {
     transform: scale(1);
 }
 
-.journey-stage.is-future .journey-node {
-    border-color: color-mix(in srgb, var(--accent-mint) 70%, var(--accent-lavender));
-    box-shadow: 0 0 14px color-mix(in srgb, var(--accent-lavender) 25%, var(--accent-mint));
+.journey-col.is-future .journey-node {
+    border-color: color-mix(in srgb, var(--accent-mint) 65%, var(--accent-lavender));
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent-lavender) 12%, transparent);
+}
+
+.journey-col:hover .journey-node {
+    border-color: var(--accent-mint);
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent-mint) 18%, transparent);
 }
 
 .journey-title {
+    grid-row: 4;
     font-family: 'Fraunces', Georgia, serif;
     font-size: clamp(1rem, 1.4vw, 1.15rem);
     margin: 0;
     line-height: 1.2;
+    transition: color 0.2s ease;
 }
 
 .journey-desc {
+    grid-row: 5;
     font-size: 0.82rem;
     line-height: 1.5;
     color: var(--text-muted);
@@ -3457,10 +3520,21 @@ footer {
 }
 
 .journey-tags {
+    grid-row: 6;
     display: flex;
     flex-wrap: wrap;
     gap: 0.35rem;
-    margin-top: 0.25rem;
+    margin-top: 0.1rem;
+}
+
+.journey-future-label {
+    grid-row: 7;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-lavender);
+    margin-top: 0.1rem;
 }
 
 .journey-tags span {
@@ -3472,45 +3546,6 @@ footer {
     border: 1px solid var(--border);
     color: var(--text-muted);
     background: color-mix(in srgb, var(--text) 4%, transparent);
-}
-
-.journey-future-label {
-    font-size: 0.62rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent-mint);
-    margin-top: 0.15rem;
-}
-
-.journey-line-track {
-    position: absolute;
-    left: clamp(1.25rem, 2.5vw, 2rem);
-    right: clamp(1.25rem, 2.5vw, 2rem);
-    top: calc(clamp(1.25rem, 2.5vw, 2rem) + 4.1rem);
-    height: 1px;
-    background: color-mix(in srgb, var(--border) 80%, transparent);
-    pointer-events: none;
-    z-index: 0;
-}
-
-.journey-line-fill {
-    display: block;
-    height: 100%;
-    width: 100%;
-    transform-origin: left center;
-    transform: scaleX(0);
-    background: linear-gradient(
-        90deg,
-        color-mix(in srgb, var(--accent-mint) 25%, transparent),
-        var(--accent-mint),
-        color-mix(in srgb, var(--accent-mint) 40%, transparent)
-    );
-    transition: transform 0.85s cubic-bezier(0.4, 0, 0.2, 1) 0.05s;
-}
-
-.journey-card.is-visible .journey-line-fill {
-    transform: scaleX(1);
 }
 
 .journey-shift {
@@ -3821,7 +3856,7 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
     .journey-line-fill,
-    .journey-stage,
+    .journey-col,
     .journey-node {
         transition: none;
         transform: none;
@@ -3833,20 +3868,40 @@ footer {
     }
 }
 
+@supports not (grid-template-rows: subgrid) {
+    .journey-col {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        grid-row: auto;
+    }
+
+    .journey-node {
+        align-self: center;
+        margin: 0.25rem 0;
+    }
+}
+
 @media (max-width: 960px) {
-    .journey-stages {
-        grid-template-columns: 1fr;
+    .journey-grid {
+        display: flex;
+        flex-direction: column;
         gap: 0;
-        padding-left: 0.5rem;
+        position: relative;
+        padding-left: 0.35rem;
     }
 
     .journey-line-track {
-        left: calc(clamp(1.25rem, 2.5vw, 2rem) + 0.55rem);
-        right: auto;
-        top: 1.5rem;
-        bottom: 1.5rem;
-        width: 1px;
+        position: absolute;
+        left: 0.55rem;
+        top: 0.5rem;
+        bottom: 0.5rem;
+        width: 2px;
         height: auto;
+        margin: 0;
+        grid-column: unset;
+        grid-row: unset;
+        align-self: stretch;
     }
 
     .journey-line-fill {
@@ -3854,19 +3909,36 @@ footer {
         transform-origin: top center;
         background: linear-gradient(
             180deg,
-            color-mix(in srgb, var(--accent-mint) 25%, transparent),
             var(--accent-mint),
-            color-mix(in srgb, var(--accent-mint) 40%, transparent)
+            var(--accent-lavender),
+            var(--accent-blue)
         );
+        opacity: 0.85;
     }
 
     .journey-card.is-visible .journey-line-fill {
         transform: scaleY(1);
     }
 
-    .journey-stage {
-        padding: 0 0 1.75rem 1.35rem;
-        border-left: none;
+    .journey-col {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        grid-row: auto;
+        padding: 0 0 1.65rem 1.35rem;
+        position: relative;
+    }
+
+    .journey-node {
+        position: absolute;
+        left: 0.55rem;
+        top: 2.35rem;
+        transform: translateX(-50%) scale(1);
+        grid-row: unset;
+    }
+
+    .journey-card.is-visible .journey-node {
+        transform: translateX(-50%) scale(1);
     }
 
     .journey-led-grid {
@@ -4167,10 +4239,194 @@ footer {
 }
 
 .process-grid {
+    display: none;
+}
+
+/* PM thinking process — connected flow */
+.pm-process {
+    max-width: 920px;
+    margin: 0 auto 2rem;
+}
+
+.pm-process-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 0.35rem 0.25rem;
+    align-items: stretch;
+}
+
+.pm-process-row-bottom {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.pm-process-branch {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: calc(16.66% - 0.5rem);
+    height: 1.75rem;
+}
+
+.pm-process-branch .pm-process-link.v {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--accent-lavender) 40%, var(--border)), var(--accent-mint));
+    opacity: 0.7;
+}
+
+.pm-process-module {
+    padding: 0.85rem 0.9rem;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: color-mix(in srgb, var(--text) 2%, var(--card-bg));
+    transition: transform 0.22s ease, border-color 0.22s ease;
+}
+
+.pm-process-module:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent-mint) 35%, var(--border));
+}
+
+.pm-process-module:hover h3 {
+    color: var(--accent-mint);
+}
+
+.pm-process-module:hover .pm-process-icon {
+    background: color-mix(in srgb, var(--accent-mint) 14%, transparent);
+}
+
+.pm-process-num {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text-soft);
+}
+
+.pm-process-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    margin: 0.4rem 0 0.5rem;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.pm-process-module[data-accent="lavender"] .pm-process-icon { background: color-mix(in srgb, var(--accent-lavender) 16%, transparent); color: var(--accent-lavender); }
+.pm-process-module[data-accent="blue"] .pm-process-icon { background: color-mix(in srgb, var(--accent-blue) 16%, transparent); color: var(--accent-blue); }
+.pm-process-module[data-accent="mint"] .pm-process-icon { background: color-mix(in srgb, var(--accent-mint) 16%, transparent); color: var(--accent-mint); }
+
+.pm-process-module h3 {
+    font-size: 1rem;
+    margin: 0 0 0.35rem;
+    transition: color 0.2s ease;
+}
+
+.pm-process-module > p {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--text-muted);
+    margin: 0 0 0.45rem;
+}
+
+.pm-process-ask,
+.pm-process-out {
+    font-size: 0.75rem;
+    line-height: 1.45;
+    color: var(--text-soft);
+    margin: 0;
+}
+
+.pm-process-ask strong,
+.pm-process-out strong {
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-right: 0.25rem;
+}
+
+.pm-process-link.h {
+    align-self: center;
+    width: clamp(12px, 2vw, 28px);
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-mint), var(--accent-lavender));
+    opacity: 0.55;
+    transition: opacity 0.2s ease;
+}
+
+.pm-process-row:hover .pm-process-link.h {
+    opacity: 0.85;
+}
+
+.pm-process-work {
+    max-width: 920px;
+    margin: 0 auto 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.pm-process-work-title {
+    font-family: 'Figtree', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 0.85rem;
+}
+
+.pm-process-work-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.85rem;
-    margin-bottom: 2.5rem;
+    gap: 0.5rem 1rem;
+}
+
+.pm-process-work-links li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.5rem;
+    font-size: 0.82rem;
+}
+
+.pm-process-work-links span {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-lavender);
+    min-width: 4.5rem;
+}
+
+.pm-process-work-links a {
+    color: var(--accent-mint);
+    font-weight: 600;
+}
+
+.pm-process-work-links a:hover {
+    text-decoration: underline;
+}
+
+.artifact-preview--experiment {
+    background: #111318;
+}
+
+.artifact-preview--experiment img {
+    object-fit: contain;
+    padding: 0.35rem;
+}
+
+@supports not (display: grid) {
+    .artifact-preview--experiment {
+        min-height: 120px;
+        background:
+            linear-gradient(135deg, #15171C 0%, #1B1E25 100%);
+    }
 }
 
 .process-step {
@@ -4282,20 +4538,52 @@ textarea:focus-visible {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .process-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .pm-process-row {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 
-    .hero-float-labels {
+    .pm-process-link.h,
+    .pm-process-branch {
         display: none;
+    }
+
+    .pm-process-row-bottom {
+        max-width: none;
+    }
+
+    .pm-process-module {
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1.15rem;
+        border-left: 2px solid color-mix(in srgb, var(--accent-mint) 35%, var(--border));
+    }
+
+    .pm-process-module::before {
+        content: '';
+        position: absolute;
+        left: -5px;
+        top: 1.15rem;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--card-bg);
+        border: 2px solid var(--accent-mint);
+    }
+
+    .pm-process-work-links {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 600px) {
     .how-i-work,
-    .project-visual-grid,
-    .process-grid {
+    .project-visual-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-float-labels {
+        display: none;
     }
 }
 

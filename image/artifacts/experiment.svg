@@ -1,10 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="A/B experiment preview">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="A/B experiment design preview">
   <rect width="640" height="360" fill="#15171C"/>
-  <rect x="80" y="80" width="200" height="200" rx="12" fill="#1B1E25" stroke="#8DB9E8"/>
-  <text x="130" y="120" fill="#8DB9E8" font-size="14" font-family="sans-serif">Control</text>
-  <rect x="110" y="200" width="140" height="12" rx="4" fill="#777D88"/>
-  <rect x="360" y="80" width="200" height="200" rx="12" fill="#1B1E25" stroke="#A8D5C2"/>
-  <text x="420" y="120" fill="#A8D5C2" font-size="14" font-family="sans-serif">Variant</text>
-  <rect x="390" y="180" width="140" height="12" rx="4" fill="#A8D5C2"/>
-  <text x="280" y="310" fill="#A7ABB5" font-size="13" font-family="sans-serif">Hypothesis ’ Test ’ Decision</text>
+  <text x="320" y="44" fill="#A7ABB5" font-family="system-ui,sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2">A/B EXPERIMENT</text>
+  <rect x="56" y="68" width="240" height="168" rx="12" fill="#1B1E25" stroke="#8DB9E8" stroke-width="1.5"/>
+  <text x="176" y="98" fill="#8DB9E8" font-family="system-ui,sans-serif" font-size="13" font-weight="700" text-anchor="middle">CONTROL</text>
+  <text x="176" y="124" fill="#A7ABB5" font-family="system-ui,sans-serif" font-size="22" font-weight="700" text-anchor="middle">50%</text>
+  <text x="176" y="152" fill="#777D88" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">Base experience</text>
+  <rect x="344" y="68" width="240" height="168" rx="12" fill="#1B1E25" stroke="#A8D5C2" stroke-width="1.5"/>
+  <text x="464" y="98" fill="#A8D5C2" font-family="system-ui,sans-serif" font-size="13" font-weight="700" text-anchor="middle">TEST</text>
+  <text x="464" y="124" fill="#A7ABB5" font-family="system-ui,sans-serif" font-size="22" font-weight="700" text-anchor="middle">50%</text>
+  <text x="464" y="152" fill="#777D88" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">New experience</text>
+  <text x="320" y="268" fill="#AAA0FF" font-family="system-ui,sans-serif" font-size="12" font-weight="700" text-anchor="middle">PRIMARY METRIC: D1 RETENTION</text>
+  <text x="320" y="292" fill="#777D88" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">Success criteria defined before launch</text>
 </svg>
